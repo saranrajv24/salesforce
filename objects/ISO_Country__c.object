@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>ABB_HRC_restriction__c</fullName>
+        <description>R8 - Customer Management</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB has recognized that certain procedures are required when doing business with counterparties in certain high risk countries. ABB entities should only transact in High Risk Countries with counterparties who are approved (GD/LI-50).</inlineHelpText>
+        <label>High Risk Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>GD/LI-50</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ABB_SCP_Classification__c</fullName>
+        <description>R8 - Customer Management</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Classification of the country related to ABB&apos;s exposure/risk in doing business from a financial, legal, security and reputation standpoint. Possible values: WATCH, ACT, DECLINE.  See Sensitive Country Protocol (GD/LI-30) link below.</inlineHelpText>
+        <label>Country Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ACT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>WATCH</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DECLINE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CH_sanctions_AGB_exclusion__c</fullName>
+        <description>R8 - Customer Management</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Swiss sanctions (UN / EU sanctions) excluded from SECO AGB</inlineHelpText>
+        <label>Swiss sanctions</label>
+        <picklist>
+            <picklistValues>
+                <fullName>arms (1483)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1533)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1591)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1701)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1718)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1737)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1844)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1907)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (1970)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>finance (2048)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (2127)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (2140)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>arms (EU)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CH concern</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>finance (2206)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>finance (EU)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>ChangeDate__c</fullName>
+        <description>StS R8 field from CnV: change date of the restrictions</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Date of restriction change</inlineHelpText>
+        <label>ChangeDate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Country_ISO_Code__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Country_ISO_Code</globalPicklist>
+        <label>Country ISO Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Country</globalPicklist>
+        <label>Country Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Currency_Code__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Currency</globalPicklist>
+        <label>Currency Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Comment field introduced in StS Release 8 for Sensitive Country integration with C&amp;V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Sensitive country comment</inlineHelpText>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ISO_Code_External__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>ISO Code External</label>
+        <length>2</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Region_Code__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Region_Code</globalPicklist>
+        <label>Region Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region_Name__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Region_Name</globalPicklist>
+        <label>Region Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Restrictions_On_Person_Involvement__c</fullName>
+        <description>Text field introduced in StS Release 8 for Sensitive Country integration with C&amp;V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB countries that prohibit or restrict the involvement of their persons doing business in/with a sensitive country. See Sensitive Country Protocol (GD/LI-30) link.</inlineHelpText>
+        <label>Restrictions On Person Involvement</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Security_Plan__c</fullName>
+        <description>Picklist field introduced in StS Release 8 for Sensitive Country integration with C&amp;V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies if a written security risk assessment for every project prior to tendering and/or a security plan must be approved by Security prior to execution. See Sensitive Country Protocol (GD/LI-30) link.</inlineHelpText>
+        <label>Is Security Plan/Assessment required?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>N/A</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sending_Personnel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checkbox field introduced in StS Release 8 for Sensitive Country integration with C&amp;V</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies if sending of personnel is allowed. See Sensitive Country Protocol (GD/LI-30) link.</inlineHelpText>
+        <label>Is Sending of Personnel allowed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>US_EAR_Country_Group__c</fullName>
+        <description>R8 - Customer Management</description>
+        <externalId>false</externalId>
+        <inlineHelpText>US Export Administration Regulations</inlineHelpText>
+        <label>Export Administration Regulations (US)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>E:1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E:2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>US_EAR_Note__c</fullName>
+        <description>R8 - Customer Management</description>
+        <externalId>false</externalId>
+        <label>US EAR Note</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>ISO Country</label>
+    <listViews>
+        <fullName>Allrecords</fullName>
+        <columns>NAME</columns>
+        <columns>Country_ISO_Code__c</columns>
+        <columns>Country__c</columns>
+        <columns>ABB_SCP_Classification__c</columns>
+        <columns>Description__c</columns>
+        <columns>ISO_Code_External__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>ISO Country Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>ISO Countries</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

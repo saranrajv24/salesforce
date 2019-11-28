@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom setting to list Unit of measure for which decimal quantity not allowed.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Not_Allowed_UOM__c</fullName>
+        <description>Unit of measure for which decimal quantity is not allowed. Put the values separated by comma.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Unit of measure for which decimal quantity is not allowed. Put the values separated by comma.</inlineHelpText>
+        <label>APTS Not Allowed UOM</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>APTS Decimal Quantity</label>
+    <visibility>Public</visibility>
+</CustomObject>

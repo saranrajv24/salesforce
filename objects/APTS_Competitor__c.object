@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_ABB_Ranking__c</fullName>
+        <externalId>false</externalId>
+        <label>ABB Ranking</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Assessment_Type__c</fullName>
+        <description>Introduced as a part of CCP 1C Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the type of Assessment from given values.</inlineHelpText>
+        <label>Assessment Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>FirstCost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>TotalOwnerShipCost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Auxiliary_Losses__c</fullName>
+        <description>Introduced as a part of CCP 1C Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the Auxiliary losses.</inlineHelpText>
+        <label>Auxiliary Losses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Bad_Track_Record__c</fullName>
+        <externalId>false</externalId>
+        <label>Bad Track Record</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Competitive_Feedback__c</fullName>
+        <description>Part of CCP Release 1C</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter more details for Competitive feedback.</inlineHelpText>
+        <label>Competitive Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Competitor__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the competitor account</inlineHelpText>
+        <label>Competitor</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Please select the Competitor Account.</errorMessage>
+            <filterItems>
+                <field>Account.RecordType.Name</field>
+                <operation>notEqual</operation>
+                <value>ABB ICV</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Quotation_Competitors</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_Customer_Relationship__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Relationship</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Estimated_Delivery_Days__c</fullName>
+        <description>Introduced as a part of CCP 1C Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Expected delivery date of the offering if customer places the order.</inlineHelpText>
+        <label>Estimated Delivery Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Estimated_Sales_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND( APTS_Quotation_Line_Item__r.APTS_Total_Net_Sales_Price__c  &gt; 0,NOT(ISBLANK( APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Opportunity__c ) ) )  , 
+
+( APTS_Quotation_Line_Item__r.APTS_Total_Net_Sales_Price__c   + ((VALUE(TEXT(APTS_Percentage__c)) / 100) * APTS_Quotation_Line_Item__r.APTS_Total_Net_Sales_Price__c)), 
+
+(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Opportunity__r.Opportunity_Value__c  + ((VALUE(TEXT(APTS_Percentage__c)) / 100) * APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Opportunity__r.Opportunity_Value__c)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Estimated Sales Price calculated with the input in the Percentage field above.</inlineHelpText>
+        <label>Estimated Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Installed_Base__c</fullName>
+        <externalId>false</externalId>
+        <label>Installed Base</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Line_Item_Related_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Item Related Information</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Link__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Id, &quot;View&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Load_Losses__c</fullName>
+        <description>Introduced as a part of CCP 1C Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the load losses.</inlineHelpText>
+        <label>Load Losses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_No_Load_Losses__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the no load losses.</inlineHelpText>
+        <label>No Load Losses</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Oil_Weight__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the oil weight.</inlineHelpText>
+        <label>Oil Weight</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Opportunity_Competitor_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Competitor ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Packaging_Solution__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Packaging/solution (one-stop-shop)</inlineHelpText>
+        <label>Packaging / Solution</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the competitor&apos;s estimated range difference against the Quotation Line Item Value. E.g. select &quot;-20% - -15%&quot; if competitor price was lower to ABB price in range of -20% - -15% ).</inlineHelpText>
+        <label>Price Difference (%)</label>
+        <picklist>
+            <picklistValues>
+                <fullName>&lt; -20%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-20% ...-10%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-10%...-5%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>-5% ...0%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+1%  ...+5%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+5% ...+10%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>+10% ...+20%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>&gt; +20%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Price_Leadership__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Price Leadership</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Pricing_Strategy__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Price leadership (cost reduction)</inlineHelpText>
+        <label>Pricing Strategy</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Quotation_Competitor__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quotation Competitor</label>
+        <referenceTo>Competitor_CQP__c</referenceTo>
+        <relationshipName>Quotation_Competitors</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Quotation_Line_Item__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quotation Line Item</label>
+        <referenceTo>Apttus_Proposal__Proposal_Line_Item__c</referenceTo>
+        <relationshipName>Competitors</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Source_of_Information__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Where did you get the information from?</inlineHelpText>
+        <label>Source of Information</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Supplementary_Services__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Supplementary services (benefit)</inlineHelpText>
+        <label>Supplementary Services</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Technical_Deviation__c</fullName>
+        <externalId>false</externalId>
+        <label>Technical Deviation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Technology_Leadership__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Technology leadership (image)</inlineHelpText>
+        <label>Technology Leadership</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Ownership_Cost__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the total ownership cost.</inlineHelpText>
+        <label>Total Ownership Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Weight__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the total weight (KG) of Quotation Line Item.</inlineHelpText>
+        <label>Total Weight</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Units_Awarded__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specify the quantity won by the competitor.</inlineHelpText>
+        <label>Units Awarded</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Weight_Without_Oil__c</fullName>
+        <description>Introduced as a part of CCP 1C Release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the weight without oil.</inlineHelpText>
+        <label>Weight Without Oil</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Winning_Company__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Winning Company</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Winning_Price__c</fullName>
+        <description>Introduced as a part of CCP 1C Release</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select the competitor&apos;s estimated price difference against the Quotation Line Item Value.</inlineHelpText>
+        <label>Winning Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Quotation Products Competitor</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>CN-{0000}</displayFormat>
+        <label>Quotation Products Competitor Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quotation Products Competitors</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>Competitors</fullName>
+        <active>true</active>
+        <label>Competitors</label>
+        <picklistValues>
+            <picklist>APTS_ABB_Ranking__c</picklist>
+            <values>
+                <fullName>1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Bad_Track_Record__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Customer_Relationship__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Installed_Base__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Percentage__c</picklist>
+            <values>
+                <fullName>%2B5%25 %2E%2E%2E%2B10%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Pricing_Strategy__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>APTS_Technical_Deviation__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>APTS_Enable_Winning_Company_upon_Closure</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(APTS_Winning_Company__c = TRUE, 
+NOT($User.AccountMerge_Override__c),
+NOT($User.Bypass_Opportunity_Validations__c),
+NOT($Setup.Validation_Override__c.Exclude__c),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+OR ( 
+ISPICKVAL( APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c , &quot;RFQ Received&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;RFQ Assigned&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Draft&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Approval Required&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Pending Approval&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Approved&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Rejected&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Generated&quot;),  
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Under Support&quot;), 
+ISPICKVAL(APTS_Quotation_Line_Item__r.Apttus_Proposal__Proposal__r.Apttus_Proposal__Approval_Stage__c, &quot;Superseded&quot;) 
+
+) 
+)</errorConditionFormula>
+        <errorDisplayField>APTS_Winning_Company__c</errorDisplayField>
+        <errorMessage>The Winning Company can be selected only upon submission to customer or upon quotation closure.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>APTS_WinningPrice_Or_PriceDifference</fullName>
+        <active>true</active>
+        <description>Only winning price or price difference to be added.</description>
+        <errorConditionFormula>AND(
+NOT($User.AccountMerge_Override__c), 
+NOT($User.Bypass_Opportunity_Validations__c), 
+NOT($Setup.Validation_Override__c.Exclude__c),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+NOT(ISBLANK(APTS_Winning_Price__c)), 
+NOT(ISPICKVAL(APTS_Percentage__c, &apos;&apos;))
+)</errorConditionFormula>
+        <errorMessage>Only winning price or price difference can be added.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_New_Competitor</fullName>
+        <availability>online</availability>
+        <description>To allow user to add Competitors associated to Opportunity for the Proposal Line Item.</description>
+        <displayType>massActionButton</displayType>
+        <linkType>page</linkType>
+        <masterLabel>Add New Competitor</masterLabel>
+        <openType>replace</openType>
+        <page>APTS_AddNewCompetitor</page>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+    </webLinks>
+</CustomObject>

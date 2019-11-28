@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ControlingFieldFilter__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Controling Field Filter</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldFilter__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>FieldFilter</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsPackage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Package</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MasterdataGlobalValueSet__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Masterdata Global Value Set</label>
+        <referenceTo>MasterdataGlobalValueSet__mdt</referenceTo>
+        <relationshipLabel>Masterdata Custom Picklists</relationshipLabel>
+        <relationshipName>MasterdataCustomPicklists</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SalesforceControlingFieldName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Salesforce Controling Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SalesforceFieldDeveloperName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Salesforce Field Developer Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SalesforceObjectDeveloperName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Salesforce Object Developer Name</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Masterdata Custom Picklist</label>
+    <listViews>
+        <fullName>All_Records</fullName>
+        <columns>MasterLabel</columns>
+        <columns>IsActive__c</columns>
+        <columns>DeveloperName</columns>
+        <columns>SalesforceObjectDeveloperName__c</columns>
+        <columns>SalesforceFieldDeveloperName__c</columns>
+        <columns>SalesforceControlingFieldName__c</columns>
+        <columns>NamespacePrefix</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Records</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Masterdata Custom Picklists</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

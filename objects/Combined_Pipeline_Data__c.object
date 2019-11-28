@@ -1,0 +1,1173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R7 - Combined pipeline reporting purpose</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ABB_Location_Bidding_unit__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R7 - Captures ABB Location bidding unit</description>
+        <externalId>false</externalId>
+        <label>ABB Location - Bidding unit</label>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipName>Combined_Pipeline_Datas</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Location_Region__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(TEXT(ABB_Location_Bidding_unit__r.Region__c))),
+  CASE(ABB_Location_Bidding_unit__r.Region__c,
+       &quot;Americas&quot;,&quot;AMC&quot;,
+       &quot;Europe&quot;,&quot;EUC&quot;,
+       &quot;AMA&quot;),NULL)</formula>
+        <label>ABB Location Region</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ABB_Probability_system__c</fullName>
+        <externalId>false</externalId>
+        <label>ABB Probability (system)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Probability_user__c</fullName>
+        <externalId>false</externalId>
+        <label>ABB Probability (user)</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Sales_Stage__c</fullName>
+        <description>R7 - Captures Opportunity ABB Sales Stage</description>
+        <externalId>false</externalId>
+        <label>ABB Sales Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Prospecting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity Pursuit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bidding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost (Cancelled)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Lost Without ABB Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_customer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account - customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Account_customer</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_end_user__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account - end user</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipName>Account_end_user</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Actual_bid_submission_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual bid submission date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Reason_For_Close__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Reason For Close</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABB only bidder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adherence to customer’s time schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bidding time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled alternative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial deviation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial terms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercially unacceptable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delivery time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing Frame Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installed base</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integrity issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No financing in place</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No installed base</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No or bad track record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No permits in place</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled by customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled by customer after bidding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other preferred supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Part of winning ABB package</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Political decision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price not competitive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pursued by another ABB entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Resource availability constraint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Risk unacceptable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sensitive countries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical deviation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical solution not available</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tight bidding window</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Track record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Won by another ABB entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown to be updated later on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Application__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>ApplicationClass</globalPicklist>
+        <label>Application</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Business_Line__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Business_Line</globalPicklist>
+        <label>Business Line</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CBP_Probability__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Customer_buying_path__c,&apos;Awareness&apos;),(0/100),
+IF(ISPICKVAL(Customer_buying_path__c,&apos;Discovery&apos;),(10/100),
+IF(ISPICKVAL(Customer_buying_path__c,&apos;Explore&apos;),(40/100),
+IF(ISPICKVAL(Customer_buying_path__c,&apos;Tendering&apos;),(70/100),
+IF(ISPICKVAL(Customer_buying_path__c,&apos;Buying&apos;),(100/100), Null
+)))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>CBP Probability</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level1__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Channel_Class_Level1</globalPicklist>
+        <label>Channel Class Level1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level2__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Channel_Class_Level2</globalPicklist>
+        <label>Channel Class Level2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Commit</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Created_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity/Quote created date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Customer_buying_path__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer buying path</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Awareness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Discovery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Explore</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tendering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Buying</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Customer_preference__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer preference</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Neutral</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>EAD_confidence_level__c</fullName>
+        <externalId>false</externalId>
+        <label>EAD confidence level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No Delay Expected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Slight Delay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Substantial Delay Expected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>End_user_project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>End user project</label>
+        <referenceTo>End_User_Project__c</referenceTo>
+        <relationshipName>End_user_project</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Award_date__c</fullName>
+        <externalId>false</externalId>
+        <label>(Expected) Award date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>External_User__c</fullName>
+        <description>Created as part of R8 to include Partner and Recurring Business Opportunities/ Quotations.</description>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISBLANK(Quotation__c)),TEXT(Quotation__r.External_User__c),
+IF(AND(NOT(ISBLANK(Opportunity__c)),ISBLANK(Quotation__c)),Opportunity__r.External_User__c,&apos;&apos;))</formula>
+        <label>External User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Heat_Index__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(Technical_Calculation_3__c = 100/100, IMAGE(&quot;/resource/Order_Booked&quot;, &quot;Orders Booked&quot;, 20, 30),
+IF( AND(Technical_Calculation_3__c &gt;= 50/100, Technical_Calculation_3__c &lt;= 99/100), IMAGE(&quot;/resource/Hot&quot;, &quot;Hot&quot;, 20, 20),
+IF( AND(Technical_Calculation_3__c &gt;= 12/100, Technical_Calculation_3__c &lt;= 49/100), IMAGE(&quot;/resource/Warm&quot;, &quot;Warm&quot;, 20, 20),
+IF( AND(Technical_Calculation_3__c &gt;= 0/100, Technical_Calculation_3__c &lt;= 11/100), IMAGE(&quot;/resource/Cold&quot;, &quot;Cold&quot;, 20, 20), Null
+))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Heat Index</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage_Level_1__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Industry_Usage_Level_1</globalPicklist>
+        <label>Industry Usage Level1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage_Level_2__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Industry_Usage_Level_2</globalPicklist>
+        <label>Industry Usage Level2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>IsRecurringOpportunity__c</fullName>
+        <description>This field is created as part of R8, to check the opportunity is from recurring business or not.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(NOT(ISBLANK(Opportunity__c)),ISBLANK(Quotation__c),Opportunity__r.RecordType.Name=&apos;Recurring Opportunity&apos;),true,false)</formula>
+        <label>IsRecurringOpportunity</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_RB_Active__c</fullName>
+        <description>Created as part of R8 which is regarding Recurring Business</description>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Active_Recurring_Business__c</formula>
+        <label>Is RB Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Last_modified_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity/Quote last modified date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Lost_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost&apos;), Pipeline_value_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Lost Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Main_reason_for_close__c</fullName>
+        <externalId>false</externalId>
+        <label>Main reason for close</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ABB only bidder</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adherence to customer’s time schedule</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bidding time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled alternative</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial deviation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercial terms</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Commercially unacceptable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Created in Error</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer relationship</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delivery time</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Duplicate opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Existing Frame Agreement</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Installed base</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Integrity issues</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No financing in place</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No installed base</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No or bad track record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No permits in place</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not qualified</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled by customer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled by customer after bidding</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other preferred supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Part of winning ABB package</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Political decision</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preferred supplier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Price not competitive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pursued by another ABB entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Resource availability constraint</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Risk unacceptable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sensitive countries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical deviation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical solution not available</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tight bidding window</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Track record</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Won by another ABB entity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unknown to be updated later on</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Must_Win__c</fullName>
+        <externalId>false</externalId>
+        <label>Must Win</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Nominated</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Must Win</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Critical Must Win</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Division Critical Must Win</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Type__c,&quot;Opportunity&quot;),
+HYPERLINK(&quot;/&quot;&amp;Opportunity__c, Opportunity__r.Name),
+HYPERLINK(&quot;/&quot;&amp;Quotation__c, if( ISBLANK(Quotation__r.Apttus_Proposal__Proposal_Name__c),Quotation__r.APTS_Quotation_Number_Internal__c,Quotation__r.Apttus_Proposal__Proposal_Name__c )))</formula>
+        <label>Opportunity/Quote Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offering_Primary_Product_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Offering - Primary Product Group</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipName>Offering_Primary_Product_Group</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Quote_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Type__c,&quot;Opportunity&quot;),Opportunity__r.Name,Quotation__r.Apttus_Proposal__Proposal_Name__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity/Quote Name (Text)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Quote_number__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity/Quote number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>Opportunity</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Overdue__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND (Expected_Award_date__c &lt; TODAY(), NOT(ISPICKVAL(ABB_Sales_Stage__c,&apos;Closed Lost (Cancelled)&apos;)),
+NOT(ISPICKVAL(ABB_Sales_Stage__c,&apos;Closed Lost&apos;)),NOT(ISPICKVAL(ABB_Sales_Stage__c,&apos;Closed Won&apos;)),NOT(ISPICKVAL(ABB_Sales_Stage__c,&apos;Closed Lost Without ABB Bid&apos;)))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Overdue</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Pipeline_value_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline value USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pipeline_value__c</fullName>
+        <externalId>false</externalId>
+        <label>Pipeline value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Quotation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quotation</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipName>Quotation</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Related_ID__c</fullName>
+        <description>R7 - Captures Related record id</description>
+        <externalId>false</externalId>
+        <label>Technical ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requested_bid_submission_date__c</fullName>
+        <externalId>false</externalId>
+        <label>Requested bid submission date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>RfQ_Received_date__c</fullName>
+        <externalId>false</externalId>
+        <label>RfQ Received date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Pursuit_Progress__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Pursuit Progress</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Captured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Pursuit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Value Proposal Delivered</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RFQ Received</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No ABB Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Under Preparation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Binding Proposal Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Binding Proposal Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LOI</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lost Without ABB Bid</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Won</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sub_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sub Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Pipeline Data (Sub Opportunity)</relationshipLabel>
+        <relationshipName>Pipeline_Data</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Target__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Target</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Techincal_Calculation_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Prospecting&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Captured&apos;),ISPICKVAL(Customer_preference__c,&apos;Competitor&apos;)),(0/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Prospecting&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Captured&apos;),ISPICKVAL(Customer_preference__c,&apos;Neutral&apos;)),(0/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Prospecting&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Captured&apos;),ISPICKVAL(Customer_preference__c,&apos;ABB&apos;)),(0/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Pursuit&apos;),ISPICKVAL(Customer_preference__c,&apos;Competitor&apos;)),(10/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Pursuit&apos;),ISPICKVAL(Customer_preference__c,&apos;Neutral&apos;)),(10/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Pursuit&apos;),ISPICKVAL(Customer_preference__c,&apos;ABB&apos;)),(20/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Value Proposal Delivered&apos;),ISPICKVAL(Customer_preference__c,&apos;Competitor&apos;)),(10/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Value Proposal Delivered&apos;),ISPICKVAL(Customer_preference__c,&apos;Neutral&apos;)),(30/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Value Proposal Delivered&apos;),ISPICKVAL(Customer_preference__c,&apos;ABB&apos;)),(40/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;RFQ Received&apos;),ISPICKVAL(Customer_preference__c,&apos;Competitor&apos;)),(10/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;RFQ Received&apos;),ISPICKVAL(Customer_preference__c,&apos;Neutral&apos;)),(30/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;RFQ Received&apos;),ISPICKVAL(Customer_preference__c,&apos;ABB&apos;)),(40/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;No ABB Bid&apos;),ISPICKVAL(Customer_preference__c,&apos;Competitor&apos;)),(0/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;No ABB Bid&apos;),ISPICKVAL(Customer_preference__c,&apos;Neutral&apos;)),(0/100),
+IF(AND(ISPICKVAL(ABB_Sales_Stage__c, &apos;Opportunity Pursuit&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;No ABB Bid&apos;),ISPICKVAL(Customer_preference__c,&apos;ABB&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;On Hold&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;On Hold&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;On Hold&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(0/100),Null
+))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Techincal Calculation 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Calculation_2__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Preparation&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(10/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Preparation&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(30/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Under Preparation&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(40/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Non-Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(10/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Non-Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(30/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Non-Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(40/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(10/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(40/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Bidding&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Binding Proposal submitted&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(60/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Negotiation&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Negotiation&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(10/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Negotiation&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Negotiation&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(40/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Negotiation&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Negotiation&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(80/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Negotiation&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;LOI&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(10/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Negotiation&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;LOI&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(90/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Lost&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Won&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Won&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(100/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost Without ABB Bid&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Lost Without ABB Bid&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost (Cancelled)&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Cancelled&apos;),ISPICKVAL(Customer_preference__c, &apos;Competitor&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost (Cancelled)&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Cancelled&apos;),ISPICKVAL(Customer_preference__c, &apos;Neutral&apos;)),(0/100),
+IF(And(ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Lost (Cancelled)&apos;),ISPICKVAL(Sales_Pursuit_Progress__c, &apos;Cancelled&apos;),ISPICKVAL(Customer_preference__c, &apos;ABB&apos;)),(0/100),Null
+))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technical Calculation 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Technical_Calculation_3__c</fullName>
+        <externalId>false</externalId>
+        <formula>ABB_Probability_user__c*CBP_Probability__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technical Calculation 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <description>R7 - Define the record type</description>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Opportunity</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quotation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Weighted_Opportunity_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>ABB_Probability_user__c*Pipeline_value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Weighted Opportunity Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Won_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( ISPICKVAL(ABB_Sales_Stage__c, &apos;Closed Won&apos;) , Pipeline_value_USD__c, 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Won Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Pipeline_Data__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Pipeline Data</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Pipeline Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Related_ID__c</columns>
+        <columns>Type__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Quotation__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CPD-{000000}</displayFormat>
+        <label>Pipeline Data Identifier</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Pipeline Data</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

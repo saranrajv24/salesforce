@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This custom metadata is used to store fields comma separated for each parent object from where the creation of new opportunity is initiated</description>
+    <fields>
+        <fullName>ABB_Location_Field__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>ABB Location Field</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Name_Field__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Account Name Field</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hardcoded_Fields__c</fullName>
+        <description>This field stores the field names and there values separated by comma</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Hardcoded Fields</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Object__c</fullName>
+        <description>This field stores the name of the parent object from where new opportunity is initiated</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Object</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Fields__c</fullName>
+        <description>This field stores the list of opportunity fields to be mapped corresponding to the parent object fields</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Opportunity Fields</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Object_Fields__c</fullName>
+        <description>This field stores the comma separated field names which will be pre-populated when creating a new opportunity from an object</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Parent Object Fields</label>
+        <length>255</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Object_Label__c</fullName>
+        <description>This field stores the label of the parent object to differentiate between multiple relationships with the same object</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Parent Object Label</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Pre-Population on New Opportunity</label>
+    <listViews>
+        <fullName>View_All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>Parent_Object_Fields__c</columns>
+        <columns>Object__c</columns>
+        <columns>Opportunity_Fields__c</columns>
+        <columns>Hardcoded_Fields__c</columns>
+        <columns>Account_Name_Field__c</columns>
+        <columns>ABB_Location_Field__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>View All</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Pre-Populations on New Opportunity</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This meta data contains data for the Quotation Integration Mapping with SAP fields</description>
+    <fields>
+        <fullName>APTS_Conditions__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Conditions</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Array__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Array</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Node__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Node</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Static__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Static</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Json_Field_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Json Field Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Node_Sequence__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Node Sequence</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Parent_Node__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Parent Node</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Used_For__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Used For</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Field_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Apttus Field Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Apttus_Object_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Apttus Object Name</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Parent__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Parent</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>SAP Integration Mapping</label>
+    <listViews>
+        <fullName>Quote_Mapping</fullName>
+        <columns>MasterLabel</columns>
+        <columns>Apttus_Object_Name__c</columns>
+        <columns>Apttus_Field_Name__c</columns>
+        <columns>APTS_Json_Field_Name__c</columns>
+        <columns>APTS_Conditions__c</columns>
+        <columns>APTS_Is_Node__c</columns>
+        <columns>APTS_Parent_Node__c</columns>
+        <columns>APTS_Is_Static__c</columns>
+        <columns>APTS_Is_Array__c</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Is_Parent__c</columns>
+        <columns>APTS_Used_For__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Quote Mapping</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>SAP Integration Mapping</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

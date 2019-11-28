@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Sales_Stage__c</fullName>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>ABB Sales Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Customer_Primary_Address_Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Customer Primary Address Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Customer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Support Opportunities for Next Year</relationshipLabel>
+        <relationshipName>Support_Opportunities_for_Next_Year</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account_Plan__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Plan__c</fullName>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>Account Plan</label>
+        <referenceTo>Account_Plan__c</referenceTo>
+        <relationshipName>Support_Opportunities_for_Next_Year</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Alternative_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>Alternative Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Support Opportunities for Next Year</relationshipLabel>
+        <relationshipName>Support_Opportunities_for_Next_Year</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>BU__c</fullName>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>BU</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Commit</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Confidence_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Confidence Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DIV__c</fullName>
+        <externalId>false</externalId>
+        <label>DIV</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>End_User_Project__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>End User Project</label>
+        <referenceTo>End_User_Project__c</referenceTo>
+        <relationshipLabel>Support Opportunities for Next Year</relationshipLabel>
+        <relationshipName>Support_Opportunities_for_Next_Year</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Expected_Award_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Award Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Freeze_Future_Support_Opportunities__c</fullName>
+        <externalId>false</externalId>
+        <formula>Account_Plan__r.Freeze_Account_Plan_Budgets_FUTURE__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Freeze Future Supporting Opportunities</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Include__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Include</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name (Hidden)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>Opportunity Name</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Support Opportunities for Next Year (Opportunity Name)</relationshipLabel>
+        <relationshipName>Support_Opportunities_for_Next_Year1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>Opportunity Owner</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Value_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Value USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Value</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>PG1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>PG</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipLabel>Support Opportunities for Next Year</relationshipLabel>
+        <relationshipName>Support_Opportunities_for_Next_Year</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Probability__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name__r.Probability</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Probability %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Hidden__c</fullName>
+        <externalId>false</externalId>
+        <formula>PG1__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Group (Hidden)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R6- Req 3328</description>
+        <externalId>false</externalId>
+        <label>Target</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Supporting Opportunity for Next Year</label>
+    <nameField>
+        <displayFormat>OPP-FBGT-{0000}</displayFormat>
+        <label>Supporting Opportunity Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Supporting Opportunities for Next Year</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Account_Plan_Status_Closed_Check</fullName>
+        <active>true</active>
+        <description>R6 - Created as part of 3328 - If Account Plan Status is Closed, the user should not edit the Budget.</description>
+        <errorConditionFormula>ISPICKVAL(Account_Plan__r.Status__c, &apos;Closed&apos;)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Account Plan is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Supporting_Opportunity_next_Year</fullName>
+        <availability>online</availability>
+        <description>R6</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Supporting Opportunity for Next Year</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/19.0/apex.js&quot;)}
+
+if (&apos;{!Account_Plan__c.Account_Record_Type__c}&apos; != &apos;GIS Approved&apos;) {
+alert(&apos;Supporting Opportunities for Next Year can be created only for the GIS Approved Accounts&apos;);
+window.location = &apos;/&apos;+&apos;{!Account_Plan__c.Id}&apos;;
+} else {
+window.location = &apos;/apex/AccountPlanSupportOpportunitiesFuture?id={!Account_Plan__c.Id}&apos;;
+}</url>
+    </webLinks>
+</CustomObject>

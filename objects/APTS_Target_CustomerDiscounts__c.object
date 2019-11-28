@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(WhCustID__r.Country1__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Country is set on the parent Target Discount record</inlineHelpText>
+        <label>Country</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Exp_Target_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Expected Target Discount (%)</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ProductHierarchyValidUntilCombination__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>ProductHierarchy-ValidUntil Combination</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Hierarchy</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>1 AND 2 AND 3</booleanFilter>
+            <errorMessage>Record does not exist or is not a hierarchy</errorMessage>
+            <filterItems>
+                <field>Product2.APTS_LP_Is_Hierarchy__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.Default_LSO__c</field>
+                <operation>contains</operation>
+                <valueField>Product2.APTS_LP_Sales_Organization__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Product2.APTS_Hierarchy_Level__c</field>
+                <operation>equals</operation>
+                <value>4</value>
+            </filterItems>
+            <infoMessage>Search results limited to hierarchies</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Target Discount Hierarchies</relationshipLabel>
+        <relationshipName>Target_Customer_Info</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Recovery2__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional discount for Target Customer</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Validity_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>can be left empty or filled with a date in the future. entries with dates in the past will be excluded from calculations</inlineHelpText>
+        <label>Valid Until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>WhCustID__c</fullName>
+        <externalId>false</externalId>
+        <label>Wholesaler-Customer Combination</label>
+        <referenceTo>APTS_Target_CustomerWholesaler__c</referenceTo>
+        <relationshipLabel>Target Discount Hierarchies</relationshipLabel>
+        <relationshipName>Target_Customer_Info</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <label>Target Discount Hierarchy</label>
+    <nameField>
+        <displayFormat>TC-{0000}</displayFormat>
+        <label>TarCustID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Target Discount Hierarchies</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Hierarchy_set</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(Product__c)</errorConditionFormula>
+        <errorDisplayField>Product__c</errorDisplayField>
+        <errorMessage>Hierarchy must be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Exp_Target_Discount</fullName>
+        <active>true</active>
+        <errorConditionFormula>Exp_Target_Discount__c &lt; 0 || Exp_Target_Discount__c &gt; 1</errorConditionFormula>
+        <errorDisplayField>Exp_Target_Discount__c</errorDisplayField>
+        <errorMessage>Expected Target Discount must be between 0 and 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Recovery</fullName>
+        <active>true</active>
+        <errorConditionFormula>Recovery2__c &lt; 0 || Recovery2__c &gt; 1</errorConditionFormula>
+        <errorDisplayField>Recovery2__c</errorDisplayField>
+        <errorMessage>Recovery2 must be between 0 and 100</errorMessage>
+    </validationRules>
+</CustomObject>

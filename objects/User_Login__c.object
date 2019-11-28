@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used as a target object of reporting snapshots capturing user login data at Country, Division, Business Unit and Product Group levels.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Business_Unit_BU__c</fullName>
+        <description>Stores the name of the Business Unit (BU).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of the Business Unit (BU).</inlineHelpText>
+        <label>Business Unit (BU)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>Stores the name of the country.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of the country.</inlineHelpText>
+        <label>Country</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division_DIV__c</fullName>
+        <description>Stores the name of Division (DIV).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of Division (DIV).</inlineHelpText>
+        <label>Division (DIV)</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Execution_Time__c</fullName>
+        <description>Stores the date and time of the execution  reporting snapshot which populated the User Login record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the date and time of the execution  reporting snapshot which populated the User Login record.</inlineHelpText>
+        <label>Execution Time</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Login_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>DATEVALUE( CreatedDate )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Login Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group_PG__c</fullName>
+        <description>Stores the name of the Product Group (PG).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of the Product Group (PG).</inlineHelpText>
+        <label>Product Group (PG)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Snapshot_Name__c</fullName>
+        <description>Stores the name of the reporting snapshots which captured the User Login record data.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of the reporting snapshots which captured the User Login record data.</inlineHelpText>
+        <label>Reporting Snapshot Name</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Snapshot_Running_User__c</fullName>
+        <description>Stores the name of the Running User of the reporting snapshot which populated the User Login record.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the name of the Running User of the reporting snapshot which populated the User Login record.</inlineHelpText>
+        <label>Snapshot Running User</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_ABB__c</fullName>
+        <description>Stores the number of all ABB active users captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of all ABB active users captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users ABB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_BU__c</fullName>
+        <description>Stores the number of active users in BU&apos;s captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <label># of Active Users per BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_Country_BU__c</fullName>
+        <description>Stores the number of active users in BUs in different Countries, captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in BUs in different Countries, captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per Country-BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_Country_DIV__c</fullName>
+        <description>Stores the number of active users in Division in different Countries captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in Division in different Countries captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per Country-DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_Country_PG__c</fullName>
+        <description>Stores the number of active users in each Country per Product Group captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in each Country per Product Group captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per Country-PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_Country__c</fullName>
+        <description>Stores the number of active users in Countries captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in Countries captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per Country</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_DIV__c</fullName>
+        <description>Stores the number of active users in Divisions captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in Divisions captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Active_Users_per_PG__c</fullName>
+        <description>Stores the number of active users in PG&apos;s captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of active users in PG&apos;s captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Active Users per PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_ABB__c</fullName>
+        <description>Stores the number of logged Users in ABB captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in ABB captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users ABB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_BU__c</fullName>
+        <description>Stores the number of logged Users in each Business Unit captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Business Unit captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_Country_BU__c</fullName>
+        <description>Stores the number of logged Users in each Country per Business Unit captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Country per Business Unit captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in Country-BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_Country_DIV__c</fullName>
+        <description>Stores the number of logged Users in each Country per Division captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Country per Division captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in Country-DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_Country_PG__c</fullName>
+        <description>Stores the number of logged Users in each Country per Product Group captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Country per Product Group captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in Country-PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_Country__c</fullName>
+        <description>Stores the number of logged Users in each Country captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Country captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in Country</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_DIV__c</fullName>
+        <description>Stores the number of logged Users in each Division captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users in each Division captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logged_Users_in_PG__c</fullName>
+        <description>Stores the number of logged Users per each Product Group captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of logged Users per each Product Group captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logged Users in PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_ABB__c</fullName>
+        <description>Stores the number of distinct logins made by ABB, captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by ABB, captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logins ABB</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_BU__c</fullName>
+        <description>Stores the number of distinct logins made by Users belonging to each BU, captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users belonging to each BU, captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logins per BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_Country_BU__c</fullName>
+        <description>Stores the number of distinct logins made by Users in each Country per Business Unit, captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users in each Country per  Business Unit, captured daily in reporting snapshot</inlineHelpText>
+        <label># of Logins per Country-BU</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_Country_DIV__c</fullName>
+        <description>Stores the number of distinct logins made by Users in each Country per Division , captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users in each Country per Division , captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logins per Country-DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_Country_PG__c</fullName>
+        <description>Stores the number of distinct logins made by Users in each Country per Product Group, captured daily in reporting snapshot</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users in each Country per Product Group, captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logins per Country-PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_Country__c</fullName>
+        <description>Stores the number of distinct logins made by Users in each Country, captured daily in reporting snapshot.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users in each Country, captured daily in reporting snapshot.</inlineHelpText>
+        <label># of Logins per Country</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_DIV__c</fullName>
+        <description>Stores the number of distinct logins made by Users in each Division, captured daily in reporting snapshot</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users in each Division, captured daily in reporting snapshot</inlineHelpText>
+        <label># of Logins per DIV</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Logins_per_PG__c</fullName>
+        <description>Stores the number of distinct logins made by Users per each Product Group, captured daily in reporting snapshot</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Stores the number of distinct logins made by Users per each Product Group, captured daily in reporting snapshot</inlineHelpText>
+        <label># of Logins per PG</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>User Login</label>
+    <listViews>
+        <fullName>ABB_Level</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Login_Date__c</columns>
+        <columns>of_Active_Users_ABB__c</columns>
+        <columns>of_Logged_Users_ABB__c</columns>
+        <columns>of_Logins_ABB__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_ABB__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_ABB__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_ABB__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>ABB Level</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_ABB__c</field>
+            <operation>equals</operation>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Business_Unit_BU_Level</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Login_Date__c</columns>
+        <columns>Division_DIV__c</columns>
+        <columns>Business_Unit_BU__c</columns>
+        <columns>of_Active_Users_per_BU__c</columns>
+        <columns>of_Logged_Users_in_BU__c</columns>
+        <columns>of_Logins_per_BU__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_per_BU__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_in_BU__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_per_BU__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Business Unit (BU) Level</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Country_Division_Level</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Login_Date__c</columns>
+        <columns>Country__c</columns>
+        <columns>Division_DIV__c</columns>
+        <columns>of_Active_Users_per_Country_DIV__c</columns>
+        <columns>of_Logged_Users_in_Country_DIV__c</columns>
+        <columns>of_Logins_per_Country_DIV__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_per_Country_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_in_Country_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_per_Country_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Country - Division Level</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Country_Product_Group_Level</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>Execution_Time__c</columns>
+        <columns>NAME</columns>
+        <columns>Country__c</columns>
+        <columns>Product_Group_PG__c</columns>
+        <columns>of_Active_Users_per_Country_PG__c</columns>
+        <columns>of_Logged_Users_in_Country_PG__c</columns>
+        <columns>of_Logins_per_Country_PG__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_per_Country_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_in_Country_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_per_Country_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Country - Product Group Level</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Division_DIV_Level</fullName>
+        <booleanFilter>(1 OR 2 OR 3) AND 4</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Login_Date__c</columns>
+        <columns>Division_DIV__c</columns>
+        <columns>of_Active_Users_per_DIV__c</columns>
+        <columns>of_Logged_Users_in_DIV__c</columns>
+        <columns>of_Logins_per_DIV__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_per_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_in_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_per_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Division_DIV__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Division (DIV) Level</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Product_Group_PG_Level</fullName>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <columns>Reporting_Snapshot_Name__c</columns>
+        <columns>NAME</columns>
+        <columns>Login_Date__c</columns>
+        <columns>Division_DIV__c</columns>
+        <columns>Business_Unit_BU__c</columns>
+        <columns>Product_Group_PG__c</columns>
+        <columns>of_Active_Users_per_PG__c</columns>
+        <columns>of_Logged_Users_in_PG__c</columns>
+        <columns>of_Logins_per_PG__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>of_Active_Users_per_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logged_Users_in_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>of_Logins_per_PG__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Product Group (PG) Level</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>UL-{YYYY}{MM}{DD}-{0}</displayFormat>
+        <label>User Login Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>User Logins</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

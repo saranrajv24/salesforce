@@ -1,0 +1,551 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This Object was created for the Road Safety Check list.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Actions_Comments__c</fullName>
+        <description>Road Safety Check list - Section 3</description>
+        <externalId>false</externalId>
+        <label>Actions/ Comments</label>
+        <length>32768</length>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Created_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>CreatedDate</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Created Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Emergency_flashers_work_properly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Lights/warning flashers are working</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Fan_and_air_condition_work_properly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Heater/air conditioning are working</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>First_aid_kit_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 1</description>
+        <externalId>false</externalId>
+        <label>First aid kit is available</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hand_brake_functions_properly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Hand and pedal break function properly</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>High_visibility_vest_is_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>High visibility vest is available</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Horn_works_properly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Car horn is working properly</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsChecked__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsChecked</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Manager_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Manager.LastName  &amp; &quot;, &quot; &amp; Owner:User.Manager.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Manager (Owner)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mirrors_properly_adjusted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Mirrors properly adjusted</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>No_warning_lights__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>No warning indicator on instrument panel</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Originating_Event_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Originating Event Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originating_Event_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Originating Event Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Originating_Event__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( Originating_Event_Id__c != NULL, HYPERLINK(&quot;/&quot;&amp; Originating_Event_Id__c, Originating_Event_Name__c, &quot;_self&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Originating Event</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Owner:User.Business_Unit_BU__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Business Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Country</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_Division__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Owner:User.Division_DIV__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner Division</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner_email_address__c</fullName>
+        <externalId>false</externalId>
+        <formula>Owner:User.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner email address</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rims_are_undamaged__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 1</description>
+        <externalId>false</externalId>
+        <label>Tire rims are undamaged</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Road_Safety_Check_Name__c</fullName>
+        <defaultValue>&quot;Manual RS -&quot; &amp; ( TEXT(DAY(TODAY()))&amp; &quot;/&quot; &amp; TEXT(MONTH(TODAY())) &amp; &quot;/&quot; &amp; TEXT(YEAR(TODAY())))</defaultValue>
+        <externalId>false</externalId>
+        <label>Road Safety Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Screens_clean_and_undamaged__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 1</description>
+        <externalId>false</externalId>
+        <label>Windows are clear and undamaged</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Seat_belts_working_properly_undamaged__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Seat belts are working and undamaged</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Section_1_completed__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( AND( Tread_wear_indicator_on_the_tires__c ,  Rims_are_undamaged__c ,  Screens_clean_and_undamaged__c ,  Spare_tire_and_repair_kit_available__c ,  Securing_of_cargo_and_luggage__c ,  First_aid_kit_available__c,Warning_triangle_is_available__c,High_visibility_vest_is_available__c ) , true , false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Section 1 completed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Section_2_completed__c</fullName>
+        <externalId>false</externalId>
+        <formula>AND( Wind_shield_wiper_washer_work_properly__c , Hand_brake_functions_properly__c ,  Horn_works_properly__c ,  Fan_and_air_condition_work_properly__c ,  Mirrors_properly_adjusted__c ,  No_warning_lights__c ,  Emergency_flashers_work_properly__c ,  Seat_belts_working_properly_undamaged__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Section 2 completed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Securing_of_cargo_and_luggage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 1</description>
+        <externalId>false</externalId>
+        <label>Cargo and luggage are secured</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spare_tire_and_repair_kit_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Spare tire and repair kit available</description>
+        <externalId>false</externalId>
+        <label>Spare tire or repair kit is available</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Tread_wear_indicator_on_the_tires__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 1</description>
+        <externalId>false</externalId>
+        <label>Tire/tire tread depth fulfilling the law</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Warning_triangle_is_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Warning triangle is available</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Will_you_be_driving_a_rental_car__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Will you be driving a rental car?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Wind_shield_wiper_washer_work_properly__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Road Safety Check list - Section 2</description>
+        <externalId>false</externalId>
+        <label>Windshield wiper/washer are working</label>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Road Safety</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_RS_Last_30_days</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event_Name__c</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Actions_Comments__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:30</value>
+        </filters>
+        <label>3. My RS - Last 30 days</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_RS_Last_7_days</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event_Name__c</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Actions_Comments__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:7</value>
+        </filters>
+        <label>2. My RS - Last 7 days</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_RS_Last_Month</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event_Name__c</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Actions_Comments__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_MONTH</value>
+        </filters>
+        <label>4. My RS - Last Month</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_RS_This_Month</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event_Name__c</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Actions_Comments__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>5. My RS - This Month</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>My_Road_Safety_checks</fullName>
+        <columns>NAME</columns>
+        <columns>Road_Safety_Check_Name__c</columns>
+        <columns>Originating_Event_Name__c</columns>
+        <columns>Created_Time__c</columns>
+        <columns>Actions_Comments__c</columns>
+        <columns>OWNER.FIRST_NAME</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Will_you_be_driving_a_rental_car__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>1. My Road Safety</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>RS-{000000}</displayFormat>
+        <label>Road Safety Number</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Road Safety</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Road_Safety_Check_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Originating_Event_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Created_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Actions_Comments__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.FIRST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Road_Safety_Check_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Created_Time__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.FIRST_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Road_Safety_Check_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>CREATED_DATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.FIRST_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.LAST_NAME</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Road_Safety_Check_Name__c</searchFilterFields>
+        <searchFilterFields>OWNER.FIRST_NAME</searchFilterFields>
+        <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
+        <searchResultsAdditionalFields>Road_Safety_Check_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Originating_Event_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.FIRST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.LAST_NAME</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>AllCheckBox_RoadSafety</fullName>
+        <active>true</active>
+        <errorConditionFormula>IF(AND( (IsChecked__c=false), ISBLANK( Actions_Comments__c ), OR(Section_1_completed__c  = false, Section_2_completed__c =false), NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),  NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c) )  , true, false)</errorConditionFormula>
+        <errorMessage>One or more of your safety points has not passed, therefore you need to enter the description/details in the Actions/Comments field.</errorMessage>
+    </validationRules>
+</CustomObject>

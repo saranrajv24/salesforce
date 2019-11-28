@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ABBAgreementNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>ABB Agreement Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ABBCompanyNumber__c</fullName>
+        <description>CLM Pilot - captures information about ABB company number</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.ABB_company_number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Please provide the ABB company number</inlineHelpText>
+        <label>ABB Company Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ABBLegalEntityName__c</fullName>
+        <description>Legal Entity of ABB</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp; Agreement__r.ABB_legal_entity_name__c, Agreement__r.ABB_legal_entity_name__r.Name)</formula>
+        <label>ABB Legal Entity Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Country__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Country_Global__c)</formula>
+        <label>Country</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Customer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.APTS_LP_AccountCustomer__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Customer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_End_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.APTS_Account_End_User__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account End User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Account Information</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>ActivatedBy__c</fullName>
+        <description>The user who activated the agreement in the system</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Activated_By__c</formula>
+        <label>Activated By</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementCategory__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Apttus__Agreement_Category__c)</formula>
+        <label>Agreement Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementEndDate__c</fullName>
+        <description>The end date for this agreement</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contract_End_Date__c</formula>
+        <inlineHelpText>Date until when the Agreement is valid.</inlineHelpText>
+        <label>Agreement End Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AgreementLanguage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.Language__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Language</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementStartDate__c</fullName>
+        <description>The effective date of the agreement</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contract_Start_Date__c</formula>
+        <inlineHelpText>Date from when the Agreement is valid, after the sign of with the customer.</inlineHelpText>
+        <label>Agreement Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AgreementSummary__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Summary</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Agreement_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Number</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Owner:User.FirstName + &quot; &quot; + Agreement__r.Owner:User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipLabel>Agreement Information</relationshipLabel>
+        <relationshipName>MSPA_Information</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AmendmentEffectiveDate__c</fullName>
+        <description>The date this amendment is effective</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Amendment_Effective_Date__c</formula>
+        <label>Amendment Effective Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ApplicableCountries__c</fullName>
+        <externalId>false</externalId>
+        <label>Applicable countries</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Applicable_Regions__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( INCLUDES( Agreement__r.Applicable_Regions__c , &quot;All Countries&quot;) , &quot;All Countries; &quot;, null) + 
+IF( INCLUDES( Agreement__r.Applicable_Regions__c, &quot;EUC - Europe&quot;) , &quot;EUC - Europe; &quot;, null) + 
+IF( INCLUDES( Agreement__r.Applicable_Regions__c , &quot;AMC - Americas&quot;) , &quot;AMC - Americas; &quot;, null) + 
+IF( INCLUDES( Agreement__r.Applicable_Regions__c, &quot;AMA - Asia, Middle East &amp; Africa&quot;) , &quot;AMA - Asia, Middle East &amp; Africa; &quot;, null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Applicable Regions</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.Apttus_Approval__Approval_Status__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoRenewTermMonths__c</fullName>
+        <description>The number of months to extend the agreement</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Auto_Renew_Term_Months__c</formula>
+        <label>Renewal Term (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoRenew__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Auto_Renewal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Auto Renew</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AutoRenewalConsent__c</fullName>
+        <description>Indicates whether consent is required to extend / renew this agreement</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Auto_Renew_Consent__c</formula>
+        <label>Renewal Consent</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AutoRenewalTerms__c</fullName>
+        <externalId>false</externalId>
+        <label>Renewal Terms</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>BillToAddress__c</fullName>
+        <description>Billing Address of the Account</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Bill_To_Address__c</formula>
+        <inlineHelpText>Billing Address of the Account</inlineHelpText>
+        <label>Bill To Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CLMAgreementName__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level1__c</fullName>
+        <description>Release: R6-EP-CPQ, Requirement ID: 4515, ChangeDescription: it&apos;s used in APTS_AgreementTriggerHelper class</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.APTS_Channel_Class_Level1__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Class Level1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Channel_Class_Level2__c</fullName>
+        <description>Release: R6-EP-CPQ, Requirement ID: 4515, ChangeDescription: it&apos;s used in APTS_AgreementTriggerHelper class</description>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.APTS_Channel_Class_Level2__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Class Level2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractDeliveryManager__c</fullName>
+        <description>CLM - Pilot - This field captures the user who are Contract Delivery Manager</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp; Agreement__r.Contract_Delivery_Manager__c, Agreement__r.Contract_Delivery_Manager__r.FirstName+&quot; &quot;+Agreement__r.Contract_Delivery_Manager__r.LastName)</formula>
+        <inlineHelpText>Please select the user who are Contract Delivery Manager</inlineHelpText>
+        <label>Contract Delivery Manager</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractDurationDays__c</fullName>
+        <description>The duration from Start Date to End Date in days</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contract_Duration_Days__c</formula>
+        <label>Contract Duration (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractedDays__c</fullName>
+        <description>Days from Contract Start Date to Current Date if the contract is In Effect and Start Date is set.</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contracted_Days__c</formula>
+        <label>Contracted Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerCompanyNumber__c</fullName>
+        <description>Captures information about the Company Number of Customer</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Customer_Company_Number__c</formula>
+        <inlineHelpText>Please enter the Customer Company Number</inlineHelpText>
+        <label>Customer Company Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerContractNumber__c</fullName>
+        <description>CLM Pilot - captures information about Customer contract number</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Customer_Contract_Number__c</formula>
+        <inlineHelpText>Please provide the Customer contract number</inlineHelpText>
+        <label>Customer Contract Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerSite__c</fullName>
+        <description>CLM Pilot - captures information about Customer Site.</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Customer_Site__c</formula>
+        <inlineHelpText>Please provide the Customer Site.</inlineHelpText>
+        <label>Customer Site</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerSupportEmailAddress__c</fullName>
+        <description>CLM Pilot - captures information about Customer Support Email Address</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Customer_Support_Email_Address__c</formula>
+        <inlineHelpText>Please provide the Customer Support Email Address</inlineHelpText>
+        <label>Customer Support Email Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CustomerSupportPhoneNumber__c</fullName>
+        <description>CLM Pilot - captures information about Customer Support Phone Number</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Customer_Support_Phone_Number__c</formula>
+        <inlineHelpText>Please provide the Customer Support Phone Number</inlineHelpText>
+        <label>Customer Support Phone Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>FFAgreementNumber__c</fullName>
+        <description>Identifies the agreement number, including the version number. Use this field to display on screens, reports, dashboards, search filters and columns, etc. The other agreement number fields are for internal use only.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Agreement Number</inlineHelpText>
+        <label>Agreement Number (use in X-Author)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FulfillmentStatus__c</fullName>
+        <description>CLM Pilot - captures information about Fulfillment Status</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Fulfillment_Status__c)</formula>
+        <inlineHelpText>Please select the Fulfillment Status</inlineHelpText>
+        <label>Delivery Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InternalRenewalNotificationDays__c</fullName>
+        <description>Notification period prior to Renewal Notice Date when notification is sent out internally that renewal is approaching</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Internal_Renewal_Notification_Days__c</formula>
+        <label>Internal Renewal Notification Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InternalRenewalStartDate__c</fullName>
+        <description>Date by which internal notice of internal renewal is approaching – Issue Renewal Notice Date less internal renewal notification days</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Internal_Renewal_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Internal Renewal Start Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>IsInternalReview__c</fullName>
+        <description>Indicates internal review was initiated</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__IsInternalReview__c</formula>
+        <label>Is Internal Review</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Leading_Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Leading Business Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leading_Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Leading Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leading_PG__c</fullName>
+        <externalId>false</externalId>
+        <label>Leading PG</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LocalContractReference__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Local_Contract_Reference__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Local Contract Reference</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Milestone__c</fullName>
+        <description>CLM - Pilot - This field gives information about Milestones</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Milestones__c</formula>
+        <inlineHelpText>Enter milestones information on agreements.</inlineHelpText>
+        <label>Milestones</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Related Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Agreement Information</relationshipLabel>
+        <relationshipName>Agreement_Information</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OwnerExpirationNotice__c</fullName>
+        <description>To indicate the number of days prior to expiration date that a notification needs to be sent to the owner</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Apttus__Owner_Expiration_Notice__c)</formula>
+        <label>Owner Expiration Notice</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerofAgreement__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp;  Agreement__r.OwnerId,  Agreement__r.Owner:User.FirstName+&apos; &apos;+Agreement__r.Owner:User.LastName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParentAgreement__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp; Agreement__r.Apttus__Parent_Agreement__c, Agreement__r.Apttus__Parent_Agreement__r.Name)</formula>
+        <label>Parent Agreement</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ParticipatingDivisions__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Divisions</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Participating_BusinessUnits__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating Business Units</label>
+        <length>130560</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Perpetual__c</fullName>
+        <description>Indicates whether agreement has an end date specified</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Perpetual__c</formula>
+        <label>Perpetual</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>PrimaryContact__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot;&amp;  Agreement__r.Apttus__Primary_Contact__c, Agreement__r.Apttus__Primary_Contact__r.FirstName+&quot; &quot;+Agreement__r.Apttus__Primary_Contact__r.LastName)</formula>
+        <inlineHelpText>Associated with a primary contact for this agreement. The contact can be one of the contacts associated with either Account Customer, Primary Partner OR Account end user.</inlineHelpText>
+        <label>Primary Contact</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Partner_Customer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.APTS_LP_Account_End_User__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Partner Customer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReasonforCancellationTerminationDet__c</fullName>
+        <description>For capturing of more detailed information on the cancellation/termination.</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Reason_for_Cancellation_Termination_Det__c</formula>
+        <label>Cancellation/Termination (Details)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReasonforTermination__c</fullName>
+        <description>CLM - Reason for Termination is required to change the status to Terminated</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Reason_for_Termination__c)</formula>
+        <inlineHelpText>Indicates why an Agreement should be or is (to be) terminated</inlineHelpText>
+        <label>Reason for Termination</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RecordSubtype__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Type_of_Change__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Record Subtype</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RelatedAccount__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The link to the account record to identify the external party to this agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Customer Account with which the agreement is to be signed</inlineHelpText>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Agreement Information</relationshipLabel>
+        <relationshipName>Agreement_Information</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>RemainingContractedDays__c</fullName>
+        <description>If the agreement is In Effect, this value is calculated as Contract Duration Days less Contracted Days</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Remaining_Contracted_Days__c</formula>
+        <label>Remaining Contracted Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RenewalNoticeDays__c</fullName>
+        <description>The number of days before end date when renewal notice is due</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Renewal_Notice_Days__c</formula>
+        <label>Renewal Notice Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requestor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Requestor__r.FirstName +&quot; &quot;+ Agreement__r.Apttus__Requestor__r.LastName</formula>
+        <label>Requestor</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RiskReviewApprovalStatus__c</fullName>
+        <description>Introduced as part of R3.0 for RR integration</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.RR_Aproval_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Review Approval Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RiskReviewID__c</fullName>
+        <description>CLM - Pilot - This gives information about the Risk Review ID</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Risk_Review_ID__c</formula>
+        <label>Local Risk Review ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RiskReviewRequired__c</fullName>
+        <description>CLM - Pilot - This gives information about the Risk Review Required</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Risk_Review_Required__c</formula>
+        <label>Risk Review Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Risk_Review_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Risk_Review_ID_Link__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Fetched from the Risk Review database if a Risk Review is initiated from this Agreement. Ensure that also the Risk Review Required box is ticked.</inlineHelpText>
+        <label>Risk Review ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Risk_Review_Project_Status__c</fullName>
+        <description>Introduced as part of R3.0 for RR integration</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.RR_Project_Status__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Risk Review Project Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Person__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.APTS_LP_Sales_Person__r.FirstName + &quot; &quot; + Agreement__r.APTS_LP_Sales_Person__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Person</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ShipToAddress__c</fullName>
+        <description>Postal/ Shipping Address of the Account</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Ship_To_Address__c</formula>
+        <inlineHelpText>Postal/ Shipping Address of the Account</inlineHelpText>
+        <label>Ship To Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SpecialTerms__c</fullName>
+        <externalId>false</externalId>
+        <label>Special Terms</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>StatusCategory__c</fullName>
+        <description>The higher level state of the agreement – In Authoring, In Effect, Expired, etc.  These are Apttus reserved values and cannot be changed.</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Apttus__Status_Category__c)</formula>
+        <label>Status Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.Apttus__Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subtype__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Agreement__r.Apttus__Subtype__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subtype</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SupportingPG__c</fullName>
+        <externalId>false</externalId>
+        <label>Participating PGs</label>
+        <length>130560</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Template_Branding__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Agreement__r.Template_Branding__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Template Branding</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TermMonths__c</fullName>
+        <description>Indicates the duration in months of the contract from the start date</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Term_Months__c</formula>
+        <label>Term (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerminationComments__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination Comments</label>
+        <length>1024</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>TerminationDate__c</fullName>
+        <description>Date contract terminated</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Termination_Date__c</formula>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TerminationNoticeDays__c</fullName>
+        <description>Notice period prior to termination</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Termination_Notice_Days__c</formula>
+        <label>Termination Notice Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TerminationNoticeIssueDate__c</fullName>
+        <description>Date termination notice was sent / received</description>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Termination_Notice_Issue_Date__c</formula>
+        <label>Termination Notice Issue Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contract_Start_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Valid_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>Agreement__r.Apttus__Contract_End_Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Valid To</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Agreement Information</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Country__c</columns>
+        <columns>Agreement_Number__c</columns>
+        <columns>Agreement_Name__c</columns>
+        <columns>Account_Customer__c</columns>
+        <columns>Approval_Status__c</columns>
+        <columns>Valid_From__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Global_Frame_Agreements</fullName>
+        <columns>NAME</columns>
+        <columns>Agreement_Name__c</columns>
+        <columns>RelatedAccount__c</columns>
+        <columns>ApplicableCountries__c</columns>
+        <columns>Applicable_Regions__c</columns>
+        <columns>StatusCategory__c</columns>
+        <columns>AgreementEndDate__c</columns>
+        <columns>Perpetual__c</columns>
+        <columns>ABBAgreementNumber__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RECORDTYPE</field>
+            <operation>equals</operation>
+            <value>APTS_MSPA_Information__c.APTS_CCP_Frame_Agreement_Open,APTS_MSPA_Information__c.APTS_CCP_Frame_Agreement_Superseded,APTS_MSPA_Information__c.Frame_Agreement</value>
+        </filters>
+        <filters>
+            <field>AgreementCategory__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </filters>
+        <label>Global Frame Agreements</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>MI-{0000000}</displayFormat>
+        <label>MSPA Information Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Agreement Information</pluralLabel>
+    <recordTypes>
+        <fullName>APTS_CCP_Frame_Agreement_Open</fullName>
+        <active>true</active>
+        <label>CCP Frame Agreement Open</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>APTS_CCP_Frame_Agreement_Superseded</fullName>
+        <active>true</active>
+        <label>CCP Frame Agreement Superseded</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Deal_Agreement_Products_and_or_Services</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <description>This record type is to create Deal (Products and/or Services) Agreement.</description>
+        <label>Deal Agreement (Products and/or Services)</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Frame_Agreement</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <description>This record type is to create Frame Agreement.</description>
+        <label>Frame Agreement</label>
+    </recordTypes>
+    <recordTypes>
+        <fullName>NDA</fullName>
+        <active>true</active>
+        <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+        <description>This record type is to create Non-Disclosure Agreement.</description>
+        <label>NDA</label>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Agreement_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Country__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Agreement__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Customer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Approval_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Valid_From__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Agreement_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Country__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Agreement__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>RelatedAccount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Account_Customer__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Valid_From__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Valid_To__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>StatusCategory__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Agreement_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Country__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Agreement__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Agreement_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Country__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Agreement__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account_Customer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approval_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Valid_From__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

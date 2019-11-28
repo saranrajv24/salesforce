@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Configuration properties for Generic Record Associator</description>
+    <fields>
+        <fullName>Display_in_PDF__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Allows you to hide this related list in the visit report PDF</inlineHelpText>
+        <label>Display in PDF</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieldSetName__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the name of the FieldSet defined for the search and association object</inlineHelpText>
+        <label>FieldSet Name</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldSet_Name_for_PDF__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Name of the fieldset to be used in the PDF version of the visit report</inlineHelpText>
+        <label>FieldSet Name for PDF</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>QueryFilter__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the query filter that will be applied for every query against the search object</inlineHelpText>
+        <label>Query Filter</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>creationObjectChildField__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the api name of the field from object [creationObject] that is used to store the record Id from the records selected in object [searchObject]</inlineHelpText>
+        <label>creation Object Child Field</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>creationObjectParentField__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the api name of the field from object [creationObject] that is used to store the record Id from the visit report record.</inlineHelpText>
+        <label>creation Object Parent Field</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>creationObjectSortField__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>API name of the field that the result list is sorted</inlineHelpText>
+        <label>creation Object SortField</label>
+        <length>50</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>creationObjectSortOrder__c</fullName>
+        <defaultValue>&apos;ASC&apos;</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>creation Object Sort Order</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ASC</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DESC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>creationObject__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the api name of the custom object where the relation between the visit report object and the object specified in parameter &apos;searchObject&apos; is stored.</inlineHelpText>
+        <label>creation Object</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>initQueryFilter__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the query filter that will only be applied when loading the component and running the query against the search object for the first time</inlineHelpText>
+        <label>initial Query Filter</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>runInitialQuery__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies whether or not the query definition in the parameter &apos;Initial Query Filter&apos; shall be applied</inlineHelpText>
+        <label>run Initial Query</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>searchListPageSize__c</fullName>
+        <defaultValue>10</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies how many search results will be displayed on one page</inlineHelpText>
+        <label>search Result Page Size</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>searchObjectSortField__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>searchObjectSortField</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>searchObjectSortOrder__c</fullName>
+        <defaultValue>&apos;ASC&apos;</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>searchObjectSortOrder</label>
+        <picklist>
+            <picklistValues>
+                <fullName>ASC</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DESC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>searchObject__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Specifies the standard or custom object that is used to execute the query</inlineHelpText>
+        <label>search Object</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>search_Result_Object_Display_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Referencing the custom label that displays the name of the object in the search result section</inlineHelpText>
+        <label>search Object Display Name</label>
+        <length>50</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>GRA</label>
+    <pluralLabel>GRA</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

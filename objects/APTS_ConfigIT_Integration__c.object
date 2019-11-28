@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting holds all ConfigIT static strings etc..</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Action_Response__c</fullName>
+        <externalId>false</externalId>
+        <label>Action Response</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dev_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Dev Name</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hook_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Hook URL</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Path_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Path URL</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>ConfigIT Integration</label>
+    <visibility>Public</visibility>
+</CustomObject>

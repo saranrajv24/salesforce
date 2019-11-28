@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>TQ_Country__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Country name of the Bidding Unit which is used to get default template name based on the Quotation Bidding Unit country</inlineHelpText>
+        <label>Country</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TQ_Default_Email_Template_Folder__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is used to get the default folder name on the &quot;Select Template&quot; page based on the quotation bidding unit country</inlineHelpText>
+        <label>Default Email Template Folder</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TQ_Default_Email_Template__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This Template is defaulted to the &quot;Submit To Customer&quot; page based on the quotation bidding unit</inlineHelpText>
+        <label>Default Email Template</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>TQ Country Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

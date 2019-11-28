@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>set value for this custom setting when frozen user schedule job is running</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>TriggerSetting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>TriggerSetting</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Frozen Flag Setting</label>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used for displaying the sections in the templates for Binding and Non Binding Quotations.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Hierarchy_Base_Total_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+NOT(ISBLANK(Hierarchy_Base_Total__c)) &amp;&amp;
+Hierarchy_Base_Total__c&gt;= 1000000, 
+TEXT(FLOOR(Hierarchy_Base_Total__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+NOT(ISBLANK(Hierarchy_Base_Total__c)) &amp;&amp;
+Hierarchy_Base_Total__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(Hierarchy_Base_Total__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF(
+NOT(ISBLANK(Hierarchy_Base_Total__c)), RIGHT(TEXT(FLOOR(Hierarchy_Base_Total__c)), 3) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp;
+IF( 
+NOT(ISBLANK(Hierarchy_Base_Total__c)) &amp;&amp;
+MOD(Hierarchy_Base_Total__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(Hierarchy_Base_Total__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(Hierarchy_Base_Total__c, 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchy Base Total EUR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Base_Total__c</fullName>
+        <description>This field is used to populate total list price which is used in non-binding Template (CR-17010)</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Base Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Hierarchy Description</label>
+        <length>5000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Total_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+NOT(ISBLANK(Hierarchy_Total__c)) &amp;&amp;
+Hierarchy_Total__c&gt;= 1000000, 
+TEXT(FLOOR(Hierarchy_Total__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+NOT(ISBLANK(Hierarchy_Total__c)) &amp;&amp;
+Hierarchy_Total__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(Hierarchy_Total__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF(
+NOT(ISBLANK(Hierarchy_Total__c)), RIGHT(TEXT(FLOOR(Hierarchy_Total__c)), 3) &amp; &quot;,&quot;, 
+&quot;&quot;) &amp;
+IF( 
+NOT(ISBLANK(Hierarchy_Total__c)) &amp;&amp;
+MOD(Hierarchy_Total__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(Hierarchy_Total__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(Hierarchy_Total__c, 1), 2) * 100, 99)) 
+)</formula>
+        <label>Hierarchy Total EUR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Hierarchy Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Level_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Level 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Level 3</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_4__c</fullName>
+        <externalId>false</externalId>
+        <label>Level 4</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Level_5__c</fullName>
+        <externalId>false</externalId>
+        <label>Level 5</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Nascondi_prezzi__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote_Proposal__r.Nascondi_prezzi__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Nascondi prezzi</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Net_Price__c</fullName>
+        <description>EP - 4.1 This field copies the Net Price checkbox field value from the related quotation object.</description>
+        <externalId>false</externalId>
+        <formula>Quote_Proposal__r.Net_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Price</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_ID__c</fullName>
+        <description>EP - 4.1 This field copies the product ID checkbox field value from the related quotation object.</description>
+        <externalId>false</externalId>
+        <formula>Quote_Proposal__r.Product_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product ID</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Proposal__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote/Proposal</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipLabel>Custom Hierarchy Lines</relationshipLabel>
+        <relationshipName>Custom_Hierarchy_Lines</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Section_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Section Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Section_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Section Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <externalId>false</externalId>
+        <label>Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Check__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Total Check</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Custom Hierarchy Line</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Level_2__c</columns>
+        <columns>Level_3__c</columns>
+        <columns>Level_4__c</columns>
+        <columns>Level_5__c</columns>
+        <columns>Total_Check__c</columns>
+        <columns>Hierarchy_Description__c</columns>
+        <columns>Hierarchy_Total__c</columns>
+        <columns>Quote_Proposal__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CHL-{0000}</displayFormat>
+        <label>Custom Hierarchy Line Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Custom Hierarchy Lines</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

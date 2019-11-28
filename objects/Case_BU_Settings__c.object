@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>SFDC-2899; Case Business Unit Specific form for IASU</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>SFDC-2899; Case Business Unit Specific form for IASU</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Case Business Unit Specifics Settings</label>
+    <visibility>Public</visibility>
+</CustomObject>

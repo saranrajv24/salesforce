@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used in R8 for transfer of Opportunity for partner users as lead</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Country_Name__c</fullName>
+        <description>Opportunity&apos;s Account Customer Countries that can be used to transfer as Lead</description>
+        <externalId>false</externalId>
+        <label>Country Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Queue_Name__c</fullName>
+        <description>Country queues for lead</description>
+        <externalId>false</externalId>
+        <label>Queue Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Opportunity Country Queue mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

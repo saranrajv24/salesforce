@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom object to store scale type details for a product.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Agreement_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Agreement__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agreement Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipLabel>Scale Types</relationshipLabel>
+        <relationshipName>Scale_Types</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Base_Price__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Base_Price__c</formula>
+        <label>Base Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Cost__c</fullName>
+        <externalId>false</externalId>
+        <label>Cost</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Delivery_Days__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.Delivery_Days__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Delivery Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_Type__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Disc. Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Net Price</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Substitute Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Additional Discount</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_Value__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Disc./Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_External_Id__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Product_Hierarchy__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_LP_Is_Hierarchy__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Product Hierarchy</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Item_No__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>IF(  APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Scale_Types_Count__c == 1, 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Cart_Line_Number__c, 
+IF( APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Scale_Types_Count__c &gt; 1 &amp;&amp; APTS_Scale_Item_No__c == 1, 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Cart_Line_Number__c,
+null
+)
+)</formula>
+        <label>Item No</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Standard_Discount__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_LP_Standard_Discount__c</formula>
+        <label>Standard Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>6</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Unit_Of_Measure__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_LP_Unit_Of_Measure__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unit Of Measure</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Unit_Of_Price__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_LP_Unit_Of_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Unit Of Price</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Market_Price__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Market_Price__c</formula>
+        <label>Market Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Min_Delivery_Qty__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Min_Delivery_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quantity of Package</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Adjustment_Percentage__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(APTS_Discount_Type__c, &quot;Substitute Discount&quot;),(APTS_Discount_Value__c/100),IF(ISPICKVAL(APTS_Discount_Type__c, &quot;Additional Discount&quot;),-(((0-(APTS_Discount_Value__c/100)) * (0-APTS_LP_Standard_Discount__c)) - (APTS_Discount_Value__c/100) - APTS_LP_Standard_Discount__c) ,IF(ISPICKVAL(APTS_Discount_Type__c, &quot;Net Price&quot;),((APTS_Base_Price__c - (APTS_Discount_Value__c)) / APTS_Base_Price__c ),NULL)))</formula>
+        <label>Net Adj. (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Parent_Configurator_Cart_Summary_ID__c</fullName>
+        <description>Parent cart summary</description>
+        <externalId>false</externalId>
+        <label>Configurator Cart Summary</label>
+        <referenceTo>APTS_Configurator_Cart_Summary__c</referenceTo>
+        <relationshipLabel>Scale Types</relationshipLabel>
+        <relationshipName>APTS_Scale_Types</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Description__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.Description</formula>
+        <label>Product Description</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_code_france__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>if( APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_LP_Is_Hierarchy__c ,right( APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Product_ID__c,5),APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Product_ID__c &amp; IF( APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Alternate_Product_Code__c  != NULL, &quot; / &quot;&amp;APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Alternate_Product_Code__c,&quot;&quot;))</formula>
+        <label>Product code france</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Quote/Proposal</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipLabel>Scale Types</relationshipLabel>
+        <relationshipName>Scale_Types</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_ScaleQty__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>If((ISPICKVAL(APTS_Scale_Types__c, &quot;To&quot;)), &quot;A&quot;, If((ISPICKVAL(APTS_Scale_Types__c, &quot;From&quot;)), &quot;DE&quot; ,Null)) + &apos; &apos; + IF( APTS_Quantity__c&gt;= 1000000, 
+TEXT(FLOOR(APTS_Quantity__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Quantity__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Quantity__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Quantity__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Quantity__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Quantity__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Quantity__c, 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>ScaleQty</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Scale_Item_No__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Scale Item No</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Scale_Types__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <label>Scale Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>To</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>From</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Scale</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Exact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Template_Sequence__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>VALUE( Text(APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Cart_Line_Number__c)+text(APTS_Scale_Item_No__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Template Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Net_Sales_Price__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>(CASE(APTS_Discount_Type__c , &apos;Substitute Discount&apos;, 
+(APTS_Base_Price__c - (APTS_Base_Price__c * APTS_Discount_Value__c/100 )) , 
+&apos;Additional Discount&apos;,( APTS_Market_Price__c - (APTS_Market_Price__c * APTS_Discount_Value__c/100 )) , 
+&apos;Net Price&apos;, 
+(APTS_Discount_Value__c), NULL) * APTS_Quantity__c ) / Value(APTS_LP_Unit_Of_Price__c)</formula>
+        <label>Total Net Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Unit_Net_Price__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>CASE(APTS_Discount_Type__c , &apos;Substitute Discount&apos;,
+ ( APTS_Base_Price__c  - (APTS_Base_Price__c *  APTS_Discount_Value__c/100 ))  ,
+&apos;Additional Discount&apos;,( APTS_Market_Price__c  - (APTS_Market_Price__c *  APTS_Discount_Value__c/100 )) , 
+&apos;Net Price&apos;,
+(APTS_Discount_Value__c), NULL)</formula>
+        <label>Net Sales Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_new_product_code__c</fullName>
+        <description>QFA-R3-MR2-Req#6149-US#1842-Scaling on template - quotation</description>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS(APTS_Agreement__r.APTS_Hierarchy_in_Cart__c,&apos;2&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c,
+IF(CONTAINS(APTS_Quote__r.APTS_Hierarchy_in_Cart__c ,&apos;2&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c,&apos;&apos;)
+) 
+&amp; 
+IF(AND(CONTAINS(APTS_Agreement__r.APTS_Hierarchy_in_Cart__c,&apos;-3&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c!=&apos;&apos;,
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c!=&apos;&apos;),
+&apos;-&apos; &amp; APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c,
+IF(CONTAINS(APTS_Agreement__r.APTS_Hierarchy_in_Cart__c,&apos;3&apos;), 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c,
+IF(AND(CONTAINS(APTS_Quote__r.APTS_Hierarchy_in_Cart__c ,&apos;-3&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c!=&apos;&apos;,
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c!=&apos;&apos;),
+&apos;-&apos; &amp; APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c,
+IF(CONTAINS(APTS_Quote__r.APTS_Hierarchy_in_Cart__c ,&apos;3&apos;), 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c,&apos;&apos;)
+)
+)
+) 
+&amp; 
+IF(AND(CONTAINS(APTS_Agreement__r.APTS_Hierarchy_in_Cart__c,&apos;-4&apos;),
+OR(APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c!=&apos;&apos;,APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c!=&apos;&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c!=&apos;&apos;),
+&apos;-&apos; &amp; APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c,
+IF(CONTAINS(APTS_Agreement__r.APTS_Hierarchy_in_Cart__c,&apos;4&apos;), 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c,
+IF(AND(CONTAINS(APTS_Quote__r.APTS_Hierarchy_in_Cart__c ,&apos;-4&apos;), OR(APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_2_Code__c!=&apos;&apos;,APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_3_Code__c!=&apos;&apos;),
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c!=&apos;&apos;),
+&apos;-&apos; &amp; APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c,
+IF(CONTAINS(APTS_Quote__r.APTS_Hierarchy_in_Cart__c ,&apos;4&apos;), 
+APTS_Parent_Configurator_Cart_Summary_ID__r.APTS_Product__r.APTS_Hierarchy_Level_4_Code__c,
+&apos;&apos;
+)
+)
+)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchy</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Scale Type</label>
+    <nameField>
+        <displayFormat>ST-{0000000000}</displayFormat>
+        <label>Scale Type Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Scale Types</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

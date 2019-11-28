@@ -1,0 +1,1532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - New Custom Object -Financial Target and Expectation Budgets</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Account_Plan__r.Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Plan_Year__c</fullName>
+        <description>R5 - Account Plan Year</description>
+        <externalId>false</externalId>
+        <label>Sales Targets &amp; Results Year</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Account_Plan__c</fullName>
+        <description>R5 - Master Detail Relationship with Account Plan</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Description of the Account Plan  such that other users can understand the scope.</inlineHelpText>
+        <label>Account Plan</label>
+        <referenceTo>Account_Plan__c</referenceTo>
+        <relationshipLabel>Sales Targets and Results</relationshipLabel>
+        <relationshipName>Budgets</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Actual_Sales_Deviation_KUSD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (Target_Sales_MUSD__c == 0 &amp;&amp; Actual_Sales_USD__c &gt; 0, 1, IF(Target_Sales_to_Month_KUSD__c&lt;&gt;0,Actual_Sales_USD__c / Target_Sales_to_Month_KUSD__c,0))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The Percentage of Target is being calculated as a linear deviation of the Actual Sales and Sales Targets according to the current Month of the Year.</inlineHelpText>
+        <label>Percent of Target Sales Month to Date</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Actual_Sales_USD__c</fullName>
+        <description>R5 - Actual Sales USD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Current Sales as per the Account Plan timeline</inlineHelpText>
+        <label>Actual Sales KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Automatic_Sync_Technical__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Created as part of R8 - CR (C191316)</description>
+        <externalId>false</externalId>
+        <label>Automatic Sync Technical</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Automatic_Sync__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Created as part of R8 - CR (C191316)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Update &apos;Actual Sales&apos; value automatically, based on the up-to-date Atlas data.</inlineHelpText>
+        <label>Automatic Sync</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Available_Market_CAPEX_MUSD__c</fullName>
+        <description>R5 - Available Market CAPEX MUSD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Available Account Capital Expenditures for the Product types in this Account Plan</inlineHelpText>
+        <label>Available Account CAPEX KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Available_Market_OPEX_MUSD__c</fullName>
+        <description>R5 - Available Market OPEX MUSD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Available Account Operational Expenditures for the Product types in this Account Plan</inlineHelpText>
+        <label>Available Account OPEX KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Available_Spend_MUSD_1_c__c</fullName>
+        <description>R5 - Available Spend MUSD</description>
+        <externalId>false</externalId>
+        <formula>Available_Market_CAPEX_MUSD__c	+ Available_Market_OPEX_MUSD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Sum of the available CAPEX and OPEX spend</inlineHelpText>
+        <label>Available Spend KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Backup_Budget_USD__c</fullName>
+        <description>R5 - Backup Budget USD</description>
+        <externalId>false</externalId>
+        <label>Backup Budget USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit_Backup__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit Backup</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>R5 - Business Unit</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select ABB Business Unit from the picklist</inlineHelpText>
+        <label>Business Unit</label>
+        <picklist>
+            <controllingField>Division__c</controllingField>
+            <picklistValues>
+                <fullName>EPCO - EP Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPDS - Distribution Solutions</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIN - GEIS Integration &amp; Synergies</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIP - Installation Products</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIS - EP Industrial Solutions</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSB - Smart Buildings</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSC - Small Country BU for EP</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSO - EP Solar</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSP - Smart Power</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSU - Sundry EP</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IACO - IA Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAEN - Energy Industries</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAMA - Measurement &amp; Analytics</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAMP - Marine &amp; Ports</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAPI - Process Industries</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IASC - Small Country BU for IA</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IASU - Sundry IA</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IATU - Turbocharging</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOCO - MO Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MODR - Drives</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOMG - Motors &amp; Generators</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOSC - Small Country BU for MO</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOSU - Sundry MO</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGCO - Power Grids Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGGA - Grid Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGGI - Grid Integration</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGHV - High Voltage Products</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGSC - Small Country BU for PG</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGSU - Sundry PGSU</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGTR - Transformers</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RACO - RA Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAMF - Machine &amp; Factory Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RARO - Robotics</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RASC - Small Country BU for RA</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RASU - Sundry RA</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCCO - Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCGS - Global Business Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCHV - High Voltage Cables</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCIA - Non-Core Industrial Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCJC - JV Creation</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCJV - EPC projects – SNCL/ABB</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCMO - Non-Core Motion</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCPG - Non-Core Power Grids</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCRE - Real Estate</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCVA - Various</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <description>SFDC 1885 - Free-type text area</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Free text to add notes</inlineHelpText>
+        <label>Comments</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>R5 -  Country</description>
+        <externalId>false</externalId>
+        <formula>TEXT(Account_Plan__r.Account__r.Primary_Address_Country__c )</formula>
+        <inlineHelpText>Defaults to GIS Country for this Location</inlineHelpText>
+        <label>Country</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_Actual_Sales_last_update__c</fullName>
+        <externalId>false</externalId>
+        <label>Date Actual Sales last update</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Division_Backup__c</fullName>
+        <description>Backup field to save existing value. STS R3.0</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Backup field to save existing value. STS R3.0</inlineHelpText>
+        <label>Division Backup</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>R5 - Division</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <picklist>
+            <picklistValues>
+                <fullName>EP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Product_Backup__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Backup__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product_Group__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Group</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 - Lookup Relationship with Product Group</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The enter PG will automatically update both the assigned Division &amp; BU in the above fields for this particular PG</inlineHelpText>
+        <label>Product Group</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipLabel>Sales Targets and Results</relationshipLabel>
+        <relationshipName>Budgets</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>R5 Product</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The enter Product Line will automatically update the assigned Division,  BU and PG in the above fields for this particular Product Line</inlineHelpText>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Sales Targets and Results</relationshipLabel>
+        <relationshipName>Budgets</relationshipName>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Segment_Level__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Segmentation Level must always match to the values entered on the fields DIV,BU,Product Group,Product. For Example;Choose &quot;Division&quot; on segmentation level and populate up to DIV drop down list.</inlineHelpText>
+        <label>Segment Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Division</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product Group</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product Line</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Share_of_Available_Wallet__c</fullName>
+        <description>R5 - Share of available wallet</description>
+        <externalId>false</externalId>
+        <formula>Share_of_Wallet_MUSD__c/Available_Spend_MUSD_1_c__c</formula>
+        <inlineHelpText>ABB Orders / Total Available Account Spend</inlineHelpText>
+        <label>Share of Available Wallet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Share_of_Wallet_MUSD__c</fullName>
+        <description>R5 - Share of Wallet MUSD currency Value</description>
+        <externalId>false</externalId>
+        <label>ABB Orders KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Share_of_Wallet_Per__c</fullName>
+        <description>R5 - Share of Wallet</description>
+        <externalId>false</externalId>
+        <formula>(Share_of_Wallet_MUSD__c /  Total_Spend_MUSD_1__c )</formula>
+        <inlineHelpText>ABB Orders / Total Account Spend</inlineHelpText>
+        <label>Share of Wallet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Target_Available_Share_of_Wallet__c</fullName>
+        <description>BR 3415 - Target Share of Wallet _Sales Target and Results.</description>
+        <externalId>false</externalId>
+        <formula>Target_Sales_MUSD__c/ Available_Spend_MUSD_1_c__c</formula>
+        <inlineHelpText>Target Sales KUSD/Available spend KUSD</inlineHelpText>
+        <label>Target Available Share of Wallet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Target_Budget_USD__c</fullName>
+        <description>R5 - Target Budget USD</description>
+        <externalId>false</externalId>
+        <label>Target Budget USD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Sales_MUSD__c</fullName>
+        <description>R5 - Target Sales USD</description>
+        <externalId>false</externalId>
+        <label>Target Sales KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Sales_to_Month_KUSD__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF((TEXT(Account_Plan_Year__c) = TEXT(YEAR(TODAY()))),
+((MONTH(TODAY()) * Target_Sales_MUSD__c) / 12),
+IF(VALUE(TEXT(Account_Plan_Year__c)) &lt; YEAR(TODAY()), 
+Target_Sales_MUSD__c, 0)
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Target Sales Month to Date KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Target_Total_Share_of_Wallet__c</fullName>
+        <description>BR 3415 - Target Share of Wallet _Sales Target and Results.</description>
+        <externalId>false</externalId>
+        <formula>Target_Sales_MUSD__c/ Total_Spend_MUSD_1__c</formula>
+        <inlineHelpText>Target Sales KUSD/Total Account spend KUSD</inlineHelpText>
+        <label>Target Total Share of Wallet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_Available_Account_Spend_Summary__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK($Label.SYSTEM_ABB_SHAREPOINT_FACE_TRAINING_ACCOUNT_SPEND, $Label.SYSTEM_ACCOUNT_SPEND_AWARE, &quot;_blank&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total &amp; Available Account Spend Summary</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Market_CAPEX_MUSD__c</fullName>
+        <description>R5 - Total Market CAPEX MUSD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Account Capital Expenditure for the Product types in this Account Plan</inlineHelpText>
+        <label>Total Account CAPEX KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Market_OPEX_MUSD__c</fullName>
+        <description>R5 - Total Market OPEX MUSD</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total Account Operational Expenditure for the Product types in this Account Plan</inlineHelpText>
+        <label>Total Account OPEX KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Spend_MUSD_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Market_CAPEX_MUSD__c + Total_Market_OPEX_MUSD__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Account Spend KUSD</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unique_Check__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 Unique Check</description>
+        <externalId>false</externalId>
+        <label>Unique Check</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>of_Sales_Targets_and_Results__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Sales Targets and Results</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sales Targets and Results</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Product__c</columns>
+        <columns>NAME</columns>
+        <columns>Account_Plan__c</columns>
+        <columns>Product_Group__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SalesTargets-Results{0000}</displayFormat>
+        <label>Budget Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Sales Targets and Results</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>External</fullName>
+        <active>true</active>
+        <description>Sales Target and Results for Portal Users without auto synch</description>
+        <label>External</label>
+        <picklistValues>
+            <picklist>Account_Plan_Year__c</picklist>
+            <values>
+                <fullName>1991</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1992</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1993</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1994</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1995</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1996</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1997</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1998</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>1999</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2000</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2001</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2002</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2003</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2004</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2005</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2006</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2007</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2008</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2009</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2010</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2011</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2012</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2013</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2014</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2015</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2016</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2017</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2018</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2019</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2020</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2021</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2022</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2023</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2024</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2025</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Business_Unit__c</picklist>
+            <values>
+                <fullName>EPCO - EP Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPDS - Distribution Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPIN - GEIS Integration %26 Synergies</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPIP - Installation Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPIS - EP Industrial Solutions</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPSB - Smart Buildings</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPSC - Small Country BU for EP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPSO - EP Solar</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPSP - Smart Power</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>EPSU - Sundry EP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IACO - IA Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAEN - Energy Industries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAMA - Measurement %26 Analytics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAMP - Marine %26 Ports</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IAPI - Process Industries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IASC - Small Country BU for IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IASU - Sundry IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IATU - Turbocharging</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOCO - MO Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MODR - Drives</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOMG - Motors %26 Generators</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOSC - Small Country BU for MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>MOSU - Sundry MO</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGCO - Power Grids Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGGA - Grid Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGGI - Grid Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGHV - High Voltage Products</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGSC - Small Country BU for PG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGSU - Sundry PGSU</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PGTR - Transformers</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RACO - RA Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RAMF - Machine %26 Factory Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RARO - Robotics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RASC - Small Country BU for RA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>RASU - Sundry RA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCCO - Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCGS - Global Business Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCHV - High Voltage Cables</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCIA - Non-Core Industrial Automation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCJC - JV Creation</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCJV - EPC projects %E2%80%93 SNCL%2FABB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCMO - Non-Core Motion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCPG - Non-Core Power Grids</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCRE - Real Estate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZCVA - Various</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Division__c</picklist>
+            <values>
+                <fullName>EP</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PG</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>ZC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Segment_Level__c</picklist>
+            <values>
+                <fullName>Business Unit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Division</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Group</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Product Line</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Product_Group__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Business_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Division__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Plan__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Account_Plan__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Country__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Division__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Group__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Product__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Target_Sales_MUSD__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Actual_Sales_USD__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Account_Plan__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Country__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Division__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Group__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Product__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Target_Sales_MUSD__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Actual_Sales_USD__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Account_Plan__c</searchFilterFields>
+        <searchFilterFields>Country__c</searchFilterFields>
+        <searchFilterFields>Division__c</searchFilterFields>
+        <searchFilterFields>Business_Unit__c</searchFilterFields>
+        <searchFilterFields>Product_Group__c</searchFilterFields>
+        <searchFilterFields>Product__c</searchFilterFields>
+        <searchFilterFields>Target_Sales_MUSD__c</searchFilterFields>
+        <searchFilterFields>Actual_Sales_USD__c</searchFilterFields>
+        <searchResultsAdditionalFields>Account_Plan__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Country__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Division__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product_Group__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Product__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Target_Sales_MUSD__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>ABB_Orders_MUSD_less_than_the_TotalSpend</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), Share_of_Wallet_MUSD__c &gt;= Total_Spend_MUSD_1__c)</errorConditionFormula>
+        <errorMessage>“ABB Orders MUSD” must be less than the sum of “Total Account CAPEX MUSD” and &quot;Total Account OPEX MUSD&quot;&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Account_plan_year_comparison</fullName>
+        <active>true</active>
+        <description>R5</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), IF (TEXT(Account_Plan_Year__c) != NULL &amp;&amp; TEXT(Account_Plan__r.Account_Plan_Year__c) != NULL, VALUE(TEXT(Account_Plan_Year__c)) &lt; (VALUE(TEXT(Account_Plan__r.Account_Plan_Year__c))- 3), FALSE))</errorConditionFormula>
+        <errorMessage>Sales Targets &amp; Results Year must be either greater than Account Plan Year or past three years from Account Plan Year</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Available_CAPEX_less_than_Total_CAPEX</fullName>
+        <active>true</active>
+        <description>R5 - Available Market CAPEX MUSD must be less than Total Market CAPEX MUSD.</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), Available_Market_CAPEX_MUSD__c &gt; Total_Market_CAPEX_MUSD__c)</errorConditionFormula>
+        <errorDisplayField>Available_Market_CAPEX_MUSD__c</errorDisplayField>
+        <errorMessage>Available Account CAPEX MUSD must be less than Total Account CAPEX MUSD!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Available_OPEX_less_than_Total_OPEX</fullName>
+        <active>true</active>
+        <description>R5 - Available Market OPEX MUSD must be less than Total Market OPEX MUSD.</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), Available_Market_OPEX_MUSD__c &gt; Total_Market_OPEX_MUSD__c)</errorConditionFormula>
+        <errorDisplayField>Available_Market_OPEX_MUSD__c</errorDisplayField>
+        <errorMessage>Available Account OPEX MUSD must be less than Total Account OPEX MUSD!</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cannot_edit_Actual_Sales_if_Sync_is_set</fullName>
+        <active>true</active>
+        <description>Created as part of R8 - CR (C191316)</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), NOT($Profile.Name = $Label.Sys_Admin_Profile_Name) &amp;&amp; Automatic_Sync__c &amp;&amp; NOT(Automatic_Sync_Technical__c) &amp;&amp; ISCHANGED( Actual_Sales_USD__c ))</errorConditionFormula>
+        <errorDisplayField>Actual_Sales_USD__c</errorDisplayField>
+        <errorMessage>Manual update of the field is not allowed when &apos;Automatic Sync&apos; is set as true.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Comments_editable_only_by_record_creator</fullName>
+        <active>true</active>
+        <description>Comments__c editable only by record (sales target and results) creator</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), ISCHANGED(Comments__c),($User.Id  &lt;&gt;  CreatedById))</errorConditionFormula>
+        <errorDisplayField>Comments__c</errorDisplayField>
+        <errorMessage>Comments can be edited only by the record creator</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Financial_Target_Status_Closed_Check</fullName>
+        <active>true</active>
+        <description>R5 - If Account Plan Status is Closed, then the user should not edit the Financial Target and Expectation.</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), ISPICKVAL(Account_Plan__r.Status__c, &apos;Closed&apos;))</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Account Plan is Closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Segment_Level_Validation</fullName>
+        <active>true</active>
+        <description>R5: Segment level must always match the hierarchy entered by the user in Division/Business Unit/Product Group/Product Line</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.Validation_Override__c.Exclude__c), 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+OR(
+            (TEXT(Business_Unit__c) != NULL &amp;&amp; TEXT(Segment_Level__c) == &apos;Division&apos;),
+            (TEXT(Business_Unit__c) == NULL &amp;&amp; TEXT(Segment_Level__c) == &apos;Business Unit&apos;),
+            ( (Product_Group__c != NULL || Product__c != NULL) &amp;&amp; (TEXT(Segment_Level__c) == &apos;Division&apos; || TEXT(Segment_Level__c) == &apos;Business Unit&apos;)),
+            ( (Product__c == NULL) &amp;&amp; TEXT(Segment_Level__c) == &apos;Product Line&apos;),
+            ( (Product_Group__c == NULL) &amp;&amp; TEXT(Segment_Level__c) == &apos;Product Group&apos;),
+            ( (Product_Group__c != NULL &amp;&amp; Product__c != NULL) &amp;&amp; TEXT(Segment_Level__c) != &apos;Product Line&apos;)))</errorConditionFormula>
+        <errorMessage>Segment level must always match the hierarchy entered by the user in Division/Business Unit/Product Group/Product Line</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Product</fullName>
+        <availability>online</availability>
+        <description>R5 - To add a Product to the Budget.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Product</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/22.0/apex.js&quot;)} 
+if (&apos;{!Budget__c.Segment_Level__c}&apos; == &apos;Product Line&apos;) { 
+window.location = &apos;/apex/AddProductBudgetPIS?BudgetID={!Budget__c.Id }&apos;; 
+} else { 
+
+alert(&apos;Before adding product, Please change the Segment Level as &quot;Product Line&quot;&apos;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Change_Product</fullName>
+        <availability>online</availability>
+        <description>R5 - Change the Product through PIS Tree</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Change Product</masterLabel>
+        <openType>sidebar</openType>
+        <page>EditBudgetPIS</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Remove_Product</fullName>
+        <availability>online</availability>
+        <description>R5 - To clearup only the product lookup.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Remove Product</masterLabel>
+        <openType>sidebar</openType>
+        <page>RemoveProductBudgetPIS</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_Actual_Sales</fullName>
+        <availability>online</availability>
+        <description>Created as part of R8 - CR(C191316)</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Update Actual Sales</masterLabel>
+        <openType>sidebar</openType>
+        <page>UpdateActualSalesBudget</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

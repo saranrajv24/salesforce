@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This custom setting contains data for the Stage mapping with Main reason for close for Close Opportunity Quick Action</description>
+    <fields>
+        <fullName>Main_Reason_for_Close__c</fullName>
+        <description>Reason for closing the opportunity</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Main Reason for Close</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>New_Record_Type__c</fullName>
+        <description>New record type of the opportunity after selecting new stage and main reason for close</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>New record type of the opportunity after selecting new stage and main reason for close</inlineHelpText>
+        <label>New Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Type__c</fullName>
+        <description>Stores the record type for which the values of Stage and Main Reason for close will be applicable</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <inlineHelpText>Stores the record type for which the values of Stage and Main Reason for close will be applicable</inlineHelpText>
+        <label>Record Type</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage_API_Name__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Stage API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <description>ABB Sales Stage</description>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Stage Mapping for Close Opportunity</label>
+    <pluralLabel>Stage Mappings for Close Opportunity</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

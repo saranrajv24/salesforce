@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>LogDAOConfigration  - used in batch class to delete logs</description>
+    <fields>
+        <fullName>Expiration_Time__c</fullName>
+        <description>Expiration time of log file mentioned in hours</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Expiration Time</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>LogDAOConfigration</label>
+    <pluralLabel>LogDAOConfigrations</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>APTS_Batch__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Batch?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Criteria</label>
+        <length>5000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Job_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Job_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Job Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Batch</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>On Demand</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Processing_Batch_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Processing Batch Number</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Data Migration Job</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>DMJ-{0000000}</displayFormat>
+        <label>Data Migration Job ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Data Migration Jobs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <webLinks>
+        <fullName>APTS_Execute_Batch</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Execute Batch</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>if({!APTS_DM_Batch_Job__c.APTS_Batch__c}){
+	alert(&apos;This batch has already been executed once. You cannot re-execute this batch.&apos;);
+} else if(&apos;{!APTS_DM_Batch_Job__c.APTS_Job_Type__c}&apos; == &apos;Batch&apos;){
+	{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/connection.js&quot;)}
+	{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/apex.js&quot;)}
+	try{
+		sforce.apex.execute(&quot;APTS_CCPDMBatchWebservice&quot;,&quot;executeQualifyQuoteBatch&quot;,{dmBatchJobID:&quot;{!APTS_DM_Batch_Job__c.Id}&quot;});
+		alert(&apos;Batch job execution has started and you will see qualified records below.&apos;);
+		location.reload();
+	}catch(err){
+		alert(err.faultstring);
+	}
+} else {
+	alert(&apos;You cannot Execute Batch from here when Job type is &quot;On Demand&quot;.&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

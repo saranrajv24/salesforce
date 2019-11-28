@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting is used in bulk upload to set default values in bulk upload process.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Configuration_LineItem__c</fullName>
+        <description>specify default value for Configuration LineItem</description>
+        <externalId>false</externalId>
+        <label>Configuration LineItem</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Configuration_Reference_Id__c</fullName>
+        <description>specify default value for Configuration Reference Id</description>
+        <externalId>false</externalId>
+        <label>Configuration Reference Id</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Label__c</fullName>
+        <description>specify default value for Label</description>
+        <externalId>false</externalId>
+        <label>Label</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Config_Sys_Id__c</fullName>
+        <description>specify default value for Local Configurator System Id</description>
+        <externalId>false</externalId>
+        <label>Local Configurator System Id</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Project_Reference_Id__c</fullName>
+        <description>specify default value for Project Reference Id</description>
+        <externalId>false</externalId>
+        <label>Project Reference Id</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Section__c</fullName>
+        <description>specify default value for Section</description>
+        <externalId>false</externalId>
+        <label>Section</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Bulk Upload Defaults</label>
+    <visibility>Public</visibility>
+</CustomObject>

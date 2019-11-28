@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>APTS_Related_Quotation_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(OR(Quote__r.APTS_Record_Type_Name__c =&apos;LP&apos;,Quote__r.RecordType.Name =&apos;Superseded&apos;),
+HYPERLINK( &quot;/&quot; &amp; Quote__c, Quote__r.APTS_Quotation_Number__c),null)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quote</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Customer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.Apttus_Proposal__Account__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Customer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_End_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.APTS_Account_End_User__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account End User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_LP_Customer__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Customer</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Quotation Information</relationshipLabel>
+        <relationshipName>Quotation_Information_del</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Quote__r.Apttus_QPApprov__Approval_Status__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Approval Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MSPA_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Number</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Partner_Customer__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.APTS_LP_Account_End_User__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Primary Partner Customer</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Quotation Name</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.Owner:User.FirstName + &quot; &quot; +  Quote__r.Owner:User.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Quotation Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quotation_Reference__c</fullName>
+        <description>Dummy field for copying quotation Id to show up in global search</description>
+        <externalId>false</externalId>
+        <label>Quotation Number</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quote</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipLabel>Quotation Information</relationshipLabel>
+        <relationshipName>Quotation_Information</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Person__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.APTS_LP_Sales_Person__r.FirstName + &quot; &quot; + Quote__r.APTS_LP_Sales_Person__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Sales Person</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_From__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quote__r.Apttus_Proposal__ExpectedStartDate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Valid From</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Quotation Information</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Quote__c</columns>
+        <columns>Account_Customer__c</columns>
+        <columns>Account_End_User__c</columns>
+        <columns>Approval_Status__c</columns>
+        <columns>Valid_From__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>QI-{0000000}</displayFormat>
+        <label>Quotation Information Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quotation Information</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Quote__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_Customer__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Account_End_User__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Approval_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Valid_From__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Quote__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account_Customer__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account_End_User__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approval_Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Valid_From__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+</CustomObject>

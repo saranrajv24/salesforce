@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>To manage a list of hierarchies with average List price</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Average_ListPrice__c</fullName>
+        <externalId>false</externalId>
+        <label>Average List Price</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Country</globalPicklist>
+        <label>Country</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Default_Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Quantity</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Hierarchy</label>
+        <lookupFilter>
+            <active>true</active>
+            <errorMessage>Record does not exist or is not a hierarchy</errorMessage>
+            <filterItems>
+                <field>Product2.APTS_LP_Is_Hierarchy__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.Default_LSO__c</field>
+                <operation>contains</operation>
+                <valueField>Product2.APTS_LP_Sales_Organization__c</valueField>
+            </filterItems>
+            <infoMessage>Search results limited to hierarchies</infoMessage>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Hierarchy Price</relationshipLabel>
+        <relationshipName>HierarchyPrice</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Validity_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>can be left empty or filled with a date in the future. entries with dates in the past will be excluded from calculations</inlineHelpText>
+        <label>Valid Until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Hierarchy Price</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Country__c</columns>
+        <columns>Product__c</columns>
+        <columns>Average_ListPrice__c</columns>
+        <columns>Default_Quantity__c</columns>
+        <columns>Validity_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>HP-{0000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Hierarchy Price</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Hierarchy_set</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK(Product__c)</errorConditionFormula>
+        <errorDisplayField>Product__c</errorDisplayField>
+        <errorMessage>Hierarchy must be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>NegativeValueCheckForListPrice</fullName>
+        <active>true</active>
+        <errorConditionFormula>Average_ListPrice__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Average_ListPrice__c</errorDisplayField>
+        <errorMessage>Average List Price Cannot be Negative</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>NegativeValueCheckForQuantity</fullName>
+        <active>true</active>
+        <errorConditionFormula>Default_Quantity__c &lt; 0</errorConditionFormula>
+        <errorDisplayField>Default_Quantity__c</errorDisplayField>
+        <errorMessage>Default Quantity cannot be negative</errorMessage>
+    </validationRules>
+</CustomObject>

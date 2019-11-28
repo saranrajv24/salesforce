@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_BAL_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Factory__r.APTS_BAL_ID__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BAL ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_1_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(APTS_Dimension_1__r.APTS_Type__c,&apos;Discrete&apos;),APTS_Dimension_1_Value__r.APTS_Value__c   +  APTS_Dimension_1_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c,&apos;&apos;) +
+IF(ISPICKVAL(APTS_Dimension_1__r.APTS_Type__c,&apos;Range&apos;),APTS_Dimension_1_Value__r.APTS_Value__c +   APTS_Dimension_1_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c + &apos; - &apos; + APTS_Dimension_1_Value__r.APTS_Range_End_Value__c +   APTS_Dimension_1_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c,&apos;&apos;) +  
+IF(ISPICKVAL(APTS_Dimension_1__r.APTS_Type__c,&apos;Formula&apos;),TEXT(APTS_Dimension_1_Value__r.APTS_Formula_Type__c) + &apos;(&apos; + APTS_Dimension_1_Value__r.APTS_Value__c + &apos;)&apos;,&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dimension 1 Value</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_1_Value__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 1 Value</label>
+        <referenceTo>APTS_ABB_Dimension_Value__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 1 Value)</relationshipLabel>
+        <relationshipName>Peer_Groups1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 1</label>
+        <referenceTo>APTS_ABB_Dimension__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 1)</relationshipLabel>
+        <relationshipName>Peer_Groups1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_2_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(APTS_Dimension_2__r.APTS_Type__c,&apos;Discrete&apos;),APTS_Dimension_2_Value__r.APTS_Value__c   +  APTS_Dimension_2_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c ,&apos;&apos;) +
+IF(ISPICKVAL(APTS_Dimension_2__r.APTS_Type__c,&apos;Range&apos;),APTS_Dimension_2_Value__r.APTS_Value__c +   APTS_Dimension_2_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c + &apos; - &apos; + APTS_Dimension_2_Value__r.APTS_Range_End_Value__c +   APTS_Dimension_2_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c,&apos;&apos;) +  
+IF(ISPICKVAL(APTS_Dimension_2__r.APTS_Type__c,&apos;Formula&apos;),TEXT(APTS_Dimension_2_Value__r.APTS_Formula_Type__c) + &apos;(&apos; + APTS_Dimension_2_Value__r.APTS_Value__c + &apos;)&apos;,&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dimension 2 Value</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_2_Value__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 2 Value</label>
+        <referenceTo>APTS_ABB_Dimension_Value__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 2 Value)</relationshipLabel>
+        <relationshipName>Peer_Groups2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 2</label>
+        <referenceTo>APTS_ABB_Dimension__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 2)</relationshipLabel>
+        <relationshipName>Peer_Groups2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_3_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(APTS_Dimension_3__r.APTS_Type__c,&apos;Discrete&apos;),APTS_Dimension_3_Value__r.APTS_Value__c   +  APTS_Dimension_3_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c ,&apos;&apos;) +
+IF(ISPICKVAL(APTS_Dimension_3__r.APTS_Type__c,&apos;Range&apos;),APTS_Dimension_3_Value__r.APTS_Value__c +   APTS_Dimension_3_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c + &apos; - &apos; + APTS_Dimension_3_Value__r.APTS_Range_End_Value__c +   APTS_Dimension_3_Value__r.APTS_Dimension__r.APTS_Unit_of_Measure__c,&apos;&apos;) +  
+IF(ISPICKVAL(APTS_Dimension_3__r.APTS_Type__c,&apos;Formula&apos;),TEXT(APTS_Dimension_3_Value__r.APTS_Formula_Type__c) + &apos;(&apos; + APTS_Dimension_3_Value__r.APTS_Value__c + &apos;)&apos;,&apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Dimension 3 Value</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_3_Value__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 3 Value</label>
+        <referenceTo>APTS_ABB_Dimension_Value__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 3 Value)</relationshipLabel>
+        <relationshipName>Peer_Groups3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_3__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 3</label>
+        <referenceTo>APTS_ABB_Dimension__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 3)</relationshipLabel>
+        <relationshipName>Peer_Groups3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_4_Value__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 4 Value</label>
+        <referenceTo>APTS_ABB_Dimension_Value__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 4 Value)</relationshipLabel>
+        <relationshipName>Peer_Groups4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_4__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 4</label>
+        <referenceTo>APTS_ABB_Dimension__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 4)</relationshipLabel>
+        <relationshipName>Peer_Groups4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_5_Value__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 5 Value</label>
+        <referenceTo>APTS_ABB_Dimension_Value__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 5 Value)</relationshipLabel>
+        <relationshipName>Peer_Groups5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension_5__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Dimension 5</label>
+        <referenceTo>APTS_ABB_Dimension__c</referenceTo>
+        <relationshipLabel>Peer Groups (Dimension 5)</relationshipLabel>
+        <relationshipName>Peer_Groups5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Factory__c</fullName>
+        <externalId>false</externalId>
+        <label>Factory</label>
+        <referenceTo>APTS_Factory__c</referenceTo>
+        <relationshipLabel>Peer Groups</relationshipLabel>
+        <relationshipName>Peer_Groups</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchical_Peer_Group_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Hierarchical_Peer_Group__r.APTS_Peer_Group_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchical Peer Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchical_Peer_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Hierarchical Peer Group</label>
+        <referenceTo>APTS_Peer_Group__c</referenceTo>
+        <relationshipLabel>Hierarchical Peer Groups</relationshipLabel>
+        <relationshipName>Parent_Peer_Groups</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_JSON_Criteria__c</fullName>
+        <externalId>false</externalId>
+        <label>JSON Criteria</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Level</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_No_of_Dimensions__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISBLANK(APTS_Dimension_1_Value__c),0,1)+
+IF(ISBLANK(APTS_Dimension_2_Value__c),0,1)+
+IF(ISBLANK(APTS_Dimension_3_Value__c),0,1)+
+IF(ISBLANK(APTS_Dimension_4_Value__c),0,1)+
+IF(ISBLANK(APTS_Dimension_5_Value__c),0,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>No of Dimensions</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Number_of_Processed_Records__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Processed Records</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Peer_Group_Name__c</fullName>
+        <externalId>true</externalId>
+        <label>Peer Group Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Use_Hierarchical_Peer_Group__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Use Hierarchical Peer Group</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Valid__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Valid</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Peer Group</label>
+    <listViews>
+        <fullName>Brilon</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Active__c</columns>
+        <columns>APTS_Use_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Factory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Factory__c</field>
+            <operation>equals</operation>
+            <value>Brilon</value>
+        </filters>
+        <label>Brilon</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Jefferson_City</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Peer_Group_Name__c</columns>
+        <columns>APTS_Level__c</columns>
+        <columns>APTS_Active__c</columns>
+        <columns>APTS_Valid__c</columns>
+        <columns>APTS_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Use_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Factory__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Factory__c</field>
+            <operation>equals</operation>
+            <value>Jefferson City</value>
+        </filters>
+        <label>Jefferson City</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Lodz</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Active__c</columns>
+        <columns>APTS_Use_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Factory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Factory__c</field>
+            <operation>equals</operation>
+            <value>Lodz</value>
+        </filters>
+        <label>Lodz</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Vaasa</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Active__c</columns>
+        <columns>APTS_Use_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Factory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Factory__c</field>
+            <operation>equals</operation>
+            <value>Vaasa</value>
+        </filters>
+        <label>Vaasa</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Zaragoza</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Active__c</columns>
+        <columns>APTS_Use_Hierarchical_Peer_Group__c</columns>
+        <columns>APTS_Factory__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Factory__c</field>
+            <operation>equals</operation>
+            <value>Zaragoza</value>
+        </filters>
+        <label>Zaragoza</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>PG-{000000}</displayFormat>
+        <label>Peer Group</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Peer Groups</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Create_Deal_Guidance_Rule</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Deal Guidance Rule</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_CreateDealGuidance?id={!APTS_Peer_Group__c.Id}</url>
+    </webLinks>
+</CustomObject>
