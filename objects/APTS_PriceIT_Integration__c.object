@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This setting holds all PriceIT static strings, passwords, tokens etc</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Auth_Client_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Client ID</label>
+        <length>32</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Client_Secret__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Client Secret</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Endpoint__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Endpoint</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Grant_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Grant Type</label>
+        <length>16</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_JWT_Access_Token_1__c</fullName>
+        <description>First part of Price.It  OAuth JWT access token is stored and reused from here.</description>
+        <externalId>false</externalId>
+        <label>Auth JWT Access Token 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_JWT_Access_Token_2__c</fullName>
+        <description>Second part of Price.It  OAuth JWT access token is stored and reused from here.</description>
+        <externalId>false</externalId>
+        <label>Auth JWT Access Token 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_JWT_Access_Token_3__c</fullName>
+        <description>Third part of Price.It  OAuth JWT access token is stored and reused from here.</description>
+        <externalId>false</externalId>
+        <label>Auth JWT Access Token 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_JWT_Access_Token_4__c</fullName>
+        <description>Fourth part of Price.It  OAuth JWT access token is stored and reused from here.</description>
+        <externalId>false</externalId>
+        <label>Auth JWT Access Token 4</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Password__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Password</label>
+        <length>128</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Scope__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Scope</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Auth_Username__c</fullName>
+        <externalId>false</externalId>
+        <label>Auth Username</label>
+        <length>64</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_TSPA_Endpoint__c</fullName>
+        <description>This field is used to store endpoint for fetch the response from TSPA(Price.it)</description>
+        <externalId>false</externalId>
+        <label>TSPA Endpoint</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PriceIT Integration</label>
+    <visibility>Public</visibility>
+</CustomObject>

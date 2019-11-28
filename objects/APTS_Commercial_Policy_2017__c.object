@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to manage Commercial Policies for Italy. Rule to override the defined pricing,</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Country</globalPicklist>
+        <label>Country</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Max__c</fullName>
+        <externalId>false</externalId>
+        <label>Max %</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Min__c</fullName>
+        <externalId>false</externalId>
+        <label>Min %</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Hierarchy</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>Product2.APTS_LP_Is_Hierarchy__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.Default_LSO__c</field>
+                <operation>contains</operation>
+                <valueField>Product2.APTS_LP_Sales_Organization__c</valueField>
+            </filterItems>
+            <filterItems>
+                <field>Product2.APTS_Hierarchy_Level__c</field>
+                <operation>equals</operation>
+                <value>4</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Commercial Policy</relationshipLabel>
+        <relationshipName>Commercial_Policy_2017</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Validity_Date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>can be left empty or filled with a date in the future. entries with dates in the past will be excluded from calculations</inlineHelpText>
+        <label>Valid Until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Commercial Policy</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Product__c</columns>
+        <columns>Country__c</columns>
+        <columns>Min__c</columns>
+        <columns>Max__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CP-{0000}</displayFormat>
+        <label>Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Commercial Policy</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Validate_Max</fullName>
+        <active>true</active>
+        <errorConditionFormula>Max__c&lt; 0 || Max__c &gt; 1</errorConditionFormula>
+        <errorDisplayField>Max__c</errorDisplayField>
+        <errorMessage>Max % must be between 0 and 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Min</fullName>
+        <active>true</active>
+        <errorConditionFormula>Min__c &lt; 0 || Min__c &gt; 1</errorConditionFormula>
+        <errorDisplayField>Min__c</errorDisplayField>
+        <errorMessage>Min % must be between 0 and 100</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validate_Min_Max</fullName>
+        <active>true</active>
+        <errorConditionFormula>Min__c &gt;= Max__c</errorConditionFormula>
+        <errorDisplayField>Min__c</errorDisplayField>
+        <errorMessage>Min % must be smaller than Max %</errorMessage>
+    </validationRules>
+</CustomObject>

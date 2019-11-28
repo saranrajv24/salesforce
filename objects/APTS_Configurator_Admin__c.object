@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>APTS_BU__c</fullName>
+        <externalId>false</externalId>
+        <formula>Factory_Location__r.BU__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BU</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Configurator_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Configurator ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Configurator_Platform__c</fullName>
+        <externalId>false</externalId>
+        <label>Configurator Platform</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Nextra</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Selectica (Ludvika)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Selectica (Non-Ludvika)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EngineX</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Treffo</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GIS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EConfig</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PP Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ConfigIT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>iConSE</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Selectica</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Copy_Action_Parameter__c</fullName>
+        <description>When Action = Copy pass this parameter</description>
+        <externalId>false</externalId>
+        <label>Copy Action Parameter</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_External_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>External ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Launch_In_New_Window__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Flag to indicate whether the configurator will be opened in new window or not</description>
+        <externalId>false</externalId>
+        <label>Launch In New Window</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Manual_BU_Entry__c</fullName>
+        <externalId>false</externalId>
+        <label>Manual BU Entry</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_No_Access_Messaging__c</fullName>
+        <externalId>false</externalId>
+        <label>No Access Messaging</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Pricing_Required_asynchronous__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>States whether asynchronous pricing is required from within the inbound Save operation (called by the configurator)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>States whether asynchronous pricing is required from within the inbound Save operation (called by the configurator)</inlineHelpText>
+        <label>Pricing Required (asynchronous)</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ATPS_Call_TechData_API__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Whether calling of TechData API is required</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Whether calling of TechData API is required</inlineHelpText>
+        <label>Call TechData API</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BAL_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Factory_Location__r.BALId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The BAL ID derived from the factory location</inlineHelpText>
+        <label>BAL ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Configurator_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The description of this configurator</inlineHelpText>
+        <label>Configurator Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Configurator_URL__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The static URL of the configurator</inlineHelpText>
+        <label>Configurator URL</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Factory_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>The location with which this configurator is associated. Helps in determining which configurator needs to be launched for a selected product, and corresponding BAL ID</inlineHelpText>
+        <label>Factory Location</label>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipLabel>Configurator Admins</relationshipLabel>
+        <relationshipName>Configurator_Admins</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_Disabled_Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Holds the message that the Admin wants to display to the users when the configurator is inactive/disabled</inlineHelpText>
+        <label>Is Disabled Description</label>
+        <length>500</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Is_Disabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables/disables the launch of this configurator</inlineHelpText>
+        <label>Is Disabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>New_Action_Paramater__c</fullName>
+        <description>When Action = New pass this parameter</description>
+        <externalId>false</externalId>
+        <label>New Action Parameter</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Reconfig_Action_Parameter__c</fullName>
+        <description>Action = Reconfig pass these paramteres</description>
+        <externalId>false</externalId>
+        <label>Reconfig Action Parameter</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>URL_Parameters__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>A string place holder that shall be of the following format:
+E.g.: TenderId={proposal.proposalId__c}&amp;LineItemId={lineItem.Id}</inlineHelpText>
+        <label>URL Parameters</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>URL_Parameters_fixed__c</fullName>
+        <description>Fixed URL parameters, e.g.,
+company=APTTUS
+includeWaterMark=true</description>
+        <externalId>false</externalId>
+        <label>URL Parameters (fixed)</label>
+        <length>2000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Configurator Admin</label>
+    <listViews>
+        <fullName>APTS_EPDS_Configurators</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Configurator_ID__c</columns>
+        <columns>Configurator_Description__c</columns>
+        <columns>Configurator_URL__c</columns>
+        <columns>Is_Disabled__c</columns>
+        <columns>Is_Disabled_Description__c</columns>
+        <columns>APTS_Manual_BU_Entry__c</columns>
+        <columns>APTS_No_Access_Messaging__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Manual_BU_Entry__c</field>
+            <operation>equals</operation>
+            <value>EPMV</value>
+        </filters>
+        <label>EPDS Configurators</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_IAMA_Configurators</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Configurator_ID__c</columns>
+        <columns>Configurator_Description__c</columns>
+        <columns>Configurator_URL__c</columns>
+        <columns>Is_Disabled__c</columns>
+        <columns>Is_Disabled_Description__c</columns>
+        <columns>APTS_Manual_BU_Entry__c</columns>
+        <columns>APTS_No_Access_Messaging__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Manual_BU_Entry__c</field>
+            <operation>equals</operation>
+            <value>IAMA</value>
+        </filters>
+        <label>IAMA Configurators</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_PGHV_Configurators</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Configurator_ID__c</columns>
+        <columns>Configurator_Description__c</columns>
+        <columns>Configurator_URL__c</columns>
+        <columns>Is_Disabled__c</columns>
+        <columns>Is_Disabled_Description__c</columns>
+        <columns>APTS_Manual_BU_Entry__c</columns>
+        <columns>APTS_No_Access_Messaging__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Manual_BU_Entry__c</field>
+            <operation>equals</operation>
+            <value>PGHV</value>
+        </filters>
+        <label>PGHV Configurators</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>APTS_PGTR_Configurators</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Configurator_ID__c</columns>
+        <columns>Configurator_Description__c</columns>
+        <columns>Is_Disabled__c</columns>
+        <columns>Configurator_URL__c</columns>
+        <columns>Is_Disabled_Description__c</columns>
+        <columns>APTS_Manual_BU_Entry__c</columns>
+        <columns>APTS_No_Access_Messaging__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Manual_BU_Entry__c</field>
+            <operation>equals</operation>
+            <value>PGTR</value>
+        </filters>
+        <label>PGTR Configurators</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Configurator_ID__c</columns>
+        <columns>Configurator_Description__c</columns>
+        <columns>Configurator_URL__c</columns>
+        <columns>Is_Disabled__c</columns>
+        <columns>Is_Disabled_Description__c</columns>
+        <columns>APTS_Manual_BU_Entry__c</columns>
+        <columns>APTS_No_Access_Messaging__c</columns>
+        <columns>OWNER.ALIAS</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Configurator Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Configurator Admins</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>APTS_Configurator_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Configurator_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>BAL_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Factory_Location__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Disabled__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Is_Disabled_Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Configurator_URL__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Configurator_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Configurator_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>BAL_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Factory_Location__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Is_Disabled__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Is_Disabled_Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Configurator_URL__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Configurator_ID__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Configurator_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>BAL_ID__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Factory_Location__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Is_Disabled__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Is_Disabled_Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Configurator_URL__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>APTS_Configurator_ID__c</searchFilterFields>
+        <searchFilterFields>BAL_ID__c</searchFilterFields>
+        <searchFilterFields>Factory_Location__c</searchFilterFields>
+        <searchFilterFields>Is_Disabled__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+        <searchResultsAdditionalFields>APTS_Configurator_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Configurator_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>BAL_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Factory_Location__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Is_Disabled__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Is_Disabled_Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Configurator_URL__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+</CustomObject>

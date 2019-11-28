@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Transacational Object used to hold quotation LOD date temporarily when its refreshed to be used in agreement. Record will be deleted after copying the LOD values to agreement.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Account_End_User__c</fullName>
+        <description>Field to store account end user id</description>
+        <externalId>false</externalId>
+        <label>Account End User</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Account__c</fullName>
+        <description>Stores Account ID</description>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Channel_Class_Level1__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Class Level1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Channel_Class_Level2__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Class Level2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_CustomerAllocation__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Customer Allocation Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Customer_Allocation__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Customer Allocation</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Distribution_Channel__c</fullName>
+        <description>Field to store distribution channel</description>
+        <externalId>false</externalId>
+        <label>Distribution Channel</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Incoterms__c</fullName>
+        <externalId>false</externalId>
+        <label>Incoterms</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Industry_Usage_Level_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Usage Level 1</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Industry_Usage_Level_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Usage Level 2</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Industry_Usage_Level_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Industry Usage Level 3</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LP_Sales_Organization__c</fullName>
+        <description>Field to store sales organization</description>
+        <externalId>false</externalId>
+        <label>Sales Organization</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalMainBusiness__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Local Main Business Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalSegmentation__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Local Segmentation code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Channel</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Main_Business__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Segmentation__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Local Segmentation</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Primary_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Quotation Refreshed LODs</relationshipLabel>
+        <relationshipName>Quotation_Refreshed_LODs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Primary_Partner_Account__c</fullName>
+        <description>Field to store primary partner account ID</description>
+        <externalId>false</externalId>
+        <label>Primary Partner Account</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quotation_ID__c</fullName>
+        <description>Master-Detail relationship for Quotation</description>
+        <externalId>false</externalId>
+        <label>Quotation</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipLabel>Quotation Refreshed LODs</relationshipLabel>
+        <relationshipName>Quotation_Refreshed_LODs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_SAP_Customer_ID__c</fullName>
+        <description>Field to store SAP customer ID</description>
+        <externalId>false</externalId>
+        <label>SAP Customer ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_SalesDistrict__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Sales District Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_District__c</fullName>
+        <description>R4.1 - Used to hold the approval value for italy</description>
+        <externalId>false</externalId>
+        <label>Sales District</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Office_LP__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>Quotation Refreshed LODs</relationshipLabel>
+        <relationshipName>Quotation_Refreshed_LODs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Office__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <referenceTo>LSO_Field_Entries__c</referenceTo>
+        <relationshipLabel>Quotation Refreshed LODs</relationshipLabel>
+        <relationshipName>Quotation_Refreshed_LODs</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Person__c</fullName>
+        <description>Release: R6-EP-CPQ, Requirement/Defect ID: 1621
+Description: Field to copy Sales Person.</description>
+        <externalId>false</externalId>
+        <label>Sales Person</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Subtype__c</fullName>
+        <externalId>false</externalId>
+        <label>Subtype</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Main_Business__c</fullName>
+        <description>This field is used to hold quotation LOD&apos;s Local Main Business temporarily when its refreshed to be used in agreement.</description>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Quotation Refreshed LOD (Temp Obj)</label>
+    <nameField>
+        <displayFormat>TEMPLOD-{000000000}</displayFormat>
+        <label>Quotation Refreshed LOD Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quotation Refreshed LODs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

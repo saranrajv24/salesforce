@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>To manage section wise product details for an Agreement or Quotation</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>APTS_Agreement__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Field to store Agreement Id</description>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipLabel>Configurator Cart Items</relationshipLabel>
+        <relationshipName>Configurator_Cart_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Assembly__c</fullName>
+        <externalId>false</externalId>
+        <label>Assembly</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Base_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+APTS_Base_Price__c&gt;= 1000000, 
+TEXT(FLOOR(APTS_Base_Price__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Base_Price__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Base_Price__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Base_Price__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Base_Price__c , 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Base_Price__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Base_Price__c , 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Base Price EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Base_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Base Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Carpenteria__c</fullName>
+        <externalId>false</externalId>
+        <label>Carpenteria</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Cart_Line_Number__c</fullName>
+        <description>Line number for each item in cart similar to Line item&apos;s line number.</description>
+        <externalId>false</externalId>
+        <label>Cart Line Number</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Comment__c</fullName>
+        <description>Req-5790, This field is used to manage the text fields in Bulk Upload file at line level</description>
+        <externalId>false</externalId>
+        <label>Bulk Upload Comment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Configure_Status__c</fullName>
+        <description>This field holds the value of configure status like when record inserted using bulk upload it will have status as Imported and if manually added into cart it will have New status.</description>
+        <externalId>false</externalId>
+        <label>Configure Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Changed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Initial Load</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Manual</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No Change</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Cust_Requested_Disc__c</fullName>
+        <externalId>false</externalId>
+        <label>Cust. Requested Disc. %</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Customer_Product_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Customer Product Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dimension__c</fullName>
+        <externalId>false</externalId>
+        <label>Dimension</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(APTS_Discount__c &lt; 0.1, 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 4), 
+IF(APTS_Discount__c&gt; 1, 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 6), 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 5) 
+) 
+) &amp; 
+IF( 
+(APTS_Discount__c - FLOOR(APTS_Discount__c)) &lt;&gt; 0, 
+&quot;&quot; ,&quot;,00&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount % EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount__c</fullName>
+        <description>Discount given in percentage.</description>
+        <externalId>false</externalId>
+        <label>Discount %</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_E_Design_Qty__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Qty__c*APTS_Section_Count__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>E-Design Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_E_Design_Reference_Id__c</fullName>
+        <description>This field is used to populate the Configuration reference Id (ConfigurationID+TimeStamp)</description>
+        <externalId>false</externalId>
+        <label>E Design Reference Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ExtConfigDt__c</fullName>
+        <description>external Configuration tool</description>
+        <externalId>false</externalId>
+        <label>Configuration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Product__r.APTS_Hierarchy_Level_3_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hierarchy Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_IP__c</fullName>
+        <externalId>false</externalId>
+        <label>IP</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Item_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Item Description</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_Label_Row__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To identify a label row while populating template data.</description>
+        <externalId>false</externalId>
+        <label>Label Row</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Label__c</fullName>
+        <externalId>false</externalId>
+        <label>Label</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Configurator_System_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Configurator System Id</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+APTS_Net_Price__c&gt;= 1000000, 
+TEXT(FLOOR(APTS_Net_Price__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Net_Price__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Net_Price__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Net_Price__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Net_Price__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Net_Price__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Net_Price__c, 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Price EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Price_Override__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Price Override</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Price__c</fullName>
+        <description>Net price of product added</description>
+        <externalId>false</externalId>
+        <label>Net Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Unit_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+APTS_Net_Unit_Price__c&gt;= 1000000, 
+TEXT(FLOOR(APTS_Net_Unit_Price__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Net_Unit_Price__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Net_Unit_Price__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Net_Unit_Price__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Net_Unit_Price__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Net_Unit_Price__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Net_Unit_Price__c, 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Unit Price EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Unit_Price__c</fullName>
+        <description>Price of added product per unit</description>
+        <externalId>false</externalId>
+        <formula>APTS_Net_Price__c  /  APTS_Qty__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Unit Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Parent_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Configurator Cart Items (Parent Product)</relationshipLabel>
+        <relationshipName>Configurator_Cart_Items1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Product details for a record</description>
+        <externalId>false</externalId>
+        <label>Product</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>Configurator Cart Items</relationshipLabel>
+        <relationshipName>Configurator_Cart_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Qty__c</fullName>
+        <description>Quantity of a Product in the record.</description>
+        <externalId>false</externalId>
+        <label>Qty.</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quadro__c</fullName>
+        <externalId>false</externalId>
+        <label>Quadro</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Quote__c</fullName>
+        <description>Quotation id to uniquely identify the cart item records for given quotation along with reference number.</description>
+        <externalId>false</externalId>
+        <label>Quote</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Reference_Number__c</fullName>
+        <description>Reference number to generated or provided by PDC data import.</description>
+        <externalId>false</externalId>
+        <label>Reference Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Section_Count__c</fullName>
+        <externalId>false</externalId>
+        <label>Section Count</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Section__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Section details of records</description>
+        <externalId>false</externalId>
+        <label>Section</label>
+        <referenceTo>APTS_Configurator_Section__c</referenceTo>
+        <relationshipLabel>Configurator Cart Items</relationshipLabel>
+        <relationshipName>Configurator_Cart_Items</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_SequenceNo__c</fullName>
+        <externalId>false</externalId>
+        <label>SequenceNo</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Shape__c</fullName>
+        <externalId>false</externalId>
+        <label>Shape</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Show_In_Cart__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Show In Cart</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Table_Group_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Table Group Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Third_Party__c</fullName>
+        <externalId>false</externalId>
+        <label>3rd Party?</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Quote_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  OR(ISBLANK(APTS_Total_Quote_Price__c) , ISNULL(APTS_Total_Quote_Price__c)) ,&quot;&quot;,IF(
+APTS_Total_Quote_Price__c &gt;= 1000000, 
+TEXT(FLOOR(APTS_Total_Quote_Price__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Total_Quote_Price__c&gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Total_Quote_Price__c/ 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Total_Quote_Price__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Total_Quote_Price__c , 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Total_Quote_Price__c , 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Total_Quote_Price__c, 1), 2) * 100, 99)) 
+))</formula>
+        <label>Total Quote Price EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Total_Quote_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Quote Price</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_User_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>User Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cust_Req_Net__c</fullName>
+        <externalId>false</externalId>
+        <label>Cust Req Net</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Position__c</fullName>
+        <description>This field is used to sequence the section and its Product in the template</description>
+        <externalId>false</externalId>
+        <label>Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Product__r.ProductCode</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Type__c</fullName>
+        <description>Created for Templates</description>
+        <externalId>false</externalId>
+        <formula>APTS_Product__r.APTS_ProductType__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Configurator Cart Item</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>APTS_Base_Price__c</columns>
+        <columns>APTS_Discount__c</columns>
+        <columns>APTS_Discount_Type__c</columns>
+        <columns>APTS_Hierarchy_Code__c</columns>
+        <columns>APTS_Net_Price_Override__c</columns>
+        <columns>APTS_Product__c</columns>
+        <columns>APTS_Qty__c</columns>
+        <columns>APTS_Section__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Net_Price_Override__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>CCI-{0000000000}</displayFormat>
+        <label>Configurator Cart Items Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Configurator Cart Items</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

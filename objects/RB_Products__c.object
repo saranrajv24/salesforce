@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <content>RedirectToEditAll</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <content>RedirectToEditAll</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is created to related products under Account and RB</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Location__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Added for Req- 6458, STS R3.0, Recurring Business Stream</description>
+        <externalId>false</externalId>
+        <label>ABB Location</label>
+        <lookupFilter>
+            <active>true</active>
+            <booleanFilter>(1 AND 4 AND 2 AND 5 AND 3 AND 6 AND 7) OR 8 OR 9</booleanFilter>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.IsActive__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.BU__c</field>
+                <operation>notEqual</operation>
+                <value>ZCCO, ZCRE, ZCVA</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.DIV__c</field>
+                <operation>notEqual</operation>
+                <value>ZC</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value>Sales, Admin/Corporate, Other, R&amp;D, Warehouse or Logistics, Training</value>
+            </filterItems>
+            <filterItems>
+                <field>ABB_Location__c.Activity__c</field>
+                <operation>notEqual</operation>
+                <value></value>
+            </filterItems>
+            <filterItems>
+                <field>$Profile.Name</field>
+                <operation>equals</operation>
+                <value>ABB CCP Integration</value>
+            </filterItems>
+            <filterItems>
+                <field>$User.DisabledLookupFilterMode__c</field>
+                <operation>equals</operation>
+                <value>True</value>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipLabel>RB Products</relationshipLabel>
+        <relationshipName>RB_Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>RB Products</relationshipLabel>
+        <relationshipName>RB_Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Currency__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Currency</globalPicklist>
+        <label>Currency</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_PG__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Primary PG</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group1__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product_Name__r.Product_Group__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Group</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Formula__c</fullName>
+        <externalId>false</externalId>
+        <formula>Text(Product_Group__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Group</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Name__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Product Name</label>
+        <referenceTo>Product2</referenceTo>
+        <relationshipLabel>RB Products</relationshipLabel>
+        <relationshipName>RB_Products</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <externalId>false</externalId>
+        <label>Quantity</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Recurring_Business__c</fullName>
+        <externalId>false</externalId>
+        <label>Recurring Business</label>
+        <referenceTo>Recurring_Business__c</referenceTo>
+        <relationshipLabel>RB Products</relationshipLabel>
+        <relationshipName>RB_Products</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Sales_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Price</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice1__c</fullName>
+        <externalId>false</externalId>
+        <label>TotalPrice1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice__c</fullName>
+        <externalId>false</externalId>
+        <formula>Quantity__c  *  Sales_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>RB Products</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Primary_PG__c</columns>
+        <columns>Product_Name__c</columns>
+        <columns>CURRENCY_ISO_CODE</columns>
+        <columns>Sales_Price__c</columns>
+        <columns>Quantity__c</columns>
+        <columns>Recurring_Business__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>RB-{0000}</displayFormat>
+        <label>RB Products Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>RB Products</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Add_Remove_Edit</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add/Remove/Edit</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/apex/RBProductsEditAll?id={!Recurring_Business__c.Account_CustomerId__c}&amp;rbid={!Recurring_Business__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_from_Favorites</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add from Favorites</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+var Pisurl = &apos;/apex/RBUserFavoritesList?addTo={!Recurring_Business__c.Id}&amp;accId={!Recurring_Business__c.Account_CustomerId__c}&apos;; 
+Pisurl = Pisurl +&apos;&amp;retURL={!Recurring_Business__c.Id}&amp;id={!Recurring_Business__c.Id}&apos;; 
+parent.parent.window.location.replace(Pisurl);</url>
+    </webLinks>
+</CustomObject>

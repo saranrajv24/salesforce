@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Used to configure quotation clone</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Fields_to_be_Nullify_Oppty__c</fullName>
+        <description>comma separated opportunity fields to be cleared on clone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>comma separated opportunity fields to be cleared on clone</inlineHelpText>
+        <label>APTS Fields to be Nullify Oppty</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Fields_to_be_Nullify__c</fullName>
+        <description>comma separated quote field names to be cleared on clone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>comma separated quote field names to be cleared on clone</inlineHelpText>
+        <label>Fields to be Nullify</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Fields_to_display_Templates__c</fullName>
+        <description>Template Quotation fields to display on create Quotation from Opportunity</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Template Quotation fields to display on create Quotation from Opportunity</inlineHelpText>
+        <label>Fields to display Templates</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Fields_to_display_line_items__c</fullName>
+        <description>Line Items fields to display on Clone with line items</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Line Items fields to display on Clone with line items</inlineHelpText>
+        <label>Fields to display line items</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Quotation Clone Properties</label>
+    <visibility>Protected</visibility>
+</CustomObject>

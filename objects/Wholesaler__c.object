@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>APTS_CusAllocation__c</fullName>
+        <description>R4.1 - Used to save Wholesaler LOD  information for approval process</description>
+        <externalId>false</externalId>
+        <label>Customer Allocation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Customer_Allocation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Allocation</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers</relationshipLabel>
+        <relationshipName>WholeSalers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Distribution_Channel__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Distribution Channel</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Distribution Channel)</relationshipLabel>
+        <relationshipName>WholeSalers1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Incoterms__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Customer Incoterms</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Customer Incoterms)</relationshipLabel>
+        <relationshipName>WholeSalers2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LocMainBusiness__c</fullName>
+        <description>R4.1 - Used to save Wholesaler LOD  information for approval process</description>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_LocalSegment__c</fullName>
+        <description>R4.1 - Used to save Wholesaler LOD  information for approval process</description>
+        <externalId>false</externalId>
+        <label>Local Segment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Channel__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Local Channel</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Local Channel)</relationshipLabel>
+        <relationshipName>WholeSalers3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Main_Business__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Local Main Business</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Local Main Business)</relationshipLabel>
+        <relationshipName>WholeSalers4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Local_Segmentation__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Local Segmentation</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Local Segmentation)</relationshipLabel>
+        <relationshipName>WholeSalers5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Payment_Terms__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Payment Terms)</relationshipLabel>
+        <relationshipName>WholeSalers6</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_SalesDistrict__c</fullName>
+        <description>R4.1 - Used to save Wholesaler LOD  information for approval process</description>
+        <externalId>false</externalId>
+        <label>Sales District</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_District__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales District</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Sales District)</relationshipLabel>
+        <relationshipName>WholeSalers7</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Office__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <referenceTo>APTS_Master_Picklist_Table__c</referenceTo>
+        <relationshipLabel>WholeSalers (Sales Office)</relationshipLabel>
+        <relationshipName>WholeSalers8</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>WholeSalers</relationshipLabel>
+        <relationshipName>WholeSalers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Distribution_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Distribution Channel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incoterms__c</fullName>
+        <externalId>false</externalId>
+        <label>Incoterms</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Local_Channel__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Channel</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LodId__c</fullName>
+        <externalId>false</externalId>
+        <label>LodId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Proposal__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quote/Proposal</label>
+        <referenceTo>Apttus_Proposal__Proposal__c</referenceTo>
+        <relationshipLabel>WholeSalers</relationshipLabel>
+        <relationshipName>WholeSalers</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SAP_Customer_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Customer ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Office__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Office</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sales_Organisation__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Organisation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Wholesaler</label>
+    <nameField>
+        <label>Wholesaler Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>WholeSalers</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

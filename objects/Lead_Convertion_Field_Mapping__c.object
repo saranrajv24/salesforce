@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>AccountFieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <label>AccountFieldAPIName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseFieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <label>CaseFieldAPIName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactFieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <label>ContactFieldAPIName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LeadFieldAPIName__c</fullName>
+        <externalId>false</externalId>
+        <label>LeadFieldAPIName</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NotUpdateExisting__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is not updated for leads converted to existing contacts.</description>
+        <externalId>false</externalId>
+        <label>NotUpdateExisting</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Lead Convertion Field Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

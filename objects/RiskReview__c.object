@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Holds parameter for Risk Review</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>RR_App_URL__c</fullName>
+        <defaultValue>&quot;/rr/riskreview/externalSystemRequest.jsf&quot;</defaultValue>
+        <description>The URL of the RiskReview Application, relative to RR_Server__c</description>
+        <externalId>false</externalId>
+        <label>RR_App_URL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RR_Check_URL__c</fullName>
+        <defaultValue>&quot;/rr/images/help-popup.gif&quot;</defaultValue>
+        <description>URL to an image file that can be used to check if the RR server is reachable</description>
+        <externalId>false</externalId>
+        <label>RR_Check_URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RR_Mode__c</fullName>
+        <externalId>false</externalId>
+        <label>RR Mode</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RR_Server__c</fullName>
+        <defaultValue>&quot;https://www209.abb.com&quot;</defaultValue>
+        <description>Holds URL to Risk Review server</description>
+        <externalId>false</externalId>
+        <label>RR_Server</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>extSystemId__c</fullName>
+        <defaultValue>&quot;9AAG10077&quot;</defaultValue>
+        <description>The GAR ID to be used for Salesforce as external system in ABB</description>
+        <externalId>false</externalId>
+        <label>extSystemId</label>
+        <length>20</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Risk Review</label>
+    <visibility>Public</visibility>
+</CustomObject>

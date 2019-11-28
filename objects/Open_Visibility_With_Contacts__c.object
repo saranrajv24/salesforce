@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Add custom setting for Open Visibility with Contacts button.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>ContactsOpen_Visibility_With_Contacts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This button can be disabled if needed, and access to this button will have only selected people or profiles.</description>
+        <externalId>false</externalId>
+        <label>Open Visibility With Contacts Button</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Open Visibility With Contacts</label>
+    <visibility>Public</visibility>
+</CustomObject>

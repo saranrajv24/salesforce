@@ -1,0 +1,1059 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>AccountGUID__c</fullName>
+        <externalId>false</externalId>
+        <label>AccountGUID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementId1__c</fullName>
+        <externalId>false</externalId>
+        <label>AgreementId1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementId2__c</fullName>
+        <externalId>false</externalId>
+        <label>AgreementId2</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementId3__c</fullName>
+        <externalId>false</externalId>
+        <label>AgreementId3</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementId4__c</fullName>
+        <externalId>false</externalId>
+        <label>AgreementId4</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementId5__c</fullName>
+        <externalId>false</externalId>
+        <label>AgreementId5</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AgreementIsApproved1__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AgreementIsApproved1</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AgreementIsApproved2__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AgreementIsApproved2</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AgreementIsApproved3__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AgreementIsApproved3</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AgreementIsApproved4__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AgreementIsApproved4</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AgreementIsApproved5__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AgreementIsApproved5</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Company__c</fullName>
+        <externalId>false</externalId>
+        <label>Company</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CountryCodePlainText__c</fullName>
+        <externalId>false</externalId>
+        <label>CountryCodePlainText</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CountryCode__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Country_ISO_Code</globalPicklist>
+        <label>CountryCode</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>CountryPlainText__c</fullName>
+        <externalId>false</externalId>
+        <label>Country Plain Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EmailPlainText__c</fullName>
+        <externalId>false</externalId>
+        <label>EmailPlainText</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FirstName__c</fullName>
+        <externalId>false</externalId>
+        <label>FirstName</label>
+        <length>40</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>InquiryConcerns__c</fullName>
+        <externalId>false</externalId>
+        <label>InquiryConcerns</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LanguagePlainText__c</fullName>
+        <externalId>false</externalId>
+        <label>Language Plain Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Language__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>Language</globalPicklist>
+        <label>Language</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>LastName__c</fullName>
+        <externalId>false</externalId>
+        <label>LastName</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Message</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>PhonePlainText__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone Plain Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>Phone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>PostalCode__c</fullName>
+        <externalId>false</externalId>
+        <label>PostalCode</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RefererProductId__c</fullName>
+        <externalId>false</externalId>
+        <label>RefererProductId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RefererURL__c</fullName>
+        <externalId>false</externalId>
+        <label>RefererURL</label>
+        <length>131072</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RefererinquiryConcerns__c</fullName>
+        <externalId>false</externalId>
+        <label>RefererinquiryConcerns</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SourceId__c</fullName>
+        <externalId>false</externalId>
+        <label>SourceId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StateCode__c</fullName>
+        <description>The master data code of state</description>
+        <externalId>false</externalId>
+        <label>StateCode</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>StatusCode__c</fullName>
+        <externalId>false</externalId>
+        <label>Status Code</label>
+        <picklist>
+            <picklistValues>
+                <fullName>NEW</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>VALIDATION ERROR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LEAD CREATION ERROR</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>SubmitDate__c</fullName>
+        <externalId>false</externalId>
+        <label>SubmitDate</label>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <label>Lead Inquiry Integration</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>FirstName__c</columns>
+        <columns>LastName__c</columns>
+        <columns>Company__c</columns>
+        <columns>Email__c</columns>
+        <columns>Status__c</columns>
+        <columns>StatusCode__c</columns>
+        <columns>Message__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>Li{0000000}</displayFormat>
+        <label>LeadIntegration Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Lead Inquiry Integrations</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>FirstName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LastName__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Company__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Agreement4And5Check</fullName>
+        <active>true</active>
+        <description>Agreement4And5Check</description>
+        <errorConditionFormula>AND( NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+OR(NOT(ISBLANK( AgreementId4__c )),NOT(ISBLANK( AgreementId5__c))))</errorConditionFormula>
+        <errorDisplayField>AccountGUID__c</errorDisplayField>
+        <errorMessage>Wrong number of agreements id. Accepted are agreementForTermsAndConditions, agreementForMarketingCommunicationByPhone, agreementForMarketingCommunicationByEmail</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AgreementsIdShouldbeValid</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(
+ IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT(
+OR(
+ AND( 
+  AgreementId1__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId2__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId3__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ ),
+ AND( 
+  AgreementId1__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId3__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId2__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ ),
+ AND( 
+  AgreementId2__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId1__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId3__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ ),
+ AND( 
+  AgreementId2__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId3__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId1__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ ),
+ AND( 
+  AgreementId3__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId1__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId2__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ ),
+ AND( 
+  AgreementId3__c = &apos;agreementForTermsAndConditions&apos;,
+  AgreementId2__c = &apos;agreementForMarketingCommunicationByPhone&apos;,
+  AgreementId1__c = &apos;agreementForMarketingCommunicationByEmail&apos;
+ )
+) 
+)
+)</errorConditionFormula>
+        <errorMessage>Wrong agreemntes id. Accepted are agreementForTermsAndConditions, agreementForMarketingCommunicationByPhone, agreementForMarketingCommunicationByEmail</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>AlwaysApproveTAndC</fullName>
+        <active>true</active>
+        <description>R8 - agreementForTermsAndConditions should be always approved to proceed inquiry.</description>
+        <errorConditionFormula>AND(
+ IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT(
+OR(
+ AND(
+  OR(AgreementIsApproved1__c = true,AgreementIsApproved1__c = false)
+ ),
+ AND(
+  
+OR(AgreementIsApproved2__c = true,AgreementIsApproved2__c = false)
+ ),
+ AND(
+  OR(AgreementIsApproved3__c = true,AgreementIsApproved3__c = false)
+ )
+)
+)
+)</errorConditionFormula>
+        <errorMessage>agreementForTermsAndConditions should be always approved to proceed inquiry.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>CheckRequiredFields</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+ IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+AND(
+ Status__c = &apos;NEW&apos;,
+ OR(
+  ISBLank(SourceId__c),  
+  IsBLank(Text(CountryCode__c)),
+  IsBlank(LastName__c),
+  IsBlank(Email__c),
+  IsBlank(Company__c),
+  IsBlank(Message__c),
+  IsBlank(InquiryConcerns__c),
+  IsBlank(Text(Language__c)) 
+ )
+)
+)</errorConditionFormula>
+        <errorMessage>Required parameter is missing. Following parameters are required: SourceId, CountryCode,LastName,Company,Description,InquiryConcerns, language</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>StateCodeIsAvlOnlyForInUsCa</fullName>
+        <active>true</active>
+        <description>Check state code</description>
+        <errorConditionFormula>AND(
+ ISBLANK(StateCode__c ) = false,
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+ NOT(
+  OR(  
+   ISPICKVAL(CountryCode__c, &apos;AU&apos;),
+   ISPICKVAL(CountryCode__c, &apos;BR&apos;),
+   ISPICKVAL(CountryCode__c, &apos;CA&apos;),
+   ISPICKVAL(CountryCode__c, &apos;DE&apos;),
+   ISPICKVAL(CountryCode__c, &apos;ES&apos;),
+   ISPICKVAL(CountryCode__c, &apos;FR&apos;),
+   ISPICKVAL(CountryCode__c, &apos;IN&apos;),
+   ISPICKVAL(CountryCode__c, &apos;PL&apos;),
+   ISPICKVAL(CountryCode__c, &apos;US&apos;)
+  )
+ )
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>StateCode is only available for Australia, Brazil, Canada, France, Germany, India, Poland, Spain and United States</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateAustraliaStateCode</fullName>
+        <active>true</active>
+        <description>Validateion of Australia State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;AU&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;ACT&apos;,
+StateCode__c = &apos;NSW&apos;,
+StateCode__c = &apos;NT&apos;,
+StateCode__c = &apos;QLD&apos;,
+StateCode__c = &apos;SA&apos;,
+StateCode__c = &apos;TAS&apos;,
+StateCode__c = &apos;VIC&apos;,
+StateCode__c = &apos;WA&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Australia state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateBrazilStateCode</fullName>
+        <active>true</active>
+        <description>Validation of Brazil State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;BR&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;AC&apos;,
+StateCode__c = &apos;AL&apos;,
+StateCode__c = &apos;AM&apos;,
+StateCode__c = &apos;AP&apos;,
+StateCode__c = &apos;BA&apos;,
+StateCode__c = &apos;CE&apos;,
+StateCode__c = &apos;DF&apos;,
+StateCode__c = &apos;ES&apos;,
+StateCode__c = &apos;GO&apos;,
+StateCode__c = &apos;MA&apos;,
+StateCode__c = &apos;MG&apos;,
+StateCode__c = &apos;MS&apos;,
+StateCode__c = &apos;MT&apos;,
+StateCode__c = &apos;PA&apos;,
+StateCode__c = &apos;PB&apos;,
+StateCode__c = &apos;PE&apos;,
+StateCode__c = &apos;PI&apos;,
+StateCode__c = &apos;PR&apos;,
+StateCode__c = &apos;RJ&apos;,
+StateCode__c = &apos;RN&apos;,
+StateCode__c = &apos;RO&apos;,
+StateCode__c = &apos;RR&apos;,
+StateCode__c = &apos;RS&apos;,
+StateCode__c = &apos;SC&apos;,
+StateCode__c = &apos;SE&apos;,
+StateCode__c = &apos;SP&apos;,
+StateCode__c = &apos;TO&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Brazil state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateCanadaStateCode</fullName>
+        <active>true</active>
+        <description>Validateion of Canada State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;), 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+AND( IsPickVal(CountryCode__c, &apos;CA&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;AB&apos;,
+StateCode__c = &apos;BC&apos;,
+StateCode__c = &apos;MB&apos;,
+StateCode__c = &apos;NB&apos;,
+StateCode__c = &apos;NL&apos;,
+StateCode__c = &apos;NS&apos;,
+StateCode__c = &apos;NT&apos;,
+StateCode__c = &apos;NU&apos;,
+StateCode__c = &apos;ON&apos;,
+StateCode__c = &apos;PE&apos;,
+StateCode__c = &apos;QC&apos;,
+StateCode__c = &apos;SK&apos;,
+StateCode__c = &apos;YT&apos;
+) 
+) 
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Canada state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateFranceStateCode</fullName>
+        <active>true</active>
+        <description>Validation of France State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;FR&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;01&apos;,
+StateCode__c = &apos;02&apos;,
+StateCode__c = &apos;03&apos;,
+StateCode__c = &apos;04&apos;,
+StateCode__c = &apos;05&apos;,
+StateCode__c = &apos;06&apos;,
+StateCode__c = &apos;07&apos;,
+StateCode__c = &apos;08&apos;,
+StateCode__c = &apos;09&apos;,
+StateCode__c = &apos;10&apos;,
+StateCode__c = &apos;11&apos;,
+StateCode__c = &apos;12&apos;,
+StateCode__c = &apos;13&apos;,
+StateCode__c = &apos;14&apos;,
+StateCode__c = &apos;15&apos;,
+StateCode__c = &apos;16&apos;,
+StateCode__c = &apos;17&apos;,
+StateCode__c = &apos;18&apos;,
+StateCode__c = &apos;19&apos;,
+StateCode__c = &apos;21&apos;,
+StateCode__c = &apos;22&apos;,
+StateCode__c = &apos;23&apos;,
+StateCode__c = &apos;24&apos;,
+StateCode__c = &apos;25&apos;,
+StateCode__c = &apos;26&apos;,
+StateCode__c = &apos;27&apos;,
+StateCode__c = &apos;28&apos;,
+StateCode__c = &apos;29&apos;,
+StateCode__c = &apos;2A&apos;,
+StateCode__c = &apos;2B&apos;,
+StateCode__c = &apos;30&apos;,
+StateCode__c = &apos;31&apos;,
+StateCode__c = &apos;32&apos;,
+StateCode__c = &apos;33&apos;,
+StateCode__c = &apos;34&apos;,
+StateCode__c = &apos;35&apos;,
+StateCode__c = &apos;36&apos;,
+StateCode__c = &apos;37&apos;,
+StateCode__c = &apos;38&apos;,
+StateCode__c = &apos;39&apos;,
+StateCode__c = &apos;40&apos;,
+StateCode__c = &apos;41&apos;,
+StateCode__c = &apos;42&apos;,
+StateCode__c = &apos;43&apos;,
+StateCode__c = &apos;44&apos;,
+StateCode__c = &apos;45&apos;,
+StateCode__c = &apos;46&apos;,
+StateCode__c = &apos;47&apos;,
+StateCode__c = &apos;48&apos;,
+StateCode__c = &apos;49&apos;,
+StateCode__c = &apos;50&apos;,
+StateCode__c = &apos;51&apos;,
+StateCode__c = &apos;52&apos;,
+StateCode__c = &apos;53&apos;,
+StateCode__c = &apos;54&apos;,
+StateCode__c = &apos;55&apos;,
+StateCode__c = &apos;56&apos;,
+StateCode__c = &apos;57&apos;,
+StateCode__c = &apos;58&apos;,
+StateCode__c = &apos;59&apos;,
+StateCode__c = &apos;60&apos;,
+StateCode__c = &apos;61&apos;,
+StateCode__c = &apos;62&apos;,
+StateCode__c = &apos;63&apos;,
+StateCode__c = &apos;64&apos;,
+StateCode__c = &apos;65&apos;,
+StateCode__c = &apos;66&apos;,
+StateCode__c = &apos;67&apos;,
+StateCode__c = &apos;68&apos;,
+StateCode__c = &apos;69&apos;,
+StateCode__c = &apos;70&apos;,
+StateCode__c = &apos;71&apos;,
+StateCode__c = &apos;72&apos;,
+StateCode__c = &apos;73&apos;,
+StateCode__c = &apos;74&apos;,
+StateCode__c = &apos;75&apos;,
+StateCode__c = &apos;76&apos;,
+StateCode__c = &apos;77&apos;,
+StateCode__c = &apos;78&apos;,
+StateCode__c = &apos;79&apos;,
+StateCode__c = &apos;80&apos;,
+StateCode__c = &apos;81&apos;,
+StateCode__c = &apos;82&apos;,
+StateCode__c = &apos;83&apos;,
+StateCode__c = &apos;84&apos;,
+StateCode__c = &apos;85&apos;,
+StateCode__c = &apos;86&apos;,
+StateCode__c = &apos;87&apos;,
+StateCode__c = &apos;88&apos;,
+StateCode__c = &apos;89&apos;,
+StateCode__c = &apos;90&apos;,
+StateCode__c = &apos;91&apos;,
+StateCode__c = &apos;92&apos;,
+StateCode__c = &apos;93&apos;,
+StateCode__c = &apos;94&apos;,
+StateCode__c = &apos;95&apos;,
+StateCode__c = &apos;971&apos;,
+StateCode__c = &apos;972&apos;,
+StateCode__c = &apos;973&apos;,
+StateCode__c = &apos;974&apos;,
+StateCode__c = &apos;975&apos;,
+StateCode__c = &apos;976&apos;,
+StateCode__c = &apos;977&apos;,
+StateCode__c = &apos;978&apos;,
+StateCode__c = &apos;986&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>France state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateGermanyStateCode</fullName>
+        <active>true</active>
+        <description>Validation of GermanyState Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;DE&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;01&apos;,
+StateCode__c = &apos;02&apos;,
+StateCode__c = &apos;03&apos;,
+StateCode__c = &apos;04&apos;,
+StateCode__c = &apos;05&apos;,
+StateCode__c = &apos;06&apos;,
+StateCode__c = &apos;07&apos;,
+StateCode__c = &apos;08&apos;,
+StateCode__c = &apos;09&apos;,
+StateCode__c = &apos;10&apos;,
+StateCode__c = &apos;11&apos;,
+StateCode__c = &apos;12&apos;,
+StateCode__c = &apos;13&apos;,
+StateCode__c = &apos;14&apos;,
+StateCode__c = &apos;15&apos;,
+StateCode__c = &apos;16&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Germany state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateIndiaStateCode</fullName>
+        <active>true</active>
+        <description>Validateion of India State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;), 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+AND( IsPickVal(CountryCode__c, &apos;IN&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;01&apos;,
+StateCode__c = &apos;02&apos;,
+StateCode__c = &apos;03&apos;,
+StateCode__c = &apos;04&apos;,
+StateCode__c = &apos;05&apos;,
+StateCode__c = &apos;06&apos;,
+StateCode__c = &apos;07&apos;,
+StateCode__c = &apos;08&apos;,
+StateCode__c = &apos;09&apos;,
+StateCode__c = &apos;10&apos;,
+StateCode__c = &apos;11&apos;,
+StateCode__c = &apos;12&apos;,
+StateCode__c = &apos;13&apos;,
+StateCode__c = &apos;14&apos;,
+StateCode__c = &apos;15&apos;,
+StateCode__c = &apos;16&apos;,
+StateCode__c = &apos;17&apos;,
+StateCode__c = &apos;18&apos;,
+StateCode__c = &apos;19&apos;,
+StateCode__c = &apos;20&apos;,
+StateCode__c = &apos;21&apos;,
+StateCode__c = &apos;22&apos;,
+StateCode__c = &apos;23&apos;,
+StateCode__c = &apos;24&apos;,
+StateCode__c = &apos;25&apos;,
+StateCode__c = &apos;26&apos;,
+StateCode__c = &apos;27&apos;,
+StateCode__c = &apos;28&apos;,
+StateCode__c = &apos;29&apos;,
+StateCode__c = &apos;30&apos;,
+StateCode__c = &apos;31&apos;,
+StateCode__c = &apos;32&apos;,
+StateCode__c = &apos;33&apos;,
+StateCode__c = &apos;34&apos;,
+StateCode__c = &apos;37&apos;,
+StateCode__c = &apos;36&apos;,
+StateCode__c = &apos;38&apos;
+) 
+) 
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>India state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidatePolandStateCode</fullName>
+        <active>true</active>
+        <description>Validation of Poland State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;PL&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;DSL&apos;,
+StateCode__c = &apos;K-P&apos;,
+StateCode__c = &apos;LBL&apos;,
+StateCode__c = &apos;LBS&apos;,
+StateCode__c = &apos;LDZ&apos;,
+StateCode__c = &apos;MAL&apos;,
+StateCode__c = &apos;MAZ&apos;,
+StateCode__c = &apos;OPO&apos;,
+StateCode__c = &apos;PDK&apos;,
+StateCode__c = &apos;PDL&apos;,
+StateCode__c = &apos;POM&apos;,
+StateCode__c = &apos;SLS&apos;,
+StateCode__c = &apos;SWK&apos;,
+StateCode__c = &apos;WLK&apos;,
+StateCode__c = &apos;W-M&apos;,
+StateCode__c = &apos;Z-P&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Poland state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateSpainStateCode</fullName>
+        <active>true</active>
+        <description>Validation of SpainState Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;ES&apos;), 
+NOT( 
+OR( 
+IsBlank(StateCode__c),
+StateCode__c = &apos;01&apos;,
+StateCode__c = &apos;02&apos;,
+StateCode__c = &apos;03&apos;,
+StateCode__c = &apos;04&apos;,
+StateCode__c = &apos;05&apos;,
+StateCode__c = &apos;06&apos;,
+StateCode__c = &apos;07&apos;,
+StateCode__c = &apos;08&apos;,
+StateCode__c = &apos;09&apos;,
+StateCode__c = &apos;10&apos;,
+StateCode__c = &apos;11&apos;,
+StateCode__c = &apos;12&apos;,
+StateCode__c = &apos;13&apos;,
+StateCode__c = &apos;14&apos;,
+StateCode__c = &apos;15&apos;,
+StateCode__c = &apos;16&apos;,
+StateCode__c = &apos;17&apos;,
+StateCode__c = &apos;18&apos;,
+StateCode__c = &apos;19&apos;,
+StateCode__c = &apos;20&apos;,
+StateCode__c = &apos;21&apos;,
+StateCode__c = &apos;22&apos;,
+StateCode__c = &apos;23&apos;,
+StateCode__c = &apos;24&apos;,
+StateCode__c = &apos;25&apos;,
+StateCode__c = &apos;26&apos;,
+StateCode__c = &apos;27&apos;,
+StateCode__c = &apos;28&apos;,
+StateCode__c = &apos;29&apos;,
+StateCode__c = &apos;30&apos;,
+StateCode__c = &apos;31&apos;,
+StateCode__c = &apos;32&apos;,
+StateCode__c = &apos;33&apos;,
+StateCode__c = &apos;34&apos;,
+StateCode__c = &apos;35&apos;,
+StateCode__c = &apos;36&apos;,
+StateCode__c = &apos;37&apos;,
+StateCode__c = &apos;38&apos;,
+StateCode__c = &apos;39&apos;,
+StateCode__c = &apos;40&apos;,
+StateCode__c = &apos;41&apos;,
+StateCode__c = &apos;42&apos;,
+StateCode__c = &apos;43&apos;,
+StateCode__c = &apos;44&apos;,
+StateCode__c = &apos;45&apos;,
+StateCode__c = &apos;46&apos;,
+StateCode__c = &apos;47&apos;,
+StateCode__c = &apos;48&apos;,
+StateCode__c = &apos;49&apos;,
+StateCode__c = &apos;50&apos;,
+StateCode__c = &apos;51&apos;,
+StateCode__c = &apos;52&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>Spain state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ValidateUSAStateCode</fullName>
+        <active>true</active>
+        <description>Validateion of USA State Code</description>
+        <errorConditionFormula>AND( 
+IsPickVal(StatusCode__c, &apos;NEW&apos;),
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+AND( IsPickVal(CountryCode__c, &apos;US&apos;), 
+NOT( 
+OR(  
+IsBlank(StateCode__c), 
+StateCode__c = &apos;AK&apos;,
+StateCode__c = &apos;AL&apos;,
+StateCode__c = &apos;AR&apos;,
+StateCode__c = &apos;AS&apos;,
+StateCode__c = &apos;AZ&apos;,
+StateCode__c = &apos;CA&apos;,
+StateCode__c = &apos;CO&apos;,
+StateCode__c = &apos;CT&apos;,
+StateCode__c = &apos;DC&apos;,
+StateCode__c = &apos;DE&apos;,
+StateCode__c = &apos;FL&apos;,
+StateCode__c = &apos;GA&apos;,
+StateCode__c = &apos;GU&apos;,
+StateCode__c = &apos;HI&apos;,
+StateCode__c = &apos;IA&apos;,
+StateCode__c = &apos;ID&apos;,
+StateCode__c = &apos;IL&apos;,
+StateCode__c = &apos;IN&apos;,
+StateCode__c = &apos;KS&apos;,
+StateCode__c = &apos;KY&apos;,
+StateCode__c = &apos;LA&apos;,
+StateCode__c = &apos;MA&apos;,
+StateCode__c = &apos;MD&apos;,
+StateCode__c = &apos;ME&apos;,
+StateCode__c = &apos;MI&apos;,
+StateCode__c = &apos;MN&apos;,
+StateCode__c = &apos;MO&apos;,
+StateCode__c = &apos;MP&apos;,
+StateCode__c = &apos;MS&apos;,
+StateCode__c = &apos;MT&apos;,
+StateCode__c = &apos;NC&apos;,
+StateCode__c = &apos;ND&apos;,
+StateCode__c = &apos;NE&apos;,
+StateCode__c = &apos;NH&apos;,
+StateCode__c = &apos;NJ&apos;,
+StateCode__c = &apos;NM&apos;,
+StateCode__c = &apos;NV&apos;,
+StateCode__c = &apos;NY&apos;,
+StateCode__c = &apos;OH&apos;,
+StateCode__c = &apos;OK&apos;,
+StateCode__c = &apos;OR&apos;,
+StateCode__c = &apos;PA&apos;,
+StateCode__c = &apos;PR&apos;,
+StateCode__c = &apos;RI&apos;,
+StateCode__c = &apos;SC&apos;,
+StateCode__c = &apos;SD&apos;,
+StateCode__c = &apos;TN&apos;,
+StateCode__c = &apos;TX&apos;,
+StateCode__c = &apos;UT&apos;,
+StateCode__c = &apos;VA&apos;,
+StateCode__c = &apos;VI&apos;,
+StateCode__c = &apos;VT&apos;,
+StateCode__c = &apos;WA&apos;,
+StateCode__c = &apos;WI&apos;,
+StateCode__c = &apos;WV&apos;,
+StateCode__c = &apos;WY&apos;
+) 
+)
+)
+)</errorConditionFormula>
+        <errorDisplayField>StateCode__c</errorDisplayField>
+        <errorMessage>USA state code should be aligned with masterdata or empty</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>ProceedAllNew</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Proceed All New</masterLabel>
+        <openType>sidebar</openType>
+        <page>ProcessAllNewLeadInquiryIntegraton</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Process</fullName>
+        <availability>online</availability>
+        <description>Process single lead inquiry integration</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Process</masterLabel>
+        <openType>sidebar</openType>
+        <page>ProcessSingleLeadInquiryIntegraton</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

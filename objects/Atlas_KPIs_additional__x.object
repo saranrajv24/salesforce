@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Atlas additional data containing basic account&apos;s KPIs (External Object)</description>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <externalDataSource>OData_Source</externalDataSource>
+    <externalName>VOCGLOM_1_Q019Results</externalName>
+    <fields>
+        <fullName>Account_customer__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MMIDFGUID_T</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account Customer</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Sts R8 field from Atlas: MABBUSUNT</description>
+        <externalDeveloperName>MABBUSUNT</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Business Unit</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Business Unit</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_Code__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MCACNTRY</description>
+        <externalDeveloperName>MMIGUID__MCACNTRY</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Reporting country code</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Country Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSO_contract__c</fullName>
+        <description>StS R8 field from Atlas: DSO</description>
+        <externalDeveloperName>DSO_REAL</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The targeted number of days to collect payment from the customer.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Days Sales Outstanding (contractual)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSO_contract_formatted__c</fullName>
+        <description>StS R8 fiels from Atlas: DSO_F</description>
+        <externalDeveloperName>DSO_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>DSO (contractual) formatted</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSO_real__c</fullName>
+        <description>StS R8 field from Atlas: DSO_REAL</description>
+        <externalDeveloperName>DSO</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The average number of days to collect payment from the customer. DSO = (Open receivables/12 sales months)*365</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Days Sales Outstanding (real)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DSO_real_formatted__c</fullName>
+        <description>StS R8 from Atlas: DSO_REAL_F</description>
+        <externalDeveloperName>DSO_REAL_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>DSO_REAL_F</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>DSO (real) formatted</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>StS R8 field from Atlas: MABDIVIS</description>
+        <externalDeveloperName>MABDIVIS</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Division</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Division</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GUID__c</fullName>
+        <description>MMIGUID__MMIDFGUID</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account</label>
+        <length>10</length>
+        <referenceTargetField>Account.GUID__c</referenceTargetField>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Atlas KPIs (additional data)</relationshipLabel>
+        <relationshipName>VOCGLOM_1_Q019Results</relationshipName>
+        <type>IndirectLookup</type>
+    </fields>
+    <fields>
+        <fullName>ID__c</fullName>
+        <description>ID</description>
+        <externalDeveloperName>ID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>ID</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Total__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_TOTAL</description>
+        <externalDeveloperName>ORDERS</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total orders ot the accounts</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>StS R8 field from Atlas: MABDFPRDG</description>
+        <externalDeveloperName>MABPRDGRP</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Product Group</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Group</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_disputed_amount__c</fullName>
+        <description>Sts R8 field from Atlas: DISPUTED</description>
+        <externalDeveloperName>DISPUTED</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount of disputed ABB invoices with the customer.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Total disputed amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_disputed_amount_formatted__c</fullName>
+        <description>StS R8 field from Atlas: DISPUTED_F</description>
+        <externalDeveloperName>DISPUTED_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The amount of the invoices being the subject of pending dispute.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Total disputed amount (foramtted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotaledProperties__c</fullName>
+        <description>TotaledProperties</description>
+        <externalDeveloperName>TotaledProperties</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>TotaledProperties</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <description>StS R8 field from Atlas: A0CALYEAR</description>
+        <externalDeveloperName>A0CALYEAR</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Accounting year</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Year</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Atlas_KPIs_additional</label>
+    <pluralLabel>Atlas_KPIs_additional</pluralLabel>
+    <searchLayouts/>
+</CustomObject>

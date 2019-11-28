@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>STS PR 2.0: Req: 5678 - The Custom Setting holds the Stages and the respective BUs for which atleast one item should be mandatory.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>BUs__c</fullName>
+        <description>STS PR2.0 - It holds the list of BUs for the particular StageName, in order to undergo the Line Item validations</description>
+        <externalId>false</externalId>
+        <label>BUs</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>STS_BUBasedStageValidations</label>
+    <visibility>Public</visibility>
+</CustomObject>

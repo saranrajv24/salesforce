@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>ABB_Minimum_Questions_in_Questionnaire__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Questions in Questionnaire</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ABB_Dimension_Set__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ABB Dimension Set</label>
+        <referenceTo>APTS_ABB_Dimension_Set__c</referenceTo>
+        <relationshipLabel>Factories</relationshipLabel>
+        <relationshipName>Factories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_ABB_Location__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ABB Location</label>
+        <referenceTo>ABB_Location__c</referenceTo>
+        <relationshipLabel>Factories</relationshipLabel>
+        <relationshipName>Factories</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_BAL_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_ABB_Location__r.BALId__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>BAL ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Configured_Display_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Configured Display Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Quarterly</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Configured_Evaluation_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Configured Evaluation Period</label>
+        <picklist>
+            <picklistValues>
+                <fullName>24 Months</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12 Months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9 Months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <picklist>
+            <controllingField>APTS_Occurs_Every__c</controllingField>
+            <picklistValues>
+                <fullName>1</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>6</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>7</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>8</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>9</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>21</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>22</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>24</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>26</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>27</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>28</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>LAST</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Day Each Month</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Display_Hit_Rate_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Display Hit Rate By</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account and Factory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product and Factory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account, Product and Factory</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Enable_Hit_Rate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enable Hit Rate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Enable_Pricing__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Enable Pricing+</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_FCM_App_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Presto App Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_FCM_CR_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Conversion Rate Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Frequency__c</fullName>
+        <externalId>false</externalId>
+        <label>Frequency</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Daily</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weekly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Gap_Factor__c</fullName>
+        <externalId>false</externalId>
+        <label>Gap Factor (Months)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchical_Field_Grouping_Number__c</fullName>
+        <defaultValue>1</defaultValue>
+        <externalId>false</externalId>
+        <label>Hierarchical Field Grouping Number</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Manual_Redirection_Configurator__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>It will be used to disable the auto redirection to the configurator.</description>
+        <externalId>false</externalId>
+        <label>Manual Redirection (Configurator)</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Margin_Rounding__c</fullName>
+        <externalId>false</externalId>
+        <label>Margin Rounding</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Minimum_Questions_in_Questionnaire__c</fullName>
+        <externalId>false</externalId>
+        <label>Minimum Questions in Questionnaire</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Minimum_Required_Margin__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>P10 is not allowed to be less than this value</inlineHelpText>
+        <label>Minimum Required Margin</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Minimum_Threshold_Value__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of historical successful sales required to generate P-values</inlineHelpText>
+        <label>Minimum Threshold Value</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Number_of_Reminder_Days__c</fullName>
+        <defaultValue>5</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of Days to send Reminder after P-Values are created but not activated</inlineHelpText>
+        <label>Number of Reminder Days</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Occurs_Every__c</fullName>
+        <externalId>false</externalId>
+        <label>Occurs Every</label>
+        <picklist>
+            <controllingField>APTS_Frequency__c</controllingField>
+            <picklistValues>
+                <fullName>Day</fullName>
+                <default>false</default>
+                <controllingFieldValues>Daily</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sunday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thursday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saturday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Weekly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Same Day Each Month</fullName>
+                <default>false</default>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Same Week Each Month</fullName>
+                <default>false</default>
+                <controllingFieldValues>Monthly</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Preferred_Start_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Preferred Start Time</label>
+        <picklist>
+            <picklistValues>
+                <fullName>00:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>01:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>02:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>03:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>04:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>05:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>06:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>07:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>08:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>09:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>10:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>11:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>12:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>13:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>14:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>15:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>16:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>17:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>18:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>19:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>20:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>21:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>22:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>23:00</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Price_Rounding__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Rounding</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Questionnaire__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Questionnaire</label>
+        <referenceTo>Apttus__WizardDesign__c</referenceTo>
+        <relationshipLabel>Factories</relationshipLabel>
+        <relationshipName>Factories</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Scheduled_Job__c</fullName>
+        <externalId>false</externalId>
+        <label>Scheduled Job</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Threshold_Hit_Rate_by_Product__c</fullName>
+        <externalId>false</externalId>
+        <label>Threshold Hit Rate % by Product</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Threshold_of_Net_Sales_Values__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum value of quote in order to trigger deal guidance questionnaire</inlineHelpText>
+        <label>Threshold of Net Sales Values</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Validate_ExtRate_on_Revise__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Validate Exchange Rate on Revise</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Week__c</fullName>
+        <externalId>false</externalId>
+        <label>Week</label>
+        <picklist>
+            <controllingField>APTS_Occurs_Every__c</controllingField>
+            <picklistValues>
+                <fullName>the 1st</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>the 2nd</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>the 3rd</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>the 4th</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>the last</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Weekday__c</fullName>
+        <externalId>false</externalId>
+        <label>Weekday</label>
+        <picklist>
+            <controllingField>APTS_Occurs_Every__c</controllingField>
+            <picklistValues>
+                <fullName>Sunday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Monday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Tuesday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wednesday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Thursday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Friday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Saturday</fullName>
+                <default>false</default>
+                <controllingFieldValues>Same Week Each Month</controllingFieldValues>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Apttus_Config2_CostModelId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Cost Model</label>
+        <referenceTo>Apttus_Config2__CostModel__c</referenceTo>
+        <relationshipLabel>Factories</relationshipLabel>
+        <relationshipName>APTS_factory_cost_model</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Default_Email_Template__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Email template used to default on &quot;Submit to Customer&quot; page based on this ABB Location. Email template name needs to be entered here</inlineHelpText>
+        <label>Default Email Template</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Quantity_Editable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field to control editability of Order Quantity field on &quot;Place Order&quot; page based upon the Source location</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checkbox to enable a deviation of the order quantity on &quot;Place Order&quot; page from the original quote line item quantity. The deviation will not change the original quantity of the particular quote line item</inlineHelpText>
+        <label>Order Quantity Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Factory</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Enable_Pricing__c</columns>
+        <columns>APTS_Enable_Hit_Rate__c</columns>
+        <columns>APTS_Configured_Display_Period__c</columns>
+        <columns>APTS_Configured_Evaluation_Period__c</columns>
+        <columns>APTS_Gap_Factor__c</columns>
+        <columns>APTS_ABB_Location__c</columns>
+        <columns>APTS_BAL_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>China</fullName>
+        <booleanFilter>1 OR 2 OR  3</booleanFilter>
+        <columns>NAME</columns>
+        <columns>APTS_ABB_Location__c</columns>
+        <columns>APTS_BAL_ID__c</columns>
+        <columns>APTS_Enable_Hit_Rate__c</columns>
+        <columns>APTS_Enable_Pricing__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_BAL_ID__c</field>
+            <operation>equals</operation>
+            <value>9AAE327059</value>
+        </filters>
+        <filters>
+            <field>APTS_BAL_ID__c</field>
+            <operation>equals</operation>
+            <value>9AAE309545</value>
+        </filters>
+        <filters>
+            <field>APTS_BAL_ID__c</field>
+            <operation>equals</operation>
+            <value>9AAE326601</value>
+        </filters>
+        <label>China</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>FactoryS</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_BAL_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_BAL_ID__c</field>
+            <operation>equals</operation>
+            <value>9AAE300088</value>
+        </filters>
+        <label>Factory Search</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Pricing_Enabled_Factories</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_Enable_Pricing__c</columns>
+        <columns>APTS_Enable_Hit_Rate__c</columns>
+        <columns>APTS_ABB_Location__c</columns>
+        <columns>APTS_BAL_ID__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>APTS_Enable_Pricing__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Pricing Enabled Factories</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Factory Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Factories</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Private</sharingModel>
+    <validationRules>
+        <fullName>APTS_GapFactorValidation</fullName>
+        <active>true</active>
+        <description>Gap factor should not be more than 6 months.</description>
+        <errorConditionFormula>AND(APTS_Gap_Factor__c &gt; 6,
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT(ISBLANK(APTS_Gap_Factor__c)))</errorConditionFormula>
+        <errorMessage>Gap factor should not be more than 6 months.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>APTS_ThresholdHitRateValidation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(APTS_Threshold_Hit_Rate_by_Product__c &gt; 1,
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c))</errorConditionFormula>
+        <errorMessage>Threshold Hit Rate % should not be higher than 100%</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APTS_Calculate_P_Values</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>5. Calculate P - Values</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_CalculatePValues?id={!APTS_Factory__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Create_Hierarchical_Peer_Groups</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>4. Create Hierarchical Peer Groups</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_HierarchicalPeerGroups?id={!APTS_Factory__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Create_Peer_Groups</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>2. Create Peer Groups</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_CreatePeerGroups?id={!APTS_Factory__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Create_Standard_Corridor</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Standard Corridor</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_CreateStandardCorridor?id={!APTS_Factory__c.Id}&amp;pagemode=na</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Generate_Cost_Model</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Cost Model</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/39.0/apex.js&quot;)}
+
+var costtypes = sforce.connection.query(&quot;SELECT Id from Apttus_Config2__CostType__c WHERE Apttus_Config2__CostModelId__c  = &apos;{!APTS_Factory__c.Apttus_Config2_CostModelIdId__c}&apos; LIMIT 1&quot;);
+var records = costtypes.getArray(&quot;records&quot;);
+if(records.length&gt;0) {
+	alert(&quot;Cost Model is already associated with this factory&quot;);
+} else {
+
+	sforce.apex.execute(&quot;APTS_GenerateFactoryCostRecord&quot;,&quot;generateCostRecordUsingBatch&quot;,{factoryId:&quot;{!APTS_Factory__c.Id}&quot;});
+	alert(&quot;Record For Cost Model will be updated in sometime.&quot;);
+	location.reload(true);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Generate_Price_List</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate Price List</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/apex.js&quot;)}
+
+sforce.apex.execute(&quot;APTS_GenerateFactoryCostRecord&quot;,&quot;generateFactoryPLUsingBatch&quot;,{factoryId:&quot;{!APTS_Factory__c.Id}&quot;});
+alert(&apos;Record For Price List will be updated in sometime.&apos;);
+location.reload(true);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Manage_Dimensions</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>1. Manage Dimensions</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_ManageDimensions?factoryid={!APTS_Factory__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>APTS_Validate_Peer_Groups</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>3. Validate Peer Groups</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Apttus_XApps__EditInExcelLaunch?parentRecordId={!APTS_Factory__c.Id}&amp;&quot;&amp;appName=ValidatePeerGroups&quot;&amp;&quot;&amp;actionflowName=getPeerGroups&quot;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_Peer_Groups</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Peer Groups</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/APTS_CreatePeerGroups?id={!APTS_Factory__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Update_P_Values_in_Excel</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>6. Update P - Values in Excel</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Apttus_XApps__EditInExcelLaunch?parentRecordId={!APTS_Factory__c.Id}&amp;&quot;&amp;appName=PValueUpdate&quot;&amp;&quot;&amp;actionflowName=getActiveFactoryDataDefault&quot;</url>
+    </webLinks>
+</CustomObject>

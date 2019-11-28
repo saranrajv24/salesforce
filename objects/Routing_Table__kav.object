@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Article used to facilitate understanding of who should be responsible of which case/enquiry</description>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <fields>
+        <fullName>Attachment__c</fullName>
+        <externalId>false</externalId>
+        <label>Attachment</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>File</type>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <picklist>
+            <controllingField>Division__c</controllingField>
+            <picklistValues>
+                <fullName>DMDR - Drives and Controls</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DMMG - Motors &amp; Generators</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DMPC - Power Conversion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>DMRO - Robotics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPCO - EP Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPDS - Distribution Solutions</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIN - GEIS Integration &amp; Synergies</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIP - Installation Products</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPIS - EP Industrial Solutions</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSB - Smart Buildings</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSC - Small Country BU for EP</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSO - EP Solar</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSP - Smart Power</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EPSU - Sundry EP</fullName>
+                <default>false</default>
+                <controllingFieldValues>EP</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IACO - IA Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAEN - Energy Industries</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAMA - Measurement &amp; Analytics</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAMP - Marine &amp; Ports</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IAPI - Process Industries</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IASC - Small Country BU for IA</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IASU - Sundry IA</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>IATU - Turbocharging</fullName>
+                <default>false</default>
+                <controllingFieldValues>IA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOCO - MO Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MODR - Drives</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOMG - Motors &amp; Generators</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOSC - Small Country BU for MO</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MOSU - Sundry MO</fullName>
+                <default>false</default>
+                <controllingFieldValues>MO</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PACT - Control Technologies</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAMA - Marine &amp; Ports</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAMP - Measurement &amp; Analytics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAOG - Oil, Gas &amp; Chemicals</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAPG - Power Generation</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PAPI - Process Industries</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PATU - Turbocharging</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGCO - Power Grids Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGGA - Grid Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGGI - Grid Integration</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGHV - High Voltage Products</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGSC - Small Country BU for PG</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGSU - Sundry PGSU</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PGTR - Transformers</fullName>
+                <default>false</default>
+                <controllingFieldValues>PG</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RACO - RA Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RAMF - Machine &amp; Factory Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RARO - Robotics</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RASC - Small Country BU for RA</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RASU - Sundry RA</fullName>
+                <default>false</default>
+                <controllingFieldValues>RA</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCCO - Corporate</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCGS - Global Business Services</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCHV - High Voltage Cables</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCIA - Non-Core Industrial Automation</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCJC - JV Creation</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCJV - EPC projects – SNCL/ABB  </fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCMO - Non-Core Motion</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCPG - Non-Core Power Grids</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCRE - Real Estate</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZCVA - Various</fullName>
+                <default>false</default>
+                <controllingFieldValues>ZC</controllingFieldValues>
+            </picklistValues>
+            <sorted>true</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <picklist>
+            <picklistValues>
+                <fullName>IA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>EP</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>PG</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ZC</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>RA</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>MO</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Expiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Expiry Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Keyword__c</fullName>
+        <externalId>false</externalId>
+        <label>Keyword</label>
+        <length>1000</length>
+        <trackHistory>false</trackHistory>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Report_with_Linked_Cases__c</fullName>
+        <description>SFDC-3198 Cases Linked in Articles</description>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; $Label.Report_URL_Id &amp; &quot;?pv0=&quot; &amp; Id , &quot;Link&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Report showing details of all Cases linked to this Article</inlineHelpText>
+        <label>Report with Linked Cases</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Sales_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Sales Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Sales_Location__c</fullName>
+        <description>This is the location where the SPOC sits</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the location where the SPOC sits</inlineHelpText>
+        <label>SPOC Sales Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Sales_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Sales Mobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Sales_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Sales Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Sales__c</fullName>
+        <description>Person responsible for any sales question</description>
+        <externalId>false</externalId>
+        <label>SPOC Sales</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Service_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Service Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Service_Location__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the location where the SPOC sits</inlineHelpText>
+        <label>SPOC Service Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Service_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Service Mobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Service_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Service Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Service__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Service</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Technical_Email__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Technical Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SPOC_Technical_Location__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the location where the SPOC sits</inlineHelpText>
+        <label>SPOC Technical Location</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Technical_Mobile__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Technical Mobile</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Technical_Phone__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Technical Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>SPOC_Technical__c</fullName>
+        <externalId>false</externalId>
+        <label>SPOC Technical</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STS_ArticleProductsNames__c</fullName>
+        <description>STS PR 2.0 - field for showing products added to the article.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This fields shows Product or Products that are associated with this Article. A maximum of 255 characters can be shown in this field.</inlineHelpText>
+        <label>Article Product Names</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STS_ArticleProducts__c</fullName>
+        <description>STS PR 2.0 - field for adding and editing products to an article.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(PublishStatus, &apos;Draft&apos;) || ISPICKVAL(PublishStatus, &apos;Online&apos;), HYPERLINK(&quot;/apex/STS_ProductTreeSelectionPage?addTo=&quot;+Id+&quot;&amp;id=&quot;+Id+&quot;&amp;retURL=&quot;+Id, $Label.STS_Add, &apos;_self&apos;) &amp;&apos; &apos;&amp; HYPERLINK(&quot;/apex/STS_ProdViaPage?id=&quot;+Id, $Label.STS_Edit, &apos;_self&apos;), $Label.STS_ArchivedArticleMessage)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Click Add if you want add one or more Products, click Edit if you want to modify one or more Products.</inlineHelpText>
+        <label>Article Products</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Was_Sent_for_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Was Sent for Approval</label>
+        <trackHistory>false</trackHistory>
+        <type>Checkbox</type>
+    </fields>
+    <label>Routing Table</label>
+    <pluralLabel>Routing Table</pluralLabel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

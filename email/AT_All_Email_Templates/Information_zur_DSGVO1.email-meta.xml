@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Information zur DSGVO</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ABB_Header_v1_1</letterhead>
+    <name>Information zur DSGVO</name>
+    <style>freeForm</style>
+    <subject>Datenschutzerklärung für Geschäftspartner</subject>
+    <textOnly>Sehr geehrte Damen und Herren,
+
+
+
+seit dem 25. Mai 2018 sind die EU-Datenschutzgrundverordnung sowie das neue Bundesdatenschutzgesetz wirksam. Sie vereinheitlichen das Datenschutzniveau innerhalb der EU und schützen die Rechte der Betroffenen stärker. Durch dieses neue Recht werden das bisherige Bundesdatenschutzgesetz und die EU Datenschutzrichtlinien abgelöst.
+
+
+
+
+ABB nimmt den Schutz Ihrer persönlichen Daten sehr ernst.
+
+Ein sorgfältiger Umgang mit Ihren Daten ist für die ABB AG sowie alle ihre Konzerngesellschaften selbstverständlich. Daher möchten wir Sie mit diesem Schreiben auf unsere aktuelle Datenschutzerklärung für Geschäftspartner hinweisen, die Ihnen alle Fragen zum Umgang mit Ihren Daten detailliert beantworten soll. Sie finden diese Datenschutzerklärung über unserer Homepage unter www.abb.com/de oder direkt über diesen Link Datenschutzerklärung für Geschäftspartner.
+
+
+
+
+Bei weiteren Fragen sprechen Sie uns gern an.
+
+
+
+
+
+Mit freundlichen Grüßen
+
+
+
+
+
+{!Contact.OwnerFullName}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ABB AG
+Sitz/Head Office: Wien
+Registergericht/Registry Court: Handelsgericht Wien
+Handelsregisternummer/Commercial Register No.: FN 57678x
+Vorstandsvorsitzender: Ing. Franz Chalupecky  Vorsitzender des Aufsichtsrats/Chairman of Supervisory Board: Dipl.-Vw. Hans-Georg Krabbe
+
+Diese E-mail enthält vertrauliche und/oder rechtlich geschützte Informationen. Wenn Sie nicht der richtige Adressat sind oder diese E-mail irrtümlich erhalten haben, informieren Sie bitte sofort den Absender und vernichten Sie diese Mail. Das unerlaubte Kopieren sowie die unbefugte Weitergabe dieser Mail ist nicht gestattet.
+
+This E-mail may contain confidential and/or privileged information. If you are not the intended recipient (or have received this E-mail in error) please notify the sender immediately and destroy this E-mail. Any unauthorized copying, disclosure or distribution of the material in this E-mail is strictly forbidden.</textOnly>
+    <type>html</type>
+</EmailTemplate>

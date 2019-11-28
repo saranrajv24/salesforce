@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This mapping is used for mapping provided product categories from CCDv2 to Division in salesforce. The Name field is the identifier (CCDv2 sub-category)</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCDv2_Category__c</fullName>
+        <description>This field contains the Product Category to be mapped from the provided Division</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field contains the Product Category to be mapped from the provided Division</inlineHelpText>
+        <label>CCDv2 Category</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>This field will map the Division According to the provided Product Category</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will map the Division According to the provided Product Category</inlineHelpText>
+        <label>Division</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CCDv2 DivisionMapping</label>
+    <listViews>
+        <fullName>All_Fields</fullName>
+        <columns>NAME</columns>
+        <columns>CCDv2_Category__c</columns>
+        <columns>Division__c</columns>
+        <columns>Business_Unit__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Fields</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Protected</visibility>
+</CustomObject>

@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_BulkUploadChunkSize__c</fullName>
+        <externalId>false</externalId>
+        <label>Bulk Upload Chunk Size</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Consolidation_Agreement__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is Consolidation enabled for Agreement</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Is Consolidation enabled for Agreement</inlineHelpText>
+        <label>Consolidation is Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Consolidation_Discount_Approach__c</fullName>
+        <defaultValue>&quot;Lowest&quot;</defaultValue>
+        <description>Choose discount selection approach when no hierarchy added for consolidation. Value should be either Lowest or Frequent</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Choose discount selection approach when no hierarchy added for consolidation. Value should be either Lowest or Frequent</inlineHelpText>
+        <label>Consolidation Discount Approach</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Consolidation_Hierarchy_Level__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>WARNING: do not change this until the second release of consolidation! Logic is mostly hard-coded!
+comma separated list with field api names for the ConsolidateBy picklist.</inlineHelpText>
+        <label>Consolidation Hierarchy Level</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Consolidation_Tolerance__c</fullName>
+        <defaultValue>0.00</defaultValue>
+        <description>Tolerance percentage to be considered while doing consolidation when creating MSPA from quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Tolerance percentage to be considered while doing consolidation when creating MSPA from quotation</inlineHelpText>
+        <label>Consolidation Tolerance</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>APTS_DefaultHierarchyDiscSAP__c</fullName>
+        <description>Default discount on hierarchy that will be send to SAP while creating MSPA - This will be fixed for Spain</description>
+        <externalId>false</externalId>
+        <label>MSPA SAP Default Hierarchy Disc</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_DefaultProductDiscSAP__c</fullName>
+        <description>Default discount on Products that will be send to SAP while creating MSPA - This will be fixed for Spain</description>
+        <externalId>false</externalId>
+        <label>MSPA SAP Default Product Disc</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Default_Max_Summary_Group_Size__c</fullName>
+        <description>This field is used to set size for Async preview approval process.</description>
+        <externalId>false</externalId>
+        <label>APTS Default Max Summary Group Size</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Folder_Name__c</fullName>
+        <description>For R2 Req-5801, field created to display folder name in Custom VF page</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field used for Italian Email Template</inlineHelpText>
+        <label>Folder Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_HierarchyCodePrefix__c</fullName>
+        <description>Code will be prefixed to the bulk uploaded file. this means if file is uploaded with code &apos;M01&apos; then it would system will make it &apos;00M01&apos; if the Hierarchy Code Prefix is &apos;00&apos;</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Code Prefix</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Hierarchy_Default_Discount__c</fullName>
+        <description>Default Discount for Hierarchy in WS</description>
+        <externalId>false</externalId>
+        <label>WS Hierarchy Default Discount</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Consolidation_Automatic__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Consolidation is Automatic</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_LCA_Group_Name__c</fullName>
+        <description>name of the public group in which the LCA for this specific Country is part of..</description>
+        <externalId>false</externalId>
+        <label>LCA Group Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Exclude_Products_from_Total__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Total of the product lines will not be considered in Grand Total and Sub Total</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Total of the product lines will not be considered in Grand Total and Sub Total</inlineHelpText>
+        <label>WS MSPA Exclude Products from Total</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Qty_Edit__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Quantity field on Workspace page will be editable for Manually added lines if selected.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantity field on Workspace page will be editable for Manually added lines if selected.</inlineHelpText>
+        <label>WS MSPA Qty Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Subtype_Editable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicated MSPA subtype is editable for specified country</description>
+        <externalId>false</externalId>
+        <inlineHelpText>MSPA subtype is editable for specified country if value is true</inlineHelpText>
+        <label>MSPA Subtype Editable?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_Subtype__c</fullName>
+        <description>default Subtype value for MSPA.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Subtype for MSPA, Format: Opportunity#Project, Account#Order</inlineHelpText>
+        <label>MSPA Subtype</label>
+        <length>155</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MSPA_isGroupLineSelectionAvailable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>only used in backend</inlineHelpText>
+        <label>WS MSPA Group Line Selection?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_MaxOrderAmt_as_Workspace_Total__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>DEPRECATED in R6 - Update Max Order Amount field on Agreement header with &quot;Grand Total Net Sales Price&quot; as displayed on Workspace</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DEPRECATED in R6 - Update Max Order Amount field on Agreement header with &quot;Grand Total Net Sales Price&quot; as displayed on Workspace</inlineHelpText>
+        <label>WS Update MSPA MaxOrderAmt w/ TNSP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_BU_Validation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>QFA_R3_MR4 - Req#6662 -US#3124- This field determines BU Validation check for adding products into Cart</description>
+        <externalId>false</externalId>
+        <label>APTS_Product BU Validation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_BU__c</fullName>
+        <description>QFA_R3_MR4 - Req#6662-US#3124- This field contains possible mixed china BU values that can be added into the cart.</description>
+        <externalId>false</externalId>
+        <label>APTS_Product_BU</label>
+        <length>60</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Product_Default_Discount__c</fullName>
+        <description>product default discount for line item in WS</description>
+        <externalId>false</externalId>
+        <label>WS Product Default Discount</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_SAP_Customer_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>SAP Customer ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Organization__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Organization</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Scale_type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>The Scaling button will be visible on Workspace for each line item</inlineHelpText>
+        <label>WS Enable Scaling</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Show_Comments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>To Show Comment Column in Workspace</inlineHelpText>
+        <label>Show Comments in WS</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Show_Empty_Column__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Display empty Hierarchy level columns on email notification mail when no value is present for Line items</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Display empty Hierarchy level columns on email notification mail when no value is present for Line items</inlineHelpText>
+        <label>Show Empty Column</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Subtype__c</fullName>
+        <description>Default Subtype on Quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Default Subtype on Quotation</inlineHelpText>
+        <label>Quotation Subtype</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_TranslateOn_ConsolidationPage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>If checked, In Consolidation Page Hierarchy Levels will be displayed as in Salesworkspace.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable If Consolidation Page Hierarchy Levels needs to be displayed as in Salesworkspace.</inlineHelpText>
+        <label>TranslateOn ConsolidationPage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Unknown_Account_GUID__c</fullName>
+        <description>GUID of unknown account</description>
+        <externalId>false</externalId>
+        <label>Unknown Account GUID</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_WS_Pricing_Batch_Size__c</fullName>
+        <description>Workspace pricing batch size; used to prepare chunk of this size while clicking go to cart in WS</description>
+        <externalId>false</externalId>
+        <label>WS Pricing Batch Size</label>
+        <precision>4</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_WS_Warn_NetAdjVariation__c</fullName>
+        <description>R6; RQ 1527</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Show warnings if the Net Adjustment of grouped line items varies from the hierarchy&apos;s Net Adj. Possible values: &quot;higher&quot; (warn if the grouped line item has a higher Net Adj than the hierarchy); &quot;lower&quot; (vice versa); &quot;always&quot;; leave &lt;empty&gt; to disable this</inlineHelpText>
+        <label>WS Warn NetAdj Variation</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Workspace_Discount_Labels__c</fullName>
+        <externalId>false</externalId>
+        <label>WS Discount Labels</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Workspace_Grouping_Fields__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>comma separated list used for GroupBy picklist. Each item includes the field API name followed by #, followed by &quot;Y&quot; or &quot;N&quot; (yes or no) to indicate if it shall be selectable via checkbox (like &quot;APTS_Hierarchy_Level_2_Code__c#Y&quot;)</inlineHelpText>
+        <label>WS Grouping Fields</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Workspace_Grouping_Labels__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>comma-separated list of &quot;api-name:label&quot; combinations to override the standard labels in the group-by in workspace</inlineHelpText>
+        <label>WS Grouping Labels</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Send_Email_to_Owner_on_Update__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>R4.1: If the Approval User makes any modifications and then approves the current Approval Step the Quote/MSPA, the Quote/MSPA Owner is receiving an email notification.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the Approval User makes any modifications and then approves the current Approval Step the Quote/MSPA, the Quote/MSPA Owner is receiving an email notification.</inlineHelpText>
+        <label>Approval Send Email to Owner on Update</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Summary_Editable__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>EP R6 Manage approval summary page field access</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Prohibit standard access rights for discounts and dates</inlineHelpText>
+        <label>Approval Summary Editable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>BU_Duplicities_By_Scale_Qty_isEnabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Bulk Upload validation - Indicates if validation of duplicated products should also consider the scale quantity field.</description>
+        <externalId>false</externalId>
+        <label>BU Duplicities By Scale Qty Is Enabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Block_MSPA_on_Unknown_Accounts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checkbox to block MSPA creation on Unknown Accounts when checked.</description>
+        <externalId>false</externalId>
+        <label>Block MSPA on Unknown Accounts</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Block_Quotes_on_Unknown_Accounts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Do not allow user to create Quotations from Unknown Account.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Do not allow user to create Quotations from Unknown Account.</inlineHelpText>
+        <label>Block Quotes on Unknown Accounts</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Consider_Hierarchy__c</fullName>
+        <description>This field is used to consider Hierarchy in approval process.</description>
+        <externalId>false</externalId>
+        <label>Consider Hierarchy In Threshold</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Consider_SAP_Std_Disc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>If Checked then Std. Disc will be calculated based on Percentage1, Percentage2 &amp; Percentage3 from SAP. Otherwise, List Price &amp; Market Price are used to calculate it.</inlineHelpText>
+        <label>WS Consider SAP Std. Disc</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Default_Distribution_Channel_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Distribution Channel Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Distribution_Channel_Non_Buying__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Distribution Channel Non Buying</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Local_Channel_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Local Channel Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Local_Channel_Non_Buying__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Local Channel Non Buying</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Sales_Office_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Sales Office Code</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Default_Sales_Office_Non_Buying__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Sales Office Non Buying</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enable_ConfigIT__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Shows / hides the &quot;Add Configuration&quot; button in workspace</inlineHelpText>
+        <label>WS Enable ConfigIT</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_Wholesaler__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This enables showing the Wholesaler mode &amp; Wholesaler edit dialogue in Workspace.</inlineHelpText>
+        <label>WS Enable Wholesaler</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hide_Threshold_button__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Req. 5807 - If the flag is set to true Threshold button will be hided in Workspace page</description>
+        <externalId>false</externalId>
+        <label>Hide Threshold button</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Hierarchy_in_eDesign_Template__c</fullName>
+        <description>This field is used to identify which hierarchy is consider while populating E-design template.</description>
+        <externalId>false</externalId>
+        <label>Hierarchy Considered in eDesign Template</label>
+        <length>12</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsTemplateOptimized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to find whether template is optimized similar to Italy</description>
+        <externalId>false</externalId>
+        <label>IsTemplateOptimized</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Approval_level_applicable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>QfA-R3-MR2 - REQ# 6137 - Boolean to check if Approval level based on Discount threshold is applicable for the country. It is referred in Email templates for Approval Notifications</description>
+        <externalId>false</externalId>
+        <label>Is Approval level applicable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Market_Default__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to auto-populate the Market field on the Quote/Agreement</description>
+        <externalId>false</externalId>
+        <label>IsMarketDefault</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Threshold_based_on_BusinessType__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to find whether the approval is based on the Biding/Non-Biding</description>
+        <externalId>false</externalId>
+        <label>Is Threshold based on BusinessType</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Threshold_based_on_Local_Channel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Threshold based on Local Channel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Threshold_based_on_Subtype__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>QFA-R3-MR4-Req#6663-US#3101 &amp; US-#3125 - This Field determines whether Approval Threshold Limit calculation is based on Quote/MSPA Sub-type.</description>
+        <externalId>false</externalId>
+        <label>Is Threshold Based on Subtype</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IseDesignEnabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to identify whether e-Design is enabled for the particular Country</description>
+        <externalId>false</externalId>
+        <label>IseDesignEnabled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>MSPA_Channel_Class_Level_check__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Channel Class Level check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>MSPA_Industry_Usage_Level_Check__c</fullName>
+        <externalId>false</externalId>
+        <label>MSPA Industry Usage Level Check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Manage_Hierarchy_List_Prices__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables hierarchy override of List Prices and Quantity with values from the &quot;Hierarchy Price&quot; object</inlineHelpText>
+        <label>WS Manage Hierarchy List Prices</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Override_MSPA_Qty_for_Product__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>if this has no value == is empty, then no override takes place and the quantity stays as is.</inlineHelpText>
+        <label>WS Override MSPA Qty. for Product</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Override_Unit_of_Price__c</fullName>
+        <description>Introduced as part of DEFECT 7507</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Overrides &quot;Unit of Price&quot; if &quot;List Price&quot; is coming null from SAP (Value must be integer)</inlineHelpText>
+        <label>WS Override Unit of Price</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Quote_Channel_Class_Level_check__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Channel Class Level check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Industry_Usage_Level_Check__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Industry Usage Level Check</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SAP_Class_Channel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is ensure that the  Class Channel field on MSPA should be sent to SAP or not</description>
+        <externalId>false</externalId>
+        <label>SAP Class Channel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SAP_Industrial_Usage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is ensure that the Industrial Usage field on MSPA should be sent to SAP or not</description>
+        <externalId>false</externalId>
+        <label>SAP Industrial Usage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SAP_Market__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is to ensure that Market field on MSPA should be sent to SAP while creating MSPA in SAP</description>
+        <externalId>false</externalId>
+        <label>SAP_Market</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SAP_PrimaryPartner_LocalChannel_CodeDesc__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>SAP PrimaryPartner LocalChannel CodeDescription will be sent to SAP in CustomerGroup field</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enable if SAP PrimaryPartner LocalChannel CodeDescription has to be sent to SAP.</inlineHelpText>
+        <label>SAP PrimaryPartner LocalChannel CodeDesc</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Area_ApttusOrgId__c</fullName>
+        <description>This value is used to store Sales Area ApttusOrgId for each Country.</description>
+        <externalId>false</externalId>
+        <label>Sales Area ApttusOrgId</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Threshold_Based_on_Disc_Type__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Threshold Based on Disc. Type</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Threshold_Dimension1__c</fullName>
+        <description>This field is used to hold the dimension values of Approval Field</description>
+        <externalId>false</externalId>
+        <label>Threshold Grp Name(Dimension1)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Threshold_Dimension2__c</fullName>
+        <description>This field is used to hold the dimension values of Approval Field</description>
+        <externalId>false</externalId>
+        <label>Threshold Disc.(Dimension2)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Threshold_Dimension3__c</fullName>
+        <description>This field is used to hold the dimension values of Approval Field</description>
+        <externalId>false</externalId>
+        <label>Threshold Local Segment(Dimension3)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sendCustomerMaterialCodeSAP__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>WS Send Customer Material Code to SAP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sendHierarchiestoSAP__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Some Country-SAP servers cannot handle hierarchies. If this is unchecked, List Prices will be set to 0 in SFDC and no other details are retrieved from SAP</inlineHelpText>
+        <label>WS Send Hierarchies to SAP</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>sendSalesDistributionChannelToSAP__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>some SAP servers cannot handle the Distribution Channel</inlineHelpText>
+        <label>SAP Send Sales Distribution Channel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>APTS Country Defaults</label>
+    <visibility>Public</visibility>
+</CustomObject>

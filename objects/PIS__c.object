@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Contains all Settings for PIS / ABB Products integration</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Life_Cycle_Phase__c</fullName>
+        <description>Life Cycle Phase</description>
+        <externalId>false</externalId>
+        <label>Life Cycle Phase</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>configKey__c</fullName>
+        <defaultValue>&quot;prod&quot;</defaultValue>
+        <description>Used by PIS control to determine the authentication settings, can be &quot;uat&quot;, &quot;uatr2&quot;, &quot;stage01&quot;, &quot;prod&quot;</description>
+        <externalId>false</externalId>
+        <label>configKey</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>extSystemId__c</fullName>
+        <defaultValue>&quot;9AAG10077&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>extSystemId</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PIS</label>
+    <visibility>Protected</visibility>
+</CustomObject>

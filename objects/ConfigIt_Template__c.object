@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>EP R2 R5803/U1428 Object used as row for E-configure templates</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Cart_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Configuration</label>
+        <referenceTo>Apttus_Config2__ProductConfiguration__c</referenceTo>
+        <relationshipLabel>ConfigIt Templates</relationshipLabel>
+        <relationshipName>ConfigIt_Templates</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>ConfigIt_Product__r.Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ConfigIt_Product__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ConfigIt Product</label>
+        <referenceTo>ConfigIt_Product__c</referenceTo>
+        <relationshipLabel>ConfigIt Templates</relationshipLabel>
+        <relationshipName>ConfigIt_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ConfigIt_Supercode__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>ConfigIt Supercode</label>
+        <referenceTo>ConfigIt_Supercode__c</referenceTo>
+        <relationshipLabel>ConfigIt Templates</relationshipLabel>
+        <relationshipName>ConfigIt_Templates</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <formula>ConfigIt_Product__r.Description__c</formula>
+        <label>Description</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>List_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ISBLANK(ConfigIt_Product__c) , 
+NULL, 
+ConfigIt_Product__r.List_Price__c
+)</formula>
+        <label>List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Net_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Price EUR</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Net_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+ISBLANK(ConfigIt_Product__c), 
+NULL, 
+ConfigIt_Product__r.Net_Price__c 
+)</formula>
+        <label>Net Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Qty__c</fullName>
+        <externalId>false</externalId>
+        <formula>ConfigIt_Product__r.Qty__c</formula>
+        <label>Qty</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sequence_No__c</fullName>
+        <externalId>false</externalId>
+        <label>Sequence No</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Supercode__c</fullName>
+        <externalId>false</externalId>
+        <formula>ConfigIt_Supercode__r.Supercode__c</formula>
+        <label>Supercode</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_List_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+ISBLANK(ConfigIt_Supercode__c),
+ISBLANK(ConfigIt_Supercode__r.Supercode__c)
+),
+IF(
+OR(
+ISBLANK(ConfigIt_Product__c),
+!ISBLANK(ConfigIt_Product__r.ConfigIt_Supercode__r.Supercode__c)
+),
+NULL,
+ConfigIt_Product__r.Total_List_Price__c 
+), 
+ConfigIt_Supercode__r.Total_List_Price__c 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total List Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Net_Price_EUR__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Net Price EUR</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Net_Price__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+ISBLANK(ConfigIt_Supercode__c),
+ISBLANK(ConfigIt_Supercode__r.Supercode__c)
+),
+IF(
+OR(
+ISBLANK(ConfigIt_Product__c),
+!ISBLANK(ConfigIt_Product__r.ConfigIt_Supercode__r.Supercode__c)
+),
+NULL,
+ConfigIt_Product__r.Total_Net_Price__c 
+), 
+ConfigIt_Supercode__r.Total_Net_Price__c 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Net Price</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>ConfigIt Template</label>
+    <nameField>
+        <displayFormat>TEMP-{00000}</displayFormat>
+        <label>ConfigIt Template Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ConfigIt Templates</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

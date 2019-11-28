@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>FSLABB_CorrectPPEavailable__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Correct PPE available?</inlineHelpText>
+        <label>Correct PPE available?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_CorrectSafetyEquipment__c</fullName>
+        <description>Correct safety equipment available (e.g. access, testers etc)?</description>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <label>Correct safety equipment available?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_EnsureSafeInteraction__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Ensure safe interaction with others nearby?</inlineHelpText>
+        <label>Ensure safe interaction with others?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_EquipmentWorkAreaSafe__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Equipment in work area is in safe condition?</inlineHelpText>
+        <label>Equipment in work area is safe?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_HaveYouListed__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Have you listed all hazards, especially those that are not listed in the risk
+assessment</inlineHelpText>
+        <label>Have you listed all hazards?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_HazardsControlsRiskshighmediu__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Hazards / Controls / Risks (high - medium - low)</inlineHelpText>
+        <label>Hazards / Controls / Risks</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_IeYouAreSafe__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>I.e. you are safe, others are safe?</inlineHelpText>
+        <label>I.e. you are safe, others are safe?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_RequiredPermitsObtained__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Required permit(s) to work obtained?</inlineHelpText>
+        <label>Required permit(s) to work obtained?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_RequiredPhysicalIsolations__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Required physical isolations used (e.g. Lockout Tagout, stored energy)?</inlineHelpText>
+        <label>Required physical isolations used?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_WorkAreaClearlyIdentified__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Work area clearly identified (barriers, signs)?</inlineHelpText>
+        <label>Work area clearly identified?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_WorkAreaSafe__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Work area is safe (e.g. house keeping, lighting, temperature etc)?</inlineHelpText>
+        <label>Work area is safe?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_WorkOrderLineItem_ref__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Work Order Line Item</label>
+        <referenceTo>WorkOrderLineItem</referenceTo>
+        <relationshipLabel>Stop Take 5</relationshipLabel>
+        <relationshipName>Stop_Take_5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_WorkOrder_ref__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Work Order</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Stop Take 5</relationshipLabel>
+        <relationshipName>Stop_Take_5</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_WorkScopSafeWorkingProcedure__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>Work scope, and safe working procedure understood?</inlineHelpText>
+        <label>Work scope &amp; safety procedure understood</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>FSLABB_YouAndCoworkersTrained__c</fullName>
+        <externalId>false</externalId>
+        <globalPicklist>FSLABB_YesNoChoice</globalPicklist>
+        <inlineHelpText>You and co-workers are suitably trained for the task?</inlineHelpText>
+        <label>You and co-workers are suitably trained?</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>Stop Take 5</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ST5-{000000}</displayFormat>
+        <label>Stop Take 5 Number</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Stop Take 5</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>
