@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>This custom setting will provide a mapping for xml tags to object fields. This setting is consumed by the class ClsCCDMapping</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Field_Name__c</fullName>
+        <description>Provide a field API Name to where to map the xml value to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Provide a field API Name to where to map the xml value to</inlineHelpText>
+        <label>Field Name</label>
+        <length>200</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <length>200</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>XML_Tag__c</fullName>
+        <description>This field sets the xml tag name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field sets the xml tag name</inlineHelpText>
+        <label>XML Tag</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>sObject__c</fullName>
+        <description>the sObject API Name to where the value from the xml will be mapped to</description>
+        <externalId>false</externalId>
+        <inlineHelpText>the sObject API Name to where the value from the xml will be mapped to</inlineHelpText>
+        <label>sObject</label>
+        <length>120</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CCDv2Mapping</label>
+    <listViews>
+        <fullName>All_Fields</fullName>
+        <columns>NAME</columns>
+        <columns>Field_Name__c</columns>
+        <columns>sObject__c</columns>
+        <columns>Type__c</columns>
+        <columns>XML_Tag__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Fields</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Protected</visibility>
+</CustomObject>

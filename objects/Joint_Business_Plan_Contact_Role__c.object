@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R5 - Joint Business Plan Contact Role</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Perspective_Role__c</fullName>
+        <description>R5 - ABB Perspective Role</description>
+        <externalId>false</externalId>
+        <label>Role from ABB Perspective</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Finance</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>General Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Operations</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Purchasing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quality</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Research &amp; Development</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner_Business_Plan_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( (TEXT(Joint_Business_Plan__r.Status__c) == &apos;Closed&apos; || TEXT(Joint_Business_Plan__r.Status__c) == &apos;Obsolete&apos;), &apos;Closed&apos;, TEXT(Joint_Business_Plan__r.Status__c))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Channel Partner Business Plan Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <description>R5 - Contact Name</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.FirstName  &amp; &apos; &apos; &amp;  Contact__r.LastName</formula>
+        <label>Contact Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Record_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Record Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <description>R5 - Master-Detail Relationship with Contact.</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Channel Partner Contact Roles</relationshipLabel>
+        <relationshipName>Joint_Business_Plan_Contact_Roles</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Email</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>External_User_Type__c</fullName>
+        <description>Created as part of R2.0 to hold partner owner type</description>
+        <externalId>false</externalId>
+        <globalPicklist>External_User_Type</globalPicklist>
+        <label>External User Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>External_User__c</fullName>
+        <description>Created as part of R8 Channel Partner management</description>
+        <externalId>false</externalId>
+        <formula>Joint_Business_Plan__r.External_User__c</formula>
+        <label>External User</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Filled_fields_count__c</fullName>
+        <description>R6</description>
+        <externalId>false</externalId>
+        <formula>If(ISBLANK(Product_Lines_Sub__c),0,1) + If(ISBLANK(TEXT(ABB_Perspective_Role__c)),0,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Filled fields count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Joint_Business_Plan__c</fullName>
+        <description>R5 - Master-Detail Relationship with Joint Business Plan.</description>
+        <externalId>false</externalId>
+        <label>Channel Business Plan</label>
+        <referenceTo>Joint_Business_Plan__c</referenceTo>
+        <relationshipName>Joint_Business_Plan_Contact_Roles</relationshipName>
+        <relationshipOrder>1</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Phone__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.Phone</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Phone</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Lines_Sub__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Lines (Sub)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Lines__c</fullName>
+        <description>R5 - Concatenate all the products of particular contact.</description>
+        <externalId>false</externalId>
+        <label>Product Lines</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Title__c</fullName>
+        <description>It Is created for X-Author</description>
+        <externalId>false</externalId>
+        <formula>Contact__r.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Title</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Unique_Contact_Check__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>R5 - Unique Contact Check</description>
+        <externalId>false</externalId>
+        <label>Unique Contact Check</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>of_Completeness__c</fullName>
+        <description>R6: To calculate % of completeness by number of  filled fields and total editable fields</description>
+        <externalId>false</externalId>
+        <formula>IF (Filled_fields_count__c == 0, 0, Filled_fields_count__c / ( VALUE($Label.Sys_Total_Fields_in_Contact_Roles) ))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>% of Completeness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <label>Channel Partner Contact Roles</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>BP-CONTACT-{0000}</displayFormat>
+        <label>Contact Role Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Channel Partner Contact Roles</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Contact__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Contact_Name__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Contact_Name__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Contact_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Contact__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Contact_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>JBP_Status_Closed_Check_ContactRoles</fullName>
+        <active>true</active>
+        <description>R5 - If Channel Partner Business Plan Status is Closed/Obsolete, then the user should not edit the Channel Partner Contact Role</description>
+        <errorConditionFormula>OR(ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Closed&apos;), 
+ISPICKVAL( Joint_Business_Plan__r.Status__c , &apos;Obsolete&apos;) 
+)</errorConditionFormula>
+        <errorMessage>You cannot save the changes - Channel Partner Business Plan is Closed</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Initiate_NPS_survey</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Initiate NPS survey</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+var allowWarning = true;
+var usrId = &apos;{!$User.Id}&apos;; 
+if (&apos;{!Joint_Business_Plan__c.NPS_ID__c}&apos; != &apos;&apos;) {
+    alert(&apos;NPS Survey created. There can be only one NPS survey per business plan&apos;);
+} else {
+	var selectedIds = {!GETRECORDIDS($ObjectType.Joint_Business_Plan_Contact_Role__c)};
+	if(&apos;{!$User.ProfileId}&apos; == &apos;{!$Label.CL00075}&apos; || usrId == &apos;{!Joint_Business_Plan__c.OwnerId}&apos;){ 
+		if (selectedIds[0] == null) {
+			alert(&quot;You must select at least one record&quot;);
+		} else if (&apos;{!Joint_Business_Plan__c.Status__c}&apos; == &apos;Obsolete&apos; || &apos;{!Joint_Business_Plan__c.Status__c}&apos; == &apos;Draft&apos;) {	
+			alert(&apos;The Survey should be available if the Business Plan is not in Status &quot;Obsolete&quot; or &quot;Draft&quot;&apos;);
+		} else {
+			window.location = &apos;/apex/InitiateNPSSurvey?BusinessPlanId=&apos;+&apos;{!Joint_Business_Plan__c.Id}&amp;ContactRoleIds=&apos;+selectedIds.toString();		
+		}
+	} else {
+		alert(&quot;Only System admin or Business Plan Owner can initiate the Survey&quot;);
+	}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Copy</fullName>
+        <availability>online</availability>
+        <description>R5 - Custom Button which copies all Contacts linked to the particular Account without duplicates.</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Copy all from Account</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/JBPContactRoleCopy?Id={!Joint_Business_Plan__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Contact_Role</fullName>
+        <availability>online</availability>
+        <description>R6: Custombutton to redirect to VF page to choose the contacts related to the Account</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Select from Account</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/connection.js&quot;)};
+{!REQUIRESCRIPT(&quot;/soap/ajax/20.0/apex.js&quot;)};
+
+var access = &apos;Edit&apos;;
+var usrId = &apos;{!$User.Id}&apos;;
+
+var queriedRec = sforce.connection.query(&quot;Select Id,AccessLevel, UserOrGroupId from Joint_Business_Plan__Share where AccessLevel=&apos;&quot;+access+&quot;&apos; AND ParentId=&apos;&quot;+&apos;{!Joint_Business_Plan__c.Id}&apos;+&quot;&apos; AND UserorGroupId=&apos;&quot;+usrId+&quot;&apos; LIMIT 1&quot;);
+
+var records = queriedRec.getArray(&quot;records&quot;);
+if(&apos;{!$User.ProfileId}&apos; == &apos;{!$Label.CL00075}&apos; || usrId == &apos;{!Joint_Business_Plan__c.OwnerId}&apos;){
+window.location=&apos;/apex/ChannelPartnerContactRolesVF?Id=&apos;+&apos;{!Joint_Business_Plan__c.Id}&apos;+&apos;&amp;AccId=&apos;+&apos;{!Joint_Business_Plan__c.AccountId__c}&apos;;
+}
+else if(&apos;{!$User.ProfileId}&apos; != &apos;{!$Label.CL00075}&apos; &amp;&amp; records.length &gt; 0){
+window.location=&apos;/apex/ChannelPartnerContactRolesVF?Id=&apos;+&apos;{!Joint_Business_Plan__c.Id}&apos;+&apos;&amp;AccId=&apos;+&apos;{!Joint_Business_Plan__c.AccountId__c}&apos;;
+}
+else if(&apos;{!$User.ProfileId}&apos; != &apos;{!$Label.CL00075}&apos; &amp;&amp; records.length &lt; 1){
+alert(&apos;Please request Write access as part of your business plan team&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

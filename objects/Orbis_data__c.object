@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Strategic Sales Release 8: custom object for storing Global Financial data from Orbis database (BvD). Populated by Mulesoft integration</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Orbis data</relationshipLabel>
+        <relationshipName>Orbis_data</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>BvD_Number__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>BvD Number</label>
+        <length>22</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>CF__c</fullName>
+        <description>StS R8 Orbis field LINE REPORT_PROFILERISK_FINANCIALDETAILS.438</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cash received or expended as a result of the company&apos;s internal business activities.</inlineHelpText>
+        <label>Cash flow</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CRIF_SCORE__c</fullName>
+        <description>StS R8: Orbis field SUMMARY.CRIF_SCORE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Financial Stability Score is a statistical model to differentiate good business performance from bad. Aims to assess the overall financial health of a company at a given point in time. More information via Detailed Report link.</inlineHelpText>
+        <label>Financial Stability Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GROS__c</fullName>
+        <description>StS R8: Orbis field GLOBAL.442</description>
+        <externalId>false</externalId>
+        <inlineHelpText>the difference between revenue and the cost of making a product or providing a service, before deducting overheads, payroll, taxation, and interest payments.</inlineHelpText>
+        <label>Gross profit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LASTDATE__c</fullName>
+        <description>StS R8: Orbis field STATUS_ACC_INFO.LASTDATE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Latest account closing date from Orbis</inlineHelpText>
+        <label>Latest account closing date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>MORRAT__c</fullName>
+        <description>StS R8: Orbis field SUMMARY.MORRAT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>An assessment of the creditworthiness of a company. It grades companies based on how well they can meet their financial commitments. More information via Detailed Report link (section: Financial strength summary)</inlineHelpText>
+        <label>Probability of default</label>
+        <length>22</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPRE__c</fullName>
+        <description>StS R8: Orbis field SIZE_GROUP_INFO.OPRERISK_FINANCIALDETAILS.OPREV</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The total income of a company in given year.</inlineHelpText>
+        <label>Operating revenue (Turnover)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SIZE_EMPL__c</fullName>
+        <description>StS R8: Orbis field SIZE_GROUP_INFO.SIZE_RISK_FINANCIALDETAILS.EMPL</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of employees. More info available via the Detailed Report link (section: Key financials &amp; employees).</inlineHelpText>
+        <label>Number of employees</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TRUCOST_SCORE_ENVIRSCORE__c</fullName>
+        <description>StS R8: Orbis field SUMMARY.GUO_SPECIFIC.ULTIMATES_TRUCOST_SCORE_ENVIRSCORESCORE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Quantifies the environmental performance of any company, based on its business activities and the efforts it is making to disclose environmental information publicly. More info available via the Detailed Report link (section: Financial strength summary).</inlineHelpText>
+        <label>Environmental score (%)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>VPIP2BB__c</fullName>
+        <description>StS R8: Orbis field SUMMARY.VPIP2BBSHAR_SPECIFIC.SHAREHOLDERS_VADIS_SCORE_P2B_BANKRUPT</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The likelihood of a company to declare bankruptcy in the next 18 months. More info available via the Detailed Report link (section: Financial strength summary).</inlineHelpText>
+        <label>Propensity to become bankrupt</label>
+        <length>22</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Orbis data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>BvD-{0000}</displayFormat>
+        <label>Orbis data Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Orbis data</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

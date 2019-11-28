@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>NewPG__c</fullName>
+        <externalId>false</externalId>
+        <label>New PG</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RBId__c</fullName>
+        <externalId>false</externalId>
+        <label>RB ID</label>
+        <length>25</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>RecurringBusinessPGMapping</label>
+    <listViews>
+        <fullName>AllProductGroup</fullName>
+        <columns>NAME</columns>
+        <columns>RBId__c</columns>
+        <columns>NewPG__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>AllProductGroup</label>
+        <language>en_US</language>
+    </listViews>
+    <visibility>Public</visibility>
+</CustomObject>

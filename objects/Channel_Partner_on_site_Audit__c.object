@@ -1,0 +1,2488 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_Channel_Partner_Portal_access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Is access of ABB Channel Partner Portal granted and pages are used by the partner?</inlineHelpText>
+        <label>ABB Channel Partner Portal access</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Warranty_rules_and_instructions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Warranty directive , local rules, customer specific instructions, etc being followed?</inlineHelpText>
+        <label>ABB Warranty rules and instructions</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ABB_Warranty_rules_instructions_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ABB_Warranty_rules_and_instructions__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Access_and_user_knowledge_to_sales_tools__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Businesses to provide the list of tools that are required. Can Include e.g. configuration, selection, pricing, quotation and ordering tools</inlineHelpText>
+        <label>Access and user knowledge to sales tools</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Access_to_all_warranty_material_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Access_to_all_warranty_material__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Access_to_all_warranty_material__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Access to all warranty material</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Access_to_needed_tools_and_Databasis__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Businesses to provide the list of tools. Can Includes e.g. configuration, selection, databanks for drawings, ..</inlineHelpText>
+        <label>Access to needed tools and Databasis</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Access_to_service_spares_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Access_to_service_spares__c,&apos;&apos;), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Access_to_service_spares__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is access to service spares to agreed product range confirmed? 
+Access has to be according to agreed response time.  Note that inventory is NOT required for all ABB products</inlineHelpText>
+        <label>Access to service spares</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Inventory not required</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Access_user_knowledge_Sales_Tools_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Access_and_user_knowledge_to_sales_tools__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Channel_Partner_Authorization__r.Account__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Authorization_Approved_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF (ISPICKVAL(Channel_Partner_Authorization__r.Approval_Progress__c, &apos;Approved&apos;), Channel_Partner_Authorization__r.Approved_Date__c, NULL)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Authorization Approved Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Case_tracking_System_in_use__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Including e.g. lead time reporting opportunites</inlineHelpText>
+        <label>Case tracking System in use?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Channel_Partner_Authorization__c</fullName>
+        <externalId>false</externalId>
+        <label>Channel Partner Authorization</label>
+        <referenceTo>Channel_Partner_Authorization__c</referenceTo>
+        <relationshipLabel>Channel Partner on-site Audits</relationshipLabel>
+        <relationshipName>Channel_Partner_on_site_Audits</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Code_of_Conduct_communicated__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if the Code-of-Conduct has been communicated, discussed and documented as per local principles.</inlineHelpText>
+        <label>Code-of-Conduct communicated</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Commissioning_provided_actively_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Commissioning_provided_actively__c,&apos;&apos;), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commissioning_provided_actively__c</fullName>
+        <externalId>false</externalId>
+        <label>Commissioning provided actively</label>
+        <picklist>
+            <picklistValues>
+                <fullName>actively</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>only when requested</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>subcontracted when needed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>not applicable</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Commissioning_report_given_to_customers__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Recommended. For certain product lines, report template or tool support available from ABB</inlineHelpText>
+        <label>Commissioning report given to customers</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Company_certifications__c</fullName>
+        <externalId>false</externalId>
+        <label>Company certifications</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competent_field_service_personnel_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Competent_field_service_personnel__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competent_field_service_personnel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Competent field service personnel to handle warranty repairs</inlineHelpText>
+        <label>Competent field service personnel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Competent_people_for_spare_parts_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Competent_people_for_spare_parts__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Competent_people_for_spare_parts__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>..or back up ABB people known</inlineHelpText>
+        <label>Competent people for spare parts</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Competent_people_for_warranty_handling__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Competent people for warranty handling</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Control_systems_you_have_competence_on__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>PLCs, Motion control; indicate also brands. Control system competence is specially asked as it masters the choise of other components/products used.</inlineHelpText>
+        <label>Control systems you have competence on</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_Access__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Described how the Customer accesses the Technical Support from the Partner?</inlineHelpText>
+        <label>Customer Access to tech support</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Customer_Access_to_tech_support_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Customer_Access__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Customer_feedback_collected__c</fullName>
+        <description>Customer feedback collected and statistic available
+Highly recommended to do after every service visit. Explain if this is measured and how it is measured and what kind of process is available to customer satisfaction improvement.</description>
+        <externalId>false</externalId>
+        <label>Customer feedback collected</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Date_of_onsite_Audit_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( Date_of_onsite_Audit__c ), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date_of_onsite_Audit__c</fullName>
+        <externalId>false</externalId>
+        <label>Date of onsite Audit</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Defective_material_stored_and_handled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Defective material stored and handled according to the ABB warranty directive
+See warranty directives for proper handling</inlineHelpText>
+        <label>Defective material stored and handled</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Defective_material_stored_handled_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Defective_material_stored_and_handled__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Demo_Units__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Demo Units</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Demo_Units_available_for_testing__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>List which units</inlineHelpText>
+        <label>Demo Units available for testing</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ESD_handling_process_known_and_utilized__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Electrostatic discharge (ESD)</inlineHelpText>
+        <label>ESD handling process known and utilized</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>ESD_handling_process_known_utilized_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(ESD_handling_process_known_and_utilized__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>E_ordering_in_use_for_warranty_handling__c</fullName>
+        <externalId>false</externalId>
+        <label>E-ordering in use for warranty handling</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>E_ordering_in_user_for_spare_part_orders__c</fullName>
+        <externalId>false</externalId>
+        <label>E-ordering in user for spare part orders</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Ensure_24_7_Contacts_are_up_to_date_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Ensure_24_7_Contacts_are_up_to_date__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ensure_24_7_Contacts_are_up_to_date__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Ensure that possible contacts for 24/365 contact details are up-to-date. This will be made available also in www.abb.com.</inlineHelpText>
+        <label>Ensure 24/7 Contacts are up-to-date</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Field_Service_reports_stored_in_ABB_Base__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Are the field service reports stored in ABB installed base -register?</inlineHelpText>
+        <label>Field Service reports stored in ABB Base</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>If_selected_no_fill_below_Fields__c</fullName>
+        <defaultValue>&quot;If you selected no you need to fill below Fields on this side!&quot;</defaultValue>
+        <description>R7A . Channel Authorization</description>
+        <externalId>false</externalId>
+        <label>If selected no fill below Fields</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_people_service_authorization_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL(No_of_people_with_service_authorization__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>No_of_people_with_service_authorization__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Typically minimum 2 persons are required, 1 in some cases</inlineHelpText>
+        <label>No. of people with service authorization</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Note_Sales_Tools__c</fullName>
+        <externalId>false</externalId>
+        <label>Note - Sales Tools</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_Cabinet_Assembly_Panel_building__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional info to be registered for the listed topics</inlineHelpText>
+        <label>Notes - Cabinet Assembly/Panel building</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_Engineering__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional info to be registered for the listed topics</inlineHelpText>
+        <label>Notes - Engineering</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_Spare_parts__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes - Spare parts</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_on_Training__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional info to be registered for the listed topics</inlineHelpText>
+        <label>Notes on Training</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_on_commissioning__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional info to be registered for the listed topics</inlineHelpText>
+        <label>Notes on commissioning</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_on_product_and_process_knowledge__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes on product and process knowledge</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_on_site_services__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes - on-site services</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_on_technical_support__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Additional info to be registered for the listed topics</inlineHelpText>
+        <label>Notes on technical support</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Notes_warranty_repairs__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes - warranty repairs</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Number_of_Sales_People_trained_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISNULL( Number_of_Sales_People_trained__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Sales_People_trained__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>How many persons received sales training according to ABB authorisation Process? Can be the same person as for support/ engineering.</inlineHelpText>
+        <label>Number of Sales People trained</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Own_Cabinet_panel_building_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Own_Cabinet_panel_building__c,&apos;&apos;), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Own_Cabinet_panel_building__c</fullName>
+        <externalId>false</externalId>
+        <label>Own Cabinet/panel building</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>People_technical_author_flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK( of_persons_technically_authorized__c ), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Personnel_for_Commissioning_flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(personnel_for_commissioning__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Persons_for_engineering_flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISNULL(persons_for_engineering__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process_for_fast_order_handling_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Process_for_fast_order_handling_known__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Process_for_fast_order_handling_known__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Process for fast order handling known</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_brochures_and_flyers_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are the Product brochures and Flyers available for the customers? Define locally what is needed. Electronic format is OK if so agreed.</inlineHelpText>
+        <label>Product brochures and flyers available</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_brochures_flyers_available_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Product_brochures_and_flyers_available__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_guides_and_other_documentation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Partner finds all relevant sales support material available from ABB datebases</inlineHelpText>
+        <label>Product guides and other documentation</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_price_list_available_from_ABB_to__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Are the product price Lists available to the partner? In tool or separate list for appropriate products</inlineHelpText>
+        <label>Product price list available from ABB</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Product_price_list_available_from_partne__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Refers to the parter&apos;s price list for their customers. Check if yes.</inlineHelpText>
+        <label>Product price list available from Partne</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Project_reference_list_is_up_to_date__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>customer references shall be a joint objective to maintain 
+data to contain correct End Customer data. Needed e.g. for the software licenses.&quot;</inlineHelpText>
+        <label>Project reference list is up-to-date</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Quality_management_of_cabinet__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Explain how you manage the quality of cabinet/panel builders used as sub-supplier</inlineHelpText>
+        <label>Quality management of cabinet</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Relevant_HSE_aspects_know_and_followed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Relevant HSE aspects are known and followed when working with ABB products
+(health, safety and environmental). Note existing ABB guideline for ….</inlineHelpText>
+        <label>Relevant HSE aspects know and followed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Relevant_HSE_aspects_know_followed_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Relevant_HSE_aspects_know_and_followed__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_for_field_repair_available_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Report_for_field_repair_available__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Report_for_field_repair_available__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Is a written report for field repair available for the end customer?
+Mandatory to have written report. Standard ABB -format recommended to be used.</inlineHelpText>
+        <label>Report for field repair available</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Response_time_to_solve_warranty_cases__c</fullName>
+        <externalId>false</externalId>
+        <label>Response time to solve warranty cases</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Measured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not measured</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Responsible_person_to_run_field_service__c</fullName>
+        <externalId>false</externalId>
+        <label>Responsible person to run field service</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sales_support_available_from_ABB_known__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Defined contacts for critical processes and product lines. Preferably list on Business Plan.</inlineHelpText>
+        <label>Sales support available from ABB known</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_support_from_ABB_known_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Sales_support_available_from_ABB_known__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scope_of_service_authorization__c</fullName>
+        <externalId>false</externalId>
+        <label>Scope of service authorization</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Whole installed base in agreed region</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Product range or services for own installations only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Service_Engineer_utilization_rate__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Service Engineer utilization rate measured and statistics are available? Explain the measurement and formula.</inlineHelpText>
+        <label>Service Engineer utilization rate</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Service_person_have_access_to_tools__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Do all service persons have access to required tools and databases? See separate business specific Lists if existing.</inlineHelpText>
+        <label>Service person have access to tools</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Service_products_known__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>All different ABB stardard service products presented to be utilized by Partner if appropriate (preventive maintenance, spare part services etc.)</inlineHelpText>
+        <label>Service products known</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spare_part_inventory_list_available__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Spare part inventory list available and matching to required spares
+Explain the system how inventory is kept updated (ERP system) and stock counting method.</inlineHelpText>
+        <label>Spare part inventory list available</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Spare_part_operations_handled_by_partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Spare part operations handled by partner</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spare_part_ops_handled_by_partner_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Spare_part_operations_handled_by_partner__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(ISPICKVAL(Status__c,&apos;&apos;), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Targeted_Authorization_confirmed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Targeted Authorization confirmed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Technical_support_available_frm_ABB_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Technical_support_available_from_ABB__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technical_support_available_from_ABB__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Defined contacts for critical processes and product lines are known. Preferably list on Business Plan</inlineHelpText>
+        <label>Technical support available from ABB</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Testing_Routine_for_ready_made_cabinet__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Explain the testing routine for ready made cabinet</inlineHelpText>
+        <label>Testing Routine for ready made cabinet</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Tools_collaboration_system_in_use_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Tools_collaboration_system_is_in_use__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tools_collaboration_system_is_in_use__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Explain how it is done and by which company. Check during the audit that measurement tools have calibration sticker. Mandatory for all measurement tools</inlineHelpText>
+        <label>Tool calibration system</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Training_OPtions__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Type of training the partner provides to his customers in connection to ABB products</inlineHelpText>
+        <label>Training Options</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User Training on request</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>User Training always after commissioning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>not available</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Training_Plan_available__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Is the Training Plan available to complete the competence gap? Present the training plan for service employees with schedule.</inlineHelpText>
+        <label>Training Plan available</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Warehouse_suitable_for_stocking_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Warehouse_suitable_for_stocking__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Warehouse_suitable_for_stocking__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Warehouse area suitable for spares stocking and handling 
+See manufacturer instructions for safety, environment (humidity, temperature)</inlineHelpText>
+        <label>Warehouse suitable for stocking</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Warranty_handling_procedure_known_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Warranty_handling_procedure_known__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Warranty_handling_procedure_known__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Warranty handling procedure known</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Warranty_repairs_handled_by_partner_Flag__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( NOT(Warranty_repairs_handled_by_partner__c), IMAGE(&quot;/img/samples/flag_red.gif&quot;, &quot;Red&quot;), &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>!</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Warranty_repairs_handled_by_partner__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Warranty repairs handled by partner</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Working_hour_rate_for_warranty_agreed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Price from partner to ABB when ABB subsupplies partner for warranty repairs</inlineHelpText>
+        <label>Working hour rate for warranty agreed</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Working_process_and_instructions_availab__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Working process and instructions/ check lists when working onsite available</inlineHelpText>
+        <label>Working process and instructions availab</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>of_people_in_operative_cabinet__c</fullName>
+        <externalId>false</externalId>
+        <label># of people in operative cabinet</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_persons_technically_authorized__c</fullName>
+        <description>R7A - Channel Authorization</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Minimum 1 person;  If after sales services is provided , typically minimum 2 persons are required.</inlineHelpText>
+        <label># of persons technically authorized</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>people_for_automation_engineering__c</fullName>
+        <externalId>false</externalId>
+        <label># people for automation engineering</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>people_for_electrical_engineering__c</fullName>
+        <externalId>false</externalId>
+        <label># people for electrical engineering</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>personnel_for_commissioning__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText># personnel available for commissioning for the authorized product range. Put zero if not applicable</inlineHelpText>
+        <label># personnel for commissioning</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>persons_for_engineering__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Define the total number of Engineers within the scope who passed the authorization.</inlineHelpText>
+        <label># persons for engineering</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Channel Partner on-site Audit</label>
+    <nameField>
+        <label>Channel Partner on-site Audit Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Channel Partner on-site Audits</pluralLabel>
+    <recordTypes>
+        <fullName>Engineerig</fullName>
+        <active>true</active>
+        <description>This Record Type is used to document the partner&apos;s engineering and/or cabinet building capabilities</description>
+        <label>Engineering</label>
+        <picklistValues>
+            <picklist>Access_to_needed_tools_and_Databasis__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_to_service_spares__c</picklist>
+            <values>
+                <fullName>Inventory not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commissioning_provided_actively__c</picklist>
+            <values>
+                <fullName>actively</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>only when requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>subcontracted when needed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_feedback_collected__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_use_for_warranty_handling__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_user_for_spare_part_orders__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Field_Service_reports_stored_in_ABB_Base__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Own_Cabinet_panel_building__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_reference_list_is_up_to_date__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response_time_to_solve_warranty_cases__c</picklist>
+            <values>
+                <fullName>Measured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not measured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Responsible_person_to_run_field_service__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not handled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scope_of_service_authorization__c</picklist>
+            <values>
+                <fullName>Product range or services for own installations only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole installed base in agreed region</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Engineer_utilization_rate__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Spare_part_inventory_list_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_OPtions__c</picklist>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training always after commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training on request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_Plan_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sales</fullName>
+        <active>true</active>
+        <description>This Record Type is used to document the partner&apos;s Sales capabilities</description>
+        <label>Sales</label>
+        <picklistValues>
+            <picklist>Access_to_needed_tools_and_Databasis__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_to_service_spares__c</picklist>
+            <values>
+                <fullName>Inventory not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commissioning_provided_actively__c</picklist>
+            <values>
+                <fullName>actively</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>only when requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>subcontracted when needed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_feedback_collected__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_use_for_warranty_handling__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_user_for_spare_part_orders__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Field_Service_reports_stored_in_ABB_Base__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Own_Cabinet_panel_building__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_reference_list_is_up_to_date__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response_time_to_solve_warranty_cases__c</picklist>
+            <values>
+                <fullName>Measured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not measured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Responsible_person_to_run_field_service__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not handled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scope_of_service_authorization__c</picklist>
+            <values>
+                <fullName>Product range or services for own installations only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole installed base in agreed region</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Engineer_utilization_rate__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Spare_part_inventory_list_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_OPtions__c</picklist>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training always after commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training on request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_Plan_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Service</fullName>
+        <active>true</active>
+        <description>This Record Type is used to document the partner&apos;s Service capabilities</description>
+        <label>Service</label>
+        <picklistValues>
+            <picklist>Access_to_needed_tools_and_Databasis__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_to_service_spares__c</picklist>
+            <values>
+                <fullName>Inventory not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commissioning_provided_actively__c</picklist>
+            <values>
+                <fullName>actively</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>only when requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>subcontracted when needed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_feedback_collected__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_use_for_warranty_handling__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_user_for_spare_part_orders__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Field_Service_reports_stored_in_ABB_Base__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Own_Cabinet_panel_building__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_reference_list_is_up_to_date__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response_time_to_solve_warranty_cases__c</picklist>
+            <values>
+                <fullName>Measured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not measured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Responsible_person_to_run_field_service__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not handled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scope_of_service_authorization__c</picklist>
+            <values>
+                <fullName>Product range or services for own installations only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole installed base in agreed region</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Engineer_utilization_rate__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Spare_part_inventory_list_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_OPtions__c</picklist>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training always after commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training on request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_Plan_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Support</fullName>
+        <active>true</active>
+        <description>This Record Type is used to document the partner&apos;s Support and/or commissioning capabilities</description>
+        <label>Support</label>
+        <picklistValues>
+            <picklist>Access_to_needed_tools_and_Databasis__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Access_to_service_spares__c</picklist>
+            <values>
+                <fullName>Inventory not required</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Commissioning_provided_actively__c</picklist>
+            <values>
+                <fullName>actively</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>only when requested</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>subcontracted when needed</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Customer_feedback_collected__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_use_for_warranty_handling__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>E_ordering_in_user_for_spare_part_orders__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Field_Service_reports_stored_in_ABB_Base__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Own_Cabinet_panel_building__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Project_reference_list_is_up_to_date__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Response_time_to_solve_warranty_cases__c</picklist>
+            <values>
+                <fullName>Measured</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not measured</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Responsible_person_to_run_field_service__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not handled</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scope_of_service_authorization__c</picklist>
+            <values>
+                <fullName>Product range or services for own installations only</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Whole installed base in agreed region</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Service_Engineer_utilization_rate__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Spare_part_inventory_list_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_OPtions__c</picklist>
+            <values>
+                <fullName>Classroom Training</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training always after commissioning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>User Training on request</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>not available</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Training_Plan_available__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not handled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Validate_the_fields_on_status_change</fullName>
+        <active>true</active>
+        <description>R7 - Validate the required fields are filled out to change status to Completed</description>
+        <errorConditionFormula>AND(ISPICKVAL(Status__c, &apos;Completed&apos;), 
+OR( 
+AND( 
+RecordType.Name = &quot;Sales&quot;, OR(ISPICKVAL(Status__c,&apos;&apos;), ISNULL( Date_of_onsite_Audit__c ), ISNULL(Number_of_Sales_People_trained__c), NOT(Warranty_handling_procedure_known__c), 
+NOT(Process_for_fast_order_handling_known__c), NOT(Sales_support_available_from_ABB_known__c), NOT(Access_and_user_knowledge_to_sales_tools__c), NOT(Product_brochures_and_flyers_available__c)) 
+),	
+AND ( 
+RecordType.Name = &quot;Service&quot;, OR(ISNULL(No_of_people_with_service_authorization__c), NOT(Report_for_field_repair_available__c), ISPICKVAL(Access_to_service_spares__c, &apos;&apos;), 
+NOT(Tools_collaboration_system_is_in_use__c), NOT(Relevant_HSE_aspects_know_and_followed__c), NOT(Spare_part_operations_handled_by_partner__c), NOT(Competent_people_for_spare_parts__c), NOT(Warehouse_suitable_for_stocking__c), NOT(Warranty_repairs_handled_by_partner__c), NOT(Competent_field_service_personnel__c), NOT(ABB_Warranty_rules_and_instructions__c), 
+NOT(Access_to_all_warranty_material__c), NOT(Defective_material_stored_and_handled__c)) 
+),	
+AND ( 
+RecordType.Name = &quot;Support&quot;, OR(ISPICKVAL(Status__c,&apos;&apos;), ISNULL( Date_of_onsite_Audit__c ), NOT(Customer_Access__c), NOT(Technical_support_available_from_ABB__c),ISPICKVAL(Commissioning_provided_actively__c,&apos;&apos;),ISNULL(personnel_for_commissioning__c),
+ISNULL(of_persons_technically_authorized__c)) 
+), 
+AND ( 
+RecordType.Name = &quot;Engineering&quot;, OR(ISNULL(persons_for_engineering__c), NOT(ESD_handling_process_known_and_utilized__c), ISPICKVAL(Own_Cabinet_panel_building__c, &apos;&apos;)) 
+)	
+))</errorConditionFormula>
+        <errorMessage>Status cannot be changed as not all Red Flag marked mandatory fields are answered. You might need to change Status back to &quot;Draft&quot; to save and see if Red Flagged fields were missed in earlier stages</errorMessage>
+    </validationRules>
+</CustomObject>

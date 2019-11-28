@@ -1,0 +1,8 @@
+Dear {!User.Manager},</br>
+</br>
+You received this message, because Salesforce user {!User.Username} (Organization ID {!Organization.Id} ) has just been deactivated and you are set up as his user’s manager. If there are any valid business records assigned to user, you are responsible for re-assignment them to new owner. </br>
+</br>
+If you need support with re-assigning objects, please contact your local Salesforce administrator.</br>
+Thank you,</br>
+</br>
+SFDC Team

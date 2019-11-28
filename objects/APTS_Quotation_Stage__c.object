@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Custom setting holds records for Quote Stage values which are used in Chevron</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Chevron_Label__c</fullName>
+        <description>Value will be used as text for Quotation Chevron</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value will be used as text for Quotation Chevron</inlineHelpText>
+        <label>Chevron Label</label>
+        <length>250</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Chevron_Value__c</fullName>
+        <description>Holds values of Approval Stage picklist. Used to highlight value in Chevron - Quotation</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Value of Approval Stage on Quotation</inlineHelpText>
+        <label>Chevron Value</label>
+        <length>250</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Default_Text__c</fullName>
+        <externalId>false</externalId>
+        <label>Default Text</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Dependent_Values__c</fullName>
+        <description>Values which are depended for this value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Values which are depended for this value (applicable only for sales stage)</inlineHelpText>
+        <label>Dependent Values</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Display_Label__c</fullName>
+        <externalId>false</externalId>
+        <label>Display Label</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_IsSalesStage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Identifies whether stage is sales stage or quotation stage</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Identifies whether stage is sales stage or quotation stage</inlineHelpText>
+        <label>IsSalesStage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_IsSkipNext__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Skips the next value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check this if you want to skip next block in chevron. Also put width accordingly.</inlineHelpText>
+        <label>IsSkipNext</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Sorting_Value__c</fullName>
+        <description>Index of chevron value</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Index of chevron value</inlineHelpText>
+        <label>Sorting Value</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Width__c</fullName>
+        <externalId>false</externalId>
+        <label>Width</label>
+        <length>250</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>APTS Quotation Stage</label>
+    <visibility>Protected</visibility>
+</CustomObject>

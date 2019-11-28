@@ -1,0 +1,4757 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Created as part of R6 -  This Custom Object will be used to generate Letter Of Authorization and Power Of Attorney.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>ABB_LoA_Contact_Person__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as part of R8 for community LoA purpose.</description>
+        <externalId>false</externalId>
+        <label>ABB LoA Contact Person</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Project_Authorization</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_End_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as part of R6 - This Account lookup is used for End User Accounts.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This Account lookup is used for End User Accounts.</inlineHelpText>
+        <label>Account – End User</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Project Authorization (End User Name)</relationshipLabel>
+        <relationshipName>Project_Authorization_End_User</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Address_of_the_Bidding_Company_CN__c</fullName>
+        <description>Created as part of R6 - Address of the Bidding Company in Chinese</description>
+        <externalId>false</externalId>
+        <label>Address of the Bidding Company (CN)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Address_of_the_Bidding_Company_EN__c</fullName>
+        <description>Created as part of R6 - Address of the Bidding Company in English</description>
+        <externalId>false</externalId>
+        <label>Address of the Bidding Company (EN)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Applicant_CN__c</fullName>
+        <description>Created as part of R6 - Name of the Applicant in Chinese Language.</description>
+        <externalId>false</externalId>
+        <label>Applicant (CN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_EN__c</fullName>
+        <description>Created as part of R6 - Name of the Applicant in English Language.</description>
+        <externalId>false</externalId>
+        <formula>CreatedBy.FirstName  &amp; &quot; &quot; &amp;  CreatedBy.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Applicant (EN)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_Position_CN__c</fullName>
+        <description>Created as part of R6 - Position of the Sales Person in Chinese Language.</description>
+        <externalId>false</externalId>
+        <label>Applicant Position (CN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Applicant_Position_EN__c</fullName>
+        <description>Created as part of R6 - Position of the Sales Person in English Language.</description>
+        <externalId>false</externalId>
+        <formula>CreatedBy.Title</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Applicant Position (EN)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application_Backup__c</fullName>
+        <description>Backup field to save existing value. STS R3.0</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Backup field to save existing value. STS R3.0</inlineHelpText>
+        <label>Application Backup</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Application__c</fullName>
+        <description>Created as part of R6 - Picklist containing active Applications relating to specific Product Groups.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB classification of application based on the main process activity of the delivered product, service, solution. The selectable options are product group specific.</inlineHelpText>
+        <label>Application</label>
+        <picklist>
+            <picklistValues>
+                <fullName>AP.301</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.302</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.303</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.304</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.305</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.306</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.307</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.308</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.309</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.310</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.311</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.313</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.314</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.315</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.316</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.317</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.318</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.319</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.320</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.321</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.322</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.323</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.324</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.325</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.326</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.327</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.328</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.329</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.330</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.331</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.332</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.333</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.334</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.335</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.336</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.337</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.338</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.339</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.340</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.341</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.342</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.343</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.344</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.345</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.347</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.348</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.349</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.350</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.351</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.352</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.353</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.354</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.355</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.356</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.357</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.358</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.359</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.360</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.362</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.363</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.364</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.365</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.366</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.367</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.368</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.369</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.370</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.371</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.372</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.373</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.374</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.375</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.401</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.402</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.403</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.404</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.405</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.406</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.407</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.408</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.409</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.410</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.411</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.412</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.413</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.414</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.415</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.416</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.417</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.418</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.419</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.420</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.421</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.422</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.423</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.424</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.425</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.426</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.427</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.428</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.429</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.430</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.431</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.432</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.433</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.434</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.435</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.436</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.437</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.441</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.442</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.443</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.444</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.445</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.446</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.514</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.515</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.517</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.518</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.519</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.520</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.521</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.524</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.526</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.527</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.528</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.533</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.534</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.535</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.536</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.537</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.538</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.549</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.553</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.554</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.555</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.556</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.557</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.558</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.559</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.560</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.561</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.562</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.563</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.564</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.565</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.566</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.567</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.568</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.569</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.570</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.571</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.572</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.573</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.574</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.575</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.576</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.577</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.578</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.579</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.580</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.581</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.582</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.583</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.584</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.585</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.586</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.587</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.588</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.589</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.590</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.591</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.592</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.593</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.594</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.595</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.596</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.597</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.598</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.600</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.623</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.626</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.630</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.631</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.632</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.634</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.635</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.636</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.637</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.638</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.639</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.640</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.641</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.642</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.643</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.644</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.645</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.646</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.647</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.648</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.650</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.651</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.652</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.653</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.654</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.655</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.656</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.657</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.658</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.660</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.661</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.662</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.663</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.664</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.665</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.666</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.667</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.668</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.669</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.670</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.671</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.673</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.674</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.675</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.676</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.677</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.678</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.679</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.682</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.683</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.684</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.685</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.686</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.687</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.688</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.689</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.691</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.692</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.693</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.694</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.695</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.696</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.698</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.699</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.700</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.701</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.702</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.703</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.704</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.705</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.706</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.707</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.708</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.709</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.710</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.711</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.717</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.718</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.719</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.720</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.721</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.722</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.723</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.724</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.725</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>AP.726</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Approval_Role_RMDR__c</fullName>
+        <description>Created as part of R8 LoA Process and will fetch UserRole API Name</description>
+        <externalId>false</externalId>
+        <formula>IF(OR(
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NO_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_EA_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_SO_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NE_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NW_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_SW_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_CE_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_XI_Hub_Role)
+) 
+,$UserRole.DeveloperName,&apos;&apos;)</formula>
+        <label>Approval Role MODR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Role__c</fullName>
+        <description>Created as part of R6 - This field will fetch the API name and and email  of the logged-in user based on conditions.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+OR(
+($UserRole.Name = $Label.PjA_SalesTeam0_SH_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_BJ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_CD_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_GZ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_NJ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_SY_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_WH_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_XA_Hub_Role),
+($UserRole.Name = $Label.PjA_SalesMngt1_KAM_Role)
+ ) 
+,$UserRole.DeveloperName , 
+IF($UserRole.Name = $Label.PjA_SalesMngt1_LPG_KAM_Role,
+$User.Email,&apos;&apos;))</formula>
+        <label>Approval Role</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approval_Status__c</fullName>
+        <description>Created as part of R6 - This field will show the status of approval process.</description>
+        <externalId>false</externalId>
+        <label>Approval Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Waiting For Approval</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Submitted</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Authorization_Type__c</fullName>
+        <description>Created as part of R6 - This field is used for the record type of the LOA and POA.</description>
+        <externalId>false</externalId>
+        <formula>RecordType.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Authorization Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AutoNumber_Tech__c</fullName>
+        <description>Created as part of R6 - This autonumber field will be used to update the value of the (Authorization Letter Number) Name field of Project Authorization.</description>
+        <displayFormat>{00000}</displayFormat>
+        <externalId>false</externalId>
+        <label>AutoNumber Tech</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Bidding_Project_Name_CN__c</fullName>
+        <description>Created as Part of R6 - The name of the  bidding project in Chinese.</description>
+        <externalId>false</externalId>
+        <label>Bidding Project Name (CN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bidding_Project_Name_EN__c</fullName>
+        <description>Created as Part of R6 - The name of the bidding project in English.</description>
+        <externalId>false</externalId>
+        <label>Bidding Project Name (EN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Person__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as Part of R6 - This field is a lookup to the Contact.</description>
+        <externalId>false</externalId>
+        <label>Contact Person</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Project Authorization</relationshipLabel>
+        <relationshipName>Project_Authorization</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>Created as Part of R6 - Country of ABB Location – Bidding unit</description>
+        <externalId>false</externalId>
+        <formula>LEFT( Opportunity_Name_EN__r.ABB_Location__r.Company__c , 2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Country</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Design_Institute__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as Part of R6 - This Account lookup is used for Design Institute.</description>
+        <externalId>false</externalId>
+        <label>Design Institute</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Project Authorization (Design Institute)</relationshipLabel>
+        <relationshipName>Project_Authorization1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>Created as part of R6 -Division of ABB Location – Bidding unit</description>
+        <externalId>false</externalId>
+        <formula>LEFT(TEXT( Opportunity_Name_EN__r.ABB_Location__r.DIV__c),2)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Division</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Eligible_For_Approval_RMDR__c</fullName>
+        <description>Created as part of R8 to verify the logged in users are eligible for submitting approval process</description>
+        <externalId>false</externalId>
+        <formula>IF(
+AND(
+NOT(ISBLANK(Industry_Usage_RMDR__c)),
+OR( 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NO_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_EA_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_SO_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NE_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_NW_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_SW_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_CE_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_MODR_XI_Hub_Role) 
+)) 
+,true,false)</formula>
+        <label>Eligible For Approval MODR</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Eligible_For_Approval__c</fullName>
+        <description>Created as part of R6 - Eligiblity Criteria for approval request.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+AND(
+NOT(ISBLANK(Industry_Usage__c)),
+OR(
+($UserRole.Name = $Label.PjA_SalesTeam0_SH_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_BJ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_CD_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_GZ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_NJ_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_SY_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_WH_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesTeam0_XA_Hub_Role), 
+($UserRole.Name = $Label.PjA_SalesMngt1_KAM_Role),
+($User.Email = $Label.PjA_SalesMngt1_LPG_KAM1_User1), 
+($User.Email = $Label.PjA_SalesMngt1_LPG_KAM1_User2),
+($User.Email = $Label.PjA_SalesMngt1_LPG_KAM2_User1),
+($User.Email = $Label.PjA_SalesMngt1_LPG_KAM2_User2))), True, False)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Eligible For Approval</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>External_User__c</fullName>
+        <description>Created as part of R8 Partner Community Build</description>
+        <externalId>false</externalId>
+        <formula>CASE( CreatedBy.Profile.Name, 
+&quot;ABB Ext Channel Partner Community User&quot;, $Label.SYS_Ext_Channel_Partner, 
+&quot;ABB External Competitive&quot;, $Label.SYS_Ext_Agent , 
+&quot;ABB External Customer&quot;, $Label.SYS_Ext_Support,$Label.SYS_Created_by_ABB)</formula>
+        <label>External User</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fax_Number__c</fullName>
+        <description>Created as part of R6 - The field is used for the Fax Number.</description>
+        <externalId>false</externalId>
+        <label>Fax Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Generate_Date__c</fullName>
+        <description>Created as part of R6 - This Date will be used on templates generated by CRMS to display Today&apos;s Date.</description>
+        <externalId>false</externalId>
+        <formula>IF( TEXT(Template_Language__c) = &apos;English&apos;,Text(Day(Today())) &amp; &quot;/&quot;&amp;Text(Month(Today())) &amp; &quot;/&quot;&amp;Text(Year(Today())) ,  IF( TEXT(Template_Language__c) = &apos;Chinese&apos; ,Text(Year(Today())) &amp; &quot;年&quot;&amp;Text(Month(Today())) &amp; &quot;月&quot;&amp;Text(Day(Today()))&amp; &quot;日&quot; , &apos;&apos;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Generate Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Generate__c</fullName>
+        <description>Created as part of R6 - This field will display a button &quot;Generate&quot; to Contract Risk Management Specialist only if the approval status is &quot;Approved&quot; or &quot;Completed&quot;.</description>
+        <externalId>false</externalId>
+        <formula>IF(AND(OR(AND(Leading_LBU__c==&apos;MOMG&apos;,$UserRole.DeveloperName = $Label.Project_Authorization_CRMS_Role),
+AND(Leading_LBU__c==&apos;MODR&apos;,$UserRole.DeveloperName = $Label.Project_Authorization_MODR_CRMS_Role)), 
+OR(TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Completed)), HYPERLINK(&quot;/apex/Apttus__DocumentGenerate?id=&quot;&amp;Id &amp; &quot;&amp;action=Generate_Document&amp;templateType=Project Authorization&quot;, IMAGE(&quot;/resource/Apttus__Button_Generate&quot;, &quot;Generate&quot;),&quot;_self&quot;),  
+IF(AND($UserRole.DeveloperName != $Label.Project_Authorization_CRMS_Role, 
+OR(TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Completed)), $Label.PjA_Mark_Complete_Available_For_Risk,$Label.PjA_Mark_Complete_Not_Applicable))</formula>
+        <label>Generate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage_Common__c</fullName>
+        <description>This field is created as part of R8, to hold common industry value for every BU</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used).</inlineHelpText>
+        <label>Industry</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage_RMDR__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, 
+&apos;IND.1&apos;,&apos;Automotive&apos;,
+&apos;IND.2&apos;,&apos;Chemical&apos;,
+&apos;IND.4&apos;,&apos;Food and Beverage&apos;,
+&apos;IND.5&apos;,&apos;Printing&apos;,
+&apos;IND.6&apos;,&apos;Textile&apos;,
+&apos;IND.7&apos;,&apos;Metals&apos;,
+&apos;IND.10&apos;,&apos;Mining and Minerals&apos;,
+&apos;IND.13&apos;,&apos;Pharmaceutical and Cosmetics&apos;,
+&apos;IND.14&apos;,&apos;Pulp and Paper&apos;,
+&apos;IND.15&apos;,&apos;Rubber and Plastics Products&apos;,
+&apos;IND.16&apos;,&apos;Other&apos;,
+&apos;UT.1&apos;,&apos;Power&apos;,
+&apos;UT.4&apos;,&apos;Water&apos;,
+&apos;BLD.8&apos;,&apos;Residential Buildings&apos;,
+&apos;BLD.9&apos;,&apos;Commercial &amp; institutional Buildings&apos;,
+&apos;TRA.1&apos;,&apos;Marine&apos;,
+&apos;TRA.4&apos;,&apos;Port &amp; Crane&apos;,
+&apos;TRA.7&apos;,&apos;Logistics&apos;,
+	CASE(Opportunity_Name_EN__r.ABB_Industry_Usage_Level3__c,
+	&apos;IND.7.1&apos;,&apos;Aluminium&apos;,
+	&apos;IND.7.2&apos;,&apos;Steel&apos;,
+	&apos;IND.11.1&apos;,&apos;Cement&apos;,
+	&apos;IND.12.2&apos;,&apos;Oil and Gas - Onshore&apos;,
+	&apos;IND.12.1&apos;,&apos;Oil and Gas - Offshore&apos;,
+	&apos;UT.1.5&apos;,&apos;Power Generation - Wind (off shore)&apos;,&apos;&apos;))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Industry Usage MODR</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Industry_Usage__c</fullName>
+        <description>Created as part of R6 - This field groups the industry Usage level2 values from opportunity.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+            OR(
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;BLD.8&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;BLD.9&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.1&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.4&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.5&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.6&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.7&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.8&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.10&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.11&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.16&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.17&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.18&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.2&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.3&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.5&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.6&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.7&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.2&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.3&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.5&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.7&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.8&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.9&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;XY.1&apos;)
+            )
+            , &apos;Other&apos;,
+            IF(OR(
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.2&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.3&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.12&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.13&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.14&apos;),
+            ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;IND.15&apos;)
+            )
+            , &apos;COG&apos;,
+            IF(ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.1&apos;),
+            &apos;Marine&apos;,
+            IF(ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;TRA.4&apos;),
+            &apos;Port &amp; Crane&apos;,
+            IF(ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.1&apos;),
+            &apos;Power&apos;,
+            IF(ISPICKVAL(Opportunity_Name_EN__r.ABB_Industry_Usage_Level2__c, &apos;UT.4&apos;),
+            &apos;Water&apos;,
+            &apos;&apos;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>The Industry Usage classification (multi-level) describes the main industrial activity (usage) to which the delivered ABB offering is applied to (or intended to be used).</inlineHelpText>
+        <label>Industry</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inviting_bidding_Party__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as part of R6 - This Account lookup is used for Inviting Bidding Party.</description>
+        <externalId>false</externalId>
+        <label>Inviting bidding Party</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Project Authorization (Inviting bidding Party)</relationshipLabel>
+        <relationshipName>Project_Authorization2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Is_CP__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Created as part of R6 - Mark the LOA for CP or Non-CP.</description>
+        <externalId>false</externalId>
+        <label>Is Channel Partner?</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_Opp_Value_Above_1M__c</fullName>
+        <description>Created as part of R8 to decide opportunity value should be greater than 1M</description>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name_EN__r.Opportunity_Value__c &gt;150000.00</formula>
+        <label>Is Opp Value Above 1M</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Leading_LBU__c</fullName>
+        <description>Created as part of R6 - Local Business Unit is the ABB management organisation responsible to market product, specific system or service mix either on division, BU or product group level. It is the local organisational unit, representing the BU&apos;s activities in a country.</description>
+        <externalId>false</externalId>
+        <formula>LEFT(Opportunity_Name_EN__r.ABB_Location__r.BU__c,4)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Leading LBU</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Leading_LPG__c</fullName>
+        <description>Created as part of R6 - This field will calculate the LPG of the parent opportunity to be use in approval process entry criteria.This should not be available on Page Layouts.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name_EN__r.Local_Product_Group__r.Product_Group_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Leading LPG</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity_Address__c</fullName>
+        <description>Created as part of R6 - This field will show the full address of the Legal entity based on Legal Entity and Template Language.</description>
+        <externalId>false</externalId>
+        <formula>IF( AND( Text(Legal_Entity__c) = $Label.PjA_CNBAL, Text(Template_Language__c) = &apos;Chinese&apos;) , &apos;上海市松江工业区松胜路160号&apos;, 
+IF( AND( Text(Legal_Entity__c) = $Label.PjA_CNBAL, Text(Template_Language__c) = &apos;English&apos;),&apos;160 SongSheng Rd, Songjiang Industrial Zone, Shanghai, 201613, P.R. China&apos;, 
+IF( AND( Text(Legal_Entity__c) =  $Label.PjA_CNEMS, Text(Template_Language__c) = &apos;Chinese&apos;) , &apos;上海市闵行开发区天星路380号&apos;, 
+IF(AND( Text(Legal_Entity__c) =  $Label.PjA_CNEMS, Text(Template_Language__c) = &apos;English&apos;) ,&apos;No.380 Tianxing Rd, Minhang District, Shanghai, 200245, P.R. China&apos;, 
+IF( AND( Text(Legal_Entity__c) = $Label.PjA_CNMOT, Text(Template_Language__c) = &apos;Chinese&apos;) , &apos;上海市闵行开发区天宁路88号&apos;, 
+IF(AND( Text(Legal_Entity__c) = $Label.PjA_CNMOT, Text(Template_Language__c) = &apos;English&apos;) ,&apos;No.88 Tianning Rd, Minhang District, Shanghai, 200245, P.R. China&apos;, 
+IF( AND( Text(Legal_Entity__c) = $Label.PjA_CNGEN, Text(Template_Language__c) = &apos;Chinese&apos;) , &apos;江西省南昌市高新开发区紫阳大道3088号&apos;, 
+IF(AND( Text(Legal_Entity__c) = $Label.PjA_CNGEN, Text(Template_Language__c) = &apos;English&apos;) ,&apos;3088 ZiYang Avenue, High-Tech Development Zone, Nanchang, Jiangxi, 330096, P.R. China&apos;,NULL))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Legal Entity Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity_Full_Name__c</fullName>
+        <description>Created as part of R6 - This field will show the full name of the Legal entity based on Legal Entity and Template Language.</description>
+        <externalId>false</externalId>
+        <formula>IF( AND( Text(Legal_Entity__c)  = $Label.PjA_CNBAL, Text(Template_Language__c)  = &apos;Chinese&apos;) , &apos;上海ABB动力传动有限公司&apos;, 
+IF( AND( Text(Legal_Entity__c)  = $Label.PjA_CNBAL, Text(Template_Language__c)  = &apos;English&apos;),&apos;Shanghai ABB Power Transmission Company Ltd.&apos;,
+IF( AND( Text(Legal_Entity__c)  = $Label.PjA_CNEMS, Text(Template_Language__c)  = &apos;Chinese&apos;) , &apos;ABB高压电机有限公司&apos;, 
+IF(AND( Text(Legal_Entity__c)  = $Label.PjA_CNEMS, Text(Template_Language__c)  = &apos;English&apos;) ,&apos;ABB Electrical Machines Ltd.&apos;,
+IF( AND( Text(Legal_Entity__c)  = $Label.PjA_CNMOT, Text(Template_Language__c)  = &apos;Chinese&apos;) , &apos;上海ABB电机有限公司&apos;, 
+IF(AND( Text(Legal_Entity__c)  = $Label.PjA_CNMOT, Text(Template_Language__c)  = &apos;English&apos;) ,&apos;ABB Shangehai Motros Co., Ltd.&apos;,
+IF( AND( Text(Legal_Entity__c)  = $Label.PjA_CNGEN, Text(Template_Language__c)  = &apos;Chinese&apos;) , &apos;南昌ABB发电机有限公司&apos;, 
+IF(AND( Text(Legal_Entity__c)  = $Label.PjA_CNGEN, Text(Template_Language__c)  = &apos;English&apos;) ,&apos;ABB Generators Ltd.&apos;,&apos;&apos;))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Legal Entity Full Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Legal_Entity__c</fullName>
+        <description>Created as part of R6 - This field will show the short name of the Legal entity based on which the approval process will go to the respective GM of those entity.</description>
+        <externalId>false</externalId>
+        <label>Legal Entity</label>
+        <picklist>
+            <picklistValues>
+                <fullName>CNEMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNGEN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNBAL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNMOT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>CNIAB</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Mark_Complete__c</fullName>
+        <description>Created as part of R6 - The field will be used by CRMS user to mark the LOA or POA application as Completed.</description>
+        <externalId>false</externalId>
+        <formula>IF(
+
+AND($UserRole.DeveloperName  = $Label.Project_Authorization_CRMS_Role,
+	TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+	TEXT(Way_of_Delivery__c) == $Label.PjA_Express_Delivery,
+	NOT(ISBLANK(Tracking_Number__c ))),
+	
+HYPERLINK(&apos;/apex/Complete_Project_Authorization?id=&apos;+Id, $Label.PjA_Mark_Complete_Click_Here,&apos;_self&apos;),
+
+IF(
+
+AND($UserRole.DeveloperName  = $Label.Project_Authorization_CRMS_Role,
+	TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+	ISPICKVAL(Way_of_Delivery__c, &apos;Pick Up&apos;)),
+	
+HYPERLINK(&apos;/apex/Complete_Project_Authorization?id=&apos;+Id, $Label.PjA_Mark_Complete_Click_Here,&apos;_self&apos;),
+ 
+IF(
+
+AND($UserRole.DeveloperName  = $Label.Project_Authorization_CRMS_Role,
+	TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+	ISPICKVAL(Way_of_Delivery__c, &apos;Fax&apos;)),
+	
+HYPERLINK(&apos;/apex/Complete_Project_Authorization?id=&apos;+Id, $Label.PjA_Mark_Complete_Click_Here,&apos;_self&apos;),
+ 
+IF(
+
+AND($UserRole.DeveloperName  = $Label.Project_Authorization_CRMS_Role,
+	TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved,
+	ISPICKVAL(Way_of_Delivery__c, &apos;Express Delivery&apos;),
+	ISBLANK(Tracking_Number__c )),
+
+$Label.PjA_Tracking_Number_Message,
+ 
+IF(
+
+AND($UserRole.DeveloperName  != $Label.Project_Authorization_CRMS_Role,
+	NOT(TEXT(Approval_Status__c) == $Label.PjA_Approval_Status_Approved)),
+
+$Label.PjA_Mark_Complete_Not_Applicable,
+
+IF(
+AND($UserRole.DeveloperName  == $Label.Project_Authorization_CRMS_Role,
+	NOT(ISPICKVAL(Approval_Status__c,&apos;Approved&apos;))),
+
+$Label.PjA_Mark_Complete_Not_Applicable,
+
+$Label.PjA_Mark_Complete_Available_For_Risk)) ) ) ) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mark Complete</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_Local__c</fullName>
+        <description>R6- This field is used for the local name of Account end user.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name_EN__r.Account_End_User__r.Name_Local__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account – End User (Local Language)</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_of_Company_s_products_CN__c</fullName>
+        <description>Created as part of R6 - Name of Company’s products in Chinese</description>
+        <externalId>false</externalId>
+        <label>Name of Company’s products (CN)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_of_Company_s_products_EN__c</fullName>
+        <description>Created as part of R6 - Name of Company’s products in English</description>
+        <externalId>false</externalId>
+        <label>Name of Company’s products (EN)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_of_Purchase_Party__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as part of R6 - The company will purchase products from the CP or ABB</description>
+        <externalId>false</externalId>
+        <label>Name of Purchase Party</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Project Authorization</relationshipLabel>
+        <relationshipName>Project_Authorization</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Name_of_the_Bidding_Company_CN__c</fullName>
+        <description>Created as part of R6 - Name of the Bidding Company in Chinese</description>
+        <externalId>false</externalId>
+        <label>Name of the Bidding Company (CN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name_of_the_Bidding_Company_EN__c</fullName>
+        <description>Created as part of R6 - Name of the Bidding Company in English.</description>
+        <externalId>false</externalId>
+        <label>Name of the Bidding Company (EN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Offering_Primary_Product_Group__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Created as part of R6 - This lookup field is used for Product Group.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Auto-populated from offering flagged as &quot;Primary Product Group&quot;. If offering is not yet known yet but the Product Group (representing main offering as demanded by customer) is, the Primary Product Group can be entered directly.</inlineHelpText>
+        <label>Offering Primary Product Group</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipLabel>Project Authorization (Offering Primary Product Group)</relationshipLabel>
+        <relationshipName>Project_Authorization</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name_CN__c</fullName>
+        <description>Created as part of R6 - This field will get auto-populate with the value avaliable in Opportunity Secondary Name on Opportunity.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Can be used to reflect Opportunity name in local language while the Opportunity name shall be recorded in English.</inlineHelpText>
+        <label>Opportunity Name (CN)</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name_EN__c</fullName>
+        <description>Created as part of R6 - This field will have the value of the parent Opportunity for the Project Authorization record.</description>
+        <externalId>false</externalId>
+        <label>Opportunity Name (EN)</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Project Authorization</relationshipLabel>
+        <relationshipName>Project_Authorization</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Number__c</fullName>
+        <description>Created as part of R6 - This field will display the Opportunty Number of the parent Opportunity.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity_Name_EN__r.Opportunity_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Unique Opportunity Identifier</inlineHelpText>
+        <label>Opportunity Number</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Postal_Code__c</fullName>
+        <description>Created as part of R6 - This field will be used to enter Postal Code of the Ship-to-Address of the Bidding Company.</description>
+        <externalId>false</externalId>
+        <label>Postal Code</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reference_No__c</fullName>
+        <defaultValue>&quot;\\&quot;</defaultValue>
+        <description>Created as part of R6 - Reference of the Invitation to Bid.</description>
+        <externalId>false</externalId>
+        <label>Reference No</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remark__c</fullName>
+        <description>Created as part of R6 - Remarks for the Application of LOA and POA.</description>
+        <externalId>false</externalId>
+        <label>Remark</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Scanning_Copy_Needed__c</fullName>
+        <description>Created as part of R6 - The field will be YES/NO If need Scanning Copy or not.</description>
+        <externalId>false</externalId>
+        <label>Scanning Copy Needed?</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Ship_to_Address__c</fullName>
+        <description>Created as part of R6 - The address to delivery LOA.</description>
+        <externalId>false</externalId>
+        <label>Ship-to-Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Ship_to_Company__c</fullName>
+        <description>Created as part of R6 - The company which receive the LOA</description>
+        <externalId>false</externalId>
+        <label>Ship-to-Company</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Telephone__c</fullName>
+        <description>Created as part of R6 - This field will be used to enter the phone number of the Applicant.</description>
+        <externalId>false</externalId>
+        <label>Telephone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>Template_Language__c</fullName>
+        <description>Created as part of R6 - The language of  template.</description>
+        <externalId>false</externalId>
+        <label>Template Language</label>
+        <picklist>
+            <picklistValues>
+                <fullName>English</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Bilingual</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Template_Type__c</fullName>
+        <description>Created as part of R6 - The template of LoA</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If the LoA template is special, The LoA with special template must be attached by ABB responsible Sales.</inlineHelpText>
+        <label>Template Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Special</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Tracking_Number__c</fullName>
+        <description>Created as part of R6 - This field will be filled by Contract Risk Management Specialists if the way of delivery is express delivery to track the LOA and POA by Applicant.</description>
+        <externalId>false</externalId>
+        <label>Tracking Number</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_until__c</fullName>
+        <description>Created as part of R6 - The date of valid to of LOA and POA.</description>
+        <externalId>false</externalId>
+        <label>Valid until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Way_of_Delivery__c</fullName>
+        <description>Created as part of R6 - This field will be used the select the method to deliver LOA or POA.</description>
+        <externalId>false</externalId>
+        <label>Way of Delivery</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Express Delivery</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pick Up</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>of_Project_Authorizations__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Project Authorizations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Project Authorization</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>RECORDTYPE</columns>
+        <columns>Approval_Status__c</columns>
+        <columns>Opportunity_Name_EN__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Authorization Letter Number</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Project Authorization</pluralLabel>
+    <recordTypes>
+        <fullName>Letter_Of_Authorization</fullName>
+        <active>true</active>
+        <description>This will generate a letter of authorization for channel partner to sell the ABB Products.</description>
+        <label>Letter Of Authorization</label>
+        <picklistValues>
+            <picklist>Application__c</picklist>
+            <values>
+                <fullName>AP%2E301</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E302</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E303</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E304</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E305</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E306</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E307</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E308</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E309</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E310</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E311</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E313</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E314</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E315</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E316</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E317</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E318</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E319</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E320</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E321</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E322</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E323</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E324</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E325</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E326</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E327</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E328</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E329</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E330</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E331</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E332</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E333</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E334</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E335</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E336</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E337</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E338</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E339</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E340</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E341</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E342</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E343</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E344</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E345</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E347</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E348</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E349</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E350</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E351</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E352</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E353</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E354</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E355</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E356</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E357</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E358</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E359</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E360</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E362</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E363</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E364</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E365</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E366</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E367</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E368</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E369</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E370</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E371</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E372</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E373</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E374</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E375</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E401</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E402</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E403</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E404</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E405</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E406</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E407</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E408</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E409</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E410</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E411</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E412</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E413</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E414</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E415</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E416</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E417</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E418</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E419</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E420</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E421</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E422</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E423</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E424</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E425</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E426</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E427</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E428</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E429</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E430</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E431</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E432</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E433</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E434</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E435</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E436</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E437</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E441</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E442</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E443</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E444</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E445</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E446</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E514</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E515</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E517</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E518</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E519</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E520</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E521</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E524</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E526</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E527</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E528</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E533</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E534</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E535</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E536</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E537</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E538</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E549</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E553</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E554</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E555</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E556</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E557</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E558</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E559</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E560</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E561</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E562</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E563</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E564</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E565</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E566</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E567</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E568</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E569</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E570</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E571</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E572</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E573</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E574</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E575</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E576</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E577</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E578</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E579</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E580</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E581</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E582</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E583</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E584</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E585</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E586</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E587</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E588</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E589</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E590</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E591</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E592</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E593</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E594</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E595</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E596</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E597</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E598</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E600</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E623</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E626</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E630</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E631</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E632</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E634</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E635</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E636</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E637</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E638</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E639</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E640</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E641</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E642</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E643</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E644</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E645</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E646</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E647</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E648</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E650</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E651</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E652</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E653</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E654</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E655</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E656</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E657</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E658</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E660</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E661</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E662</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E663</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E664</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E665</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E666</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E667</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E668</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E669</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E670</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E671</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E673</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E674</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E675</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E676</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E677</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E678</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E679</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E682</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E683</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E684</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E685</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E686</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E687</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E688</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E689</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E691</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E692</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E693</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E694</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E695</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E696</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E698</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E699</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E700</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E701</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E702</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E704</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E705</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E706</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E707</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E708</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E709</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E710</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E711</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E717</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E718</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E719</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E720</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E721</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E722</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E723</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E724</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E725</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E726</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting For Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Entity__c</picklist>
+            <values>
+                <fullName>CNBAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNEMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNGEN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNIAB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNMOT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scanning_Copy_Needed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Template_Language__c</picklist>
+            <values>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Template_Type__c</picklist>
+            <values>
+                <fullName>Special</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Way_of_Delivery__c</picklist>
+            <values>
+                <fullName>Express Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pick Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Power_Of_Attorney</fullName>
+        <active>true</active>
+        <description>A written document in which one person (the principal) appoints another person to act as an agent on his or her behalf, thus conferring authority on the agent to perform certain acts or functions on behalf of the principal.</description>
+        <label>Power Of Attorney</label>
+        <picklistValues>
+            <picklist>Application__c</picklist>
+            <values>
+                <fullName>AP%2E301</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E302</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E303</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E304</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E305</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E306</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E307</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E308</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E309</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E310</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E311</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E313</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E314</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E315</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E316</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E317</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E318</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E319</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E320</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E321</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E322</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E323</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E324</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E325</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E326</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E327</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E328</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E329</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E330</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E331</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E332</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E333</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E334</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E335</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E336</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E337</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E338</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E339</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E340</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E341</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E342</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E343</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E344</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E345</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E347</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E348</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E349</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E350</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E351</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E352</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E353</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E354</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E355</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E356</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E357</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E358</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E359</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E360</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E362</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E363</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E364</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E365</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E366</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E367</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E368</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E369</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E370</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E371</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E372</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E373</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E374</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E375</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E401</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E402</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E403</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E404</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E405</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E406</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E407</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E408</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E409</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E410</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E411</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E412</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E413</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E414</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E415</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E416</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E417</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E418</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E419</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E420</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E421</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E422</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E423</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E424</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E425</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E426</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E427</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E428</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E429</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E430</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E431</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E432</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E433</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E434</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E435</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E436</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E437</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E441</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E442</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E443</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E444</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E445</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E446</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E514</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E515</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E517</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E518</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E519</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E520</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E521</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E524</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E526</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E527</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E528</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E533</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E534</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E535</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E536</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E537</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E538</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E549</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E553</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E554</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E555</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E556</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E557</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E558</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E559</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E560</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E561</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E562</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E563</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E564</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E565</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E566</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E567</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E568</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E569</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E570</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E571</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E572</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E573</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E574</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E575</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E576</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E577</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E578</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E579</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E580</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E581</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E582</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E583</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E584</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E585</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E586</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E587</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E588</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E589</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E590</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E591</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E592</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E593</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E594</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E595</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E596</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E597</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E598</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E600</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E623</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E626</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E630</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E631</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E632</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E634</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E635</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E636</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E637</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E638</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E639</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E640</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E641</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E642</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E643</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E644</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E645</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E646</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E647</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E648</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E650</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E651</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E652</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E653</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E654</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E655</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E656</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E657</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E658</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E660</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E661</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E662</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E663</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E664</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E665</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E666</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E667</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E668</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E669</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E670</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E671</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E673</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E674</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E675</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E676</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E677</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E678</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E679</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E682</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E683</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E684</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E685</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E686</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E687</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E688</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E689</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E691</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E692</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E693</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E694</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E695</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E696</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E698</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E699</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E700</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E701</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E702</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E703</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E704</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E705</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E706</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E707</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E708</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E709</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E710</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E711</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E717</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E718</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E719</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E720</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E721</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E722</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E723</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E724</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E725</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>AP%2E726</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Approval_Status__c</picklist>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Submitted</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Waiting For Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Entity__c</picklist>
+            <values>
+                <fullName>CNBAL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNEMS</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNGEN</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNIAB</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CNMOT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Scanning_Copy_Needed__c</picklist>
+            <values>
+                <fullName>No</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Yes</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Template_Language__c</picklist>
+            <values>
+                <fullName>Chinese</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>English</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Template_Type__c</picklist>
+            <values>
+                <fullName>Special</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Standard</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Way_of_Delivery__c</picklist>
+            <values>
+                <fullName>Express Delivery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fax</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pick Up</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Approval_Status_Completed</fullName>
+        <active>false</active>
+        <description>R6</description>
+        <errorConditionFormula>IF(AND(ISPICKVAL(Approval_Status__c , &apos;Completed&apos;), 
+ISPICKVAL( Way_of_Delivery__c , &apos;Express Delivery&apos; ), OR(ISNULL(Tracking_Number__c ), 
+ ISBLANK( Tracking_Number__c ))),true,false)</errorConditionFormula>
+        <errorDisplayField>Approval_Status__c</errorDisplayField>
+        <errorMessage>If the way of delivery is express delivery then tracking number must be entered before changing the Approval status as Completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Approved_Record_Lock</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the approval status is &quot;Approved&quot; any User other than CRMS edit the application.</description>
+        <errorConditionFormula>IF( 
+AND( 
+NOT($Setup.Validation_Override__c.Exclude__c),  
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+TEXT(Approval_Status__c)  =  $Label.PjA_Approval_Status_Approved ,  
+( 
+ISCHANGED(Address_of_the_Bidding_Company_CN__c) || 
+ISCHANGED(Address_of_the_Bidding_Company_EN__c) || 
+ISCHANGED(Application__c) ||  
+ISCHANGED(Contact_Person__c) || 
+ISCHANGED(Design_Institute__c) || 
+ISCHANGED(Account_End_User__c) || 
+ISCHANGED(Fax_Number__c) || 
+ISCHANGED(Industry_Usage__c) || 
+ISCHANGED(Is_CP__c) || 
+ISCHANGED(Legal_Entity__c) || 
+ISCHANGED(Name_of_Company_s_products_CN__c) || 
+ISCHANGED(Name_of_Company_s_products_EN__c) || 
+ISCHANGED(Name_of_Purchase_Party__c) || 
+ISCHANGED(Name_of_the_Bidding_Company_CN__c) || 
+ISCHANGED(Name_of_the_Bidding_Company_EN__c) || 
+ISCHANGED(Opportunity_Name_EN__c) || 
+ISCHANGED(Postal_Code__c) || 
+ISCHANGED(Opportunity_Number__c) || 
+ISCHANGED(Bidding_Project_Name_CN__c) || 
+ISCHANGED(Bidding_Project_Name_EN__c) || 
+ISCHANGED(Offering_Primary_Product_Group__c) || 
+ISCHANGED(Reference_No__c) || 
+ISCHANGED(Remark__c) || 
+ISCHANGED(Scanning_Copy_Needed__c) || 
+ISCHANGED(Ship_to_Address__c) || 
+ISCHANGED(Ship_to_Company__c) || 
+ISCHANGED(Telephone__c) || 
+ISCHANGED(Template_Language__c) || 
+ISCHANGED(Template_Type__c) || 
+ISCHANGED(Valid_until__c) || 
+ISCHANGED(Way_of_Delivery__c) || 
+AND(NOT(ISPICKVAL(Way_of_Delivery__c,&apos;Express Delivery&apos;)), ISCHANGED( Tracking_Number__c )) || 
+AND(NOT($UserRole.DeveloperName=$Label.Project_Authorization_CRMS_Role),ISCHANGED( Tracking_Number__c )) || 
+ISCHANGED(Name) 
+) 
+) 
+,True,false)</errorConditionFormula>
+        <errorMessage>Only the Contract Risk Management Specialist can modify following details once the record is Approved  - 
+       1. Tracking number if the &apos;Way of Delivery&apos; is &apos;Express Delivery&apos;.  
+       2. Mark application as Completed.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Authorization_Letter_Number</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error messageIf the applicant tries to change the Authorization letter number, as this field will be updated by system itself.</description>
+        <errorConditionFormula>AND
+(NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), NOT($Setup.Validation_Override__c.Exclude__c),NOT(ISNEW()),
+ISCHANGED(Name))</errorConditionFormula>
+        <errorMessage>You cannot change Authorization letter number, this is always system generated.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Awaiting_Approval_Record_Lock</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the approval status is &quot;Waiting for Approval&quot; and applicant tries to edit the application.</description>
+        <errorConditionFormula>IF(External_User__c==$Label.SYS_Created_by_ABB,AND(NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),NOT($Setup.Validation_Override__c.Exclude__c), 
+ISPICKVAL(PRIORVALUE(Approval_Status__c),&apos;Waiting for Approval&apos;), 
+ISPICKVAL(Approval_Status__c,&apos;Waiting for Approval&apos;)),AND(NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),NOT($Setup.Validation_Override__c.Exclude__c),OR($User.Id &lt;&gt; CreatedBy.ABB_Manager__c,$User.Id&lt;&gt;ABB_LoA_Contact_Person__c), 
+ISPICKVAL(PRIORVALUE(Approval_Status__c),&apos;Waiting for Approval&apos;), 
+ISPICKVAL(Approval_Status__c,&apos;Waiting for Approval&apos;)))</errorConditionFormula>
+        <errorMessage>Record cannot be modified while the approval process is underway. Kindly try again once the record is either Approved or Rejected.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Completed_Record_Lock</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error messagewhen after the Approval Process has been approved and the Contact Risk Manager has updated the Approval Status to &apos;Completed&apos;, no field should be allowed to be edited.</description>
+        <errorConditionFormula>AND(NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT($Setup.Validation_Override__c.Exclude__c),
+ISPICKVAL(PRIORVALUE(Approval_Status__c),&apos;Completed&apos;), 
+ISPICKVAL(Approval_Status__c, &apos;Completed&apos;)
+)</errorConditionFormula>
+        <errorMessage>You cannot modify the record once the Approval Status is &apos;Completed&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Draft_Reject_Record_Lock</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if any of the user other than applicant tries to edit the record when the approval status is either &apos;Draft&apos; or &apos;Rejected&apos;</description>
+        <errorConditionFormula>IF(External_User__c==$Label.SYS_Created_by_ABB,AND(
+    NOT(ISNEW()),NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT($Setup.Validation_Override__c.Exclude__c),
+($User.Id != CreatedById),
+OR(ISPICKVAL(Approval_Status__c, &apos;Not Submitted&apos;),
+AND(TEXT(PRIORVALUE(Approval_Status__c)) == &apos;Rejected&apos;,
+ISPICKVAL(Approval_Status__c, &apos;Rejected&apos;)))),
+AND(
+    NOT(ISNEW()),
+NOT($Setup.Validation_Override__c.Exclude__c),NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+AND($User.Id &lt;&gt; CreatedBy.ABB_Manager__c,$User.Id&lt;&gt;ABB_LoA_Contact_Person__c,$User.Id != CreatedById),
+OR(ISPICKVAL(Approval_Status__c, &apos;Not Submitted&apos;),
+AND(TEXT(PRIORVALUE(Approval_Status__c)) == &apos;Rejected&apos;,
+ISPICKVAL(Approval_Status__c, &apos;Rejected&apos;)))))</errorConditionFormula>
+        <errorMessage>Only the record creator can edit the record when the Approval Status is either &apos;Draft&apos; or &apos;Rejected&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Template_Language_Chinese</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the Template Language is Chinese and any of the fields mentioned in formula is blank.</description>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT($Setup.Validation_Override__c.Exclude__c),  
+TEXT( Template_Language__c )  =  $Label.PjA_lang_CN, 
+OR(
+ISBLANK( Address_of_the_Bidding_Company_CN__c ), 
+ISBLANK( Name_of_Company_s_products_CN__c ), 
+ISBLANK( Name_of_the_Bidding_Company_CN__c ), 
+ISBLANK( Bidding_Project_Name_CN__c ) ) )</errorConditionFormula>
+        <errorMessage>Please fill the values of the required fields  -  
+&apos;Bidding Project Name (CN)&apos;, 
+&apos;Name of the Bidding Company (CN)&apos;,  
+&apos;Address of the Bidding Company (CN)&apos;, 
+&apos;Name of Company’s products (CN)&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Template_Language_English</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the Template Language is English and any of the fields mentioned in formula is blank.</description>
+        <errorConditionFormula>AND(
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT($Setup.Validation_Override__c.Exclude__c),  
+TEXT(Template_Language__c)  =  $Label.PjA_lang_EN,
+OR(
+ISBLANK( Address_of_the_Bidding_Company_EN__c ), 
+ISBLANK( Name_of_Company_s_products_EN__c ), 
+ISBLANK( Name_of_the_Bidding_Company_EN__c ),  
+ISBLANK( Bidding_Project_Name_EN__c ) ) )</errorConditionFormula>
+        <errorMessage>Please fill the values of the required fields  -  
+&apos;Bidding Project Name (EN)&apos;, 
+&apos;Name of the Bidding Company (EN)&apos;, 
+&apos;Address of the Bidding Company (EN)&apos;, 
+&apos;Name of Company’s products (EN)&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Way_of_Delivery_is_Express_Delivery</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the Way of Delivery is Express Delivery and any of the fields mentioned in formula is blank.</description>
+        <errorConditionFormula>AND(
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c), 
+NOT($Setup.Validation_Override__c.Exclude__c),
+TEXT(Way_of_Delivery__c) =  $Label.PjA_Express_Delivery,
+OR( 
+ISBLANK(Ship_to_Company__c),
+ISBLANK(Ship_to_Address__c), 
+ISBLANK(Postal_Code__c), 
+ISBLANK(Contact_Person__c),
+ISBLANK(Telephone__c) 
+))</errorConditionFormula>
+        <errorMessage>Please fill the values of the required fields  - 
+&apos;Ship-to-Company&apos;, 
+&apos;Ship-to-Address&apos;, 
+&apos;Postal Code&apos;, 
+&apos;Contact Person&apos;, 
+&apos;Telephone&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Way_of_Delivery_is_Fax_Number</fullName>
+        <active>true</active>
+        <description>Created as part of R6 - This validation rule will be used to show the error message if the Way of Delivery is Fax and the fax number is blank.</description>
+        <errorConditionFormula>AND(
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT($Setup.Validation_Override__c.Exclude__c),
+TEXT(Way_of_Delivery__c) = $Label.PjA_Way_Of_Delivery_Fax, 
+ISBLANK( Fax_Number__c ))</errorConditionFormula>
+        <errorDisplayField>Fax_Number__c</errorDisplayField>
+        <errorMessage>Please enter the Fax Number.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>New_Letter_of_Authorization</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Letter of Authorization</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var opporId = &apos;{!Opportunity.Id}&apos;;
+var opptyAccountId = &apos;{!Opportunity.AccountId}&apos;; 
+var partnerAccountId = &apos;&apos;;
+var partnerAccountName = &apos;&apos;;
+var partners = sforce.connection.query(&quot;Select Id, AccountToId, OpportunityId, Role FROM OpportunityPartner WHERE Role = &apos;Design Institute&apos; AND OpportunityId  = &apos;&quot;+opporId+&quot;&apos; AND AccountToId!=&apos;&quot;+opptyAccountId+&quot;&apos; Order By CreatedDate DESC LIMIT 1&quot;); 
+var recs = partners.getArray(&quot;records&quot;);
+
+if(recs != null &amp;&amp; recs.length &gt;0)
+{
+partnerAccountId = recs[0].AccountToId;
+var account = sforce.connection.query(&quot;Select Id, Name From Account Where Id=&apos;&quot;+partnerAccountId+&quot;&apos;&quot;);
+    var partnerAccountRecs = account.getArray(&quot;records&quot;);
+    partnerAccountName = partnerAccountRecs[0].Name;
+}
+var newLOAURL = &apos;&apos;;
+if(partnerAccountId == &apos;&apos;){
+newLOAURL = &apos;{!$Label.PjA_Project_Authorization_Object_Id}/e?RecordType={!$Label.PjA_Record_Type_LOA}&amp;Name=System Generated&amp;{!$Label.PjA_Opportunity_Name_EN}={!Opportunity.Name}&amp;{!$Label.PjA_Opportunity_Name_EN}_lkid={!Opportunity.Id}&amp;{!$Label.PjA_Offering_Primary_Product_Group}_lkid={!Opportunity.Product_GroupId__c}&amp;{!$Label.PjA_Account_End_User}_lkid={!Opportunity.Account_End_UserId__c}{!IF(NOT(ISNULL(Opportunity.Product_Group__c)),&apos;&amp;&apos;+$Label.PjA_Offering_Primary_Product_Group+&apos;=&apos;+Opportunity.Product_Group__c, null)}{!IF(NOT(ISNULL(Opportunity.Opportunity_Secondary_Name__c)),&apos;&amp;&apos;+$Label.PjA_Opportunity_Name_CN+&apos;=&apos;+Opportunity.Opportunity_Secondary_Name__c, null)}{!IF(NOT(ISPICKVAL(Opportunity.Application__c,&apos;&apos;)),&apos;&amp;&apos;+$Label.PjA_Application+&apos;=&apos;+TEXT(Opportunity.Application__c), null)}{!IF(NOT(ISNULL(Opportunity.Account_End_User__c)),&apos;&amp;&apos;+$Label.PjA_Account_End_User+&apos;=&apos;+Opportunity.Account_End_User__c,null)}&amp;retURL=/{!Opportunity.Id}&apos;;
+}
+else{
+newLOAURL = &apos;{!$Label.PjA_Project_Authorization_Object_Id}/e?RecordType={!$Label.PjA_Record_Type_LOA}&amp;Name=System Generated&amp;{!$Label.PjA_Design_Institute}=&apos;+partnerAccountName+&apos;&amp;{!$Label.PjA_Design_Institute}_lkid=&apos;+partnerAccountId+&apos;&amp;{!$Label.PjA_Opportunity_Name_EN}={!Opportunity.Name}&amp;{!$Label.PjA_Opportunity_Name_EN}_lkid={!Opportunity.Id}&amp;{!$Label.PjA_Offering_Primary_Product_Group}_lkid={!Opportunity.Product_GroupId__c}&amp;{!$Label.PjA_Account_End_User}_lkid={!Opportunity.Account_End_UserId__c}{!IF(NOT(ISNULL(Opportunity.Product_Group__c)),&apos;&amp;&apos;+$Label.PjA_Offering_Primary_Product_Group+&apos;=&apos;+Opportunity.Product_Group__c, null)}{!IF(NOT(ISNULL(Opportunity.Opportunity_Secondary_Name__c)),&apos;&amp;&apos;+$Label.PjA_Opportunity_Name_CN+&apos;=&apos;+Opportunity.Opportunity_Secondary_Name__c, null)}{!IF(NOT(ISPICKVAL(Opportunity.Application__c,&apos;&apos;)),&apos;&amp;&apos;+$Label.PjA_Application+&apos;=&apos;+TEXT(Opportunity.Application__c), null)}{!IF(NOT(ISNULL(Opportunity.Account_End_User__c)),&apos;&amp;&apos;+$Label.PjA_Account_End_User+&apos;=&apos;+Opportunity.Account_End_User__c,null)}&amp;retURL=/{!Opportunity.Id}&apos;;
+}				
+parent.parent.window.location.replace(newLOAURL);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Power_Of_Attorney</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Power Of Attorney</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var opporId = &apos;{!Opportunity.Id}&apos;;
+var opptyAccountId = &apos;{!Opportunity.AccountId}&apos;; 
+var partnerAccountId = &apos;&apos;;
+var partnerAccountName = &apos;&apos;;
+var partners = sforce.connection.query(&quot;Select Id, AccountToId, OpportunityId, Role FROM OpportunityPartner WHERE Role = &apos;Design Institute&apos; AND OpportunityId  = &apos;&quot;+opporId+&quot;&apos; AND AccountToId!=&apos;&quot;+opptyAccountId+&quot;&apos; Order By CreatedDate DESC LIMIT 1&quot;); 
+var recs = partners.getArray(&quot;records&quot;);
+
+if(recs != null &amp;&amp; recs.length &gt;0)
+{
+partnerAccountId = recs[0].AccountToId;
+var account = sforce.connection.query(&quot;Select Id, Name From Account Where Id=&apos;&quot;+partnerAccountId+&quot;&apos;&quot;);
+    var partnerAccountRecs = account.getArray(&quot;records&quot;);
+    partnerAccountName = partnerAccountRecs[0].Name;
+}
+
+var newPOAURL = &apos;&apos;;
+if(partnerAccountId == &apos;&apos;){
+newPOAURL = &apos;{!$Label.PjA_Project_Authorization_Object_Id}/e?RecordType={!$Label.PjA_Record_Type_POA}&amp;Name=System Generated&amp;{!$Label.PjA_Opportunity_Name_EN}={!Opportunity.Name}&amp;{!$Label.PjA_Opportunity_Name_EN}_lkid={!Opportunity.Id}&amp;{!$Label.PjA_Offering_Primary_Product_Group}_lkid={!Opportunity.Product_GroupId__c}&amp;{!$Label.PjA_Account_End_User}_lkid={!Opportunity.Account_End_UserId__c}{!IF(NOT(ISNULL(Opportunity.Product_Group__c)),&apos;&amp;&apos;+$Label.PjA_Offering_Primary_Product_Group+&apos;=&apos;+Opportunity.Product_Group__c, null)}{!IF(NOT(ISNULL(Opportunity.Opportunity_Secondary_Name__c)),&apos;&amp;&apos;+$Label.PjA_Opportunity_Name_CN+&apos;=&apos;+Opportunity.Opportunity_Secondary_Name__c, null)}{!IF(NOT(ISPICKVAL(Opportunity.Application__c,&apos;&apos;)),&apos;&amp;&apos;+$Label.PjA_Application+&apos;=&apos;+TEXT(Opportunity.Application__c), null)}{!IF(NOT(ISNULL(Opportunity.Account_End_User__c)),&apos;&amp;&apos;+$Label.PjA_Account_End_User+&apos;=&apos;+Opportunity.Account_End_User__c,null)}&amp;retURL=/{!Opportunity.Id}&apos;;
+}
+else{
+newPOAURL = &apos;{!$Label.PjA_Project_Authorization_Object_Id}/e?RecordType={!$Label.PjA_Record_Type_POA}&amp;Name=System Generated&amp;{!$Label.PjA_Design_Institute}=&apos;+partnerAccountName+&apos;&amp;{!$Label.PjA_Design_Institute}_lkid=&apos;+partnerAccountId+&apos;&amp;{!$Label.PjA_Opportunity_Name_EN}={!Opportunity.Name}&amp;{!$Label.PjA_Opportunity_Name_EN}_lkid={!Opportunity.Id}&amp;{!$Label.PjA_Offering_Primary_Product_Group}_lkid={!Opportunity.Product_GroupId__c}&amp;{!$Label.PjA_Account_End_User}_lkid={!Opportunity.Account_End_UserId__c}{!IF(NOT(ISNULL(Opportunity.Product_Group__c)),&apos;&amp;&apos;+$Label.PjA_Offering_Primary_Product_Group+&apos;=&apos;+Opportunity.Product_Group__c, null)}{!IF(NOT(ISNULL(Opportunity.Opportunity_Secondary_Name__c)),&apos;&amp;&apos;+$Label.PjA_Opportunity_Name_CN+&apos;=&apos;+Opportunity.Opportunity_Secondary_Name__c, null)}{!IF(NOT(ISPICKVAL(Opportunity.Application__c,&apos;&apos;)),&apos;&amp;&apos;+$Label.PjA_Application+&apos;=&apos;+TEXT(Opportunity.Application__c), null)}{!IF(NOT(ISNULL(Opportunity.Account_End_User__c)),&apos;&amp;&apos;+$Label.PjA_Account_End_User+&apos;=&apos;+Opportunity.Account_End_User__c,null)}&amp;retURL=/{!Opportunity.Id}&apos;;
+}
+
+parent.parent.window.location.replace(newPOAURL);</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>Country state mapping</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Country_Code__c</fullName>
+        <description>country code</description>
+        <externalId>false</externalId>
+        <label>Country Code</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Country Name</label>
+        <length>200</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Code__c</fullName>
+        <description>state code</description>
+        <externalId>false</externalId>
+        <label>State Code</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>State_Name__c</fullName>
+        <description>state name</description>
+        <externalId>false</externalId>
+        <label>State Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MDM Country State Mapping</label>
+    <visibility>Public</visibility>
+</CustomObject>

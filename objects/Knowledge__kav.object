@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>STS_ArticleProductsNames__c</fullName>
+        <description>STS PR 2.0 - field for showing products added to the article.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This fields shows Product or Products that are associated with this Article. A maximum of 255 characters can be shown in this field.</inlineHelpText>
+        <label>Article Product Names</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>STS_ArticleProducts__c</fullName>
+        <description>STS PR 2.0 - field for adding and editing products to an article.</description>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(PublishStatus, &apos;Draft&apos;) || ISPICKVAL(PublishStatus, &apos;Online&apos;), HYPERLINK(&quot;/apex/STS_ProductTreeSelectionPage?addTo=&quot;+Id+&quot;&amp;id=&quot;+Id+&quot;&amp;retURL=&quot;+Id, $Label.STS_Add, &apos;_self&apos;) &amp;&apos; &apos;&amp; HYPERLINK(&quot;/apex/STS_ProdViaPage?id=&quot;+Id, $Label.STS_Edit, &apos;_self&apos;), $Label.STS_ArchivedArticleMessage)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Click Add if you want add one or more Products, click Edit if you want to modify one or more Products.</inlineHelpText>
+        <label>Article Products</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Knowledge_Articles__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Knowledge Articles</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Knowledge</label>
+    <pluralLabel>Knowledge</pluralLabel>
+</CustomObject>

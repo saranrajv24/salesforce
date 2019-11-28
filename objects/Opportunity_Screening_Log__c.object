@@ -1,0 +1,1143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>SFDC1094 - Custom object used to report the status of the Opportunity Screening approval process.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AR_Active__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__Active__c</formula>
+        <label>AR - Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AR_Actual_Approver_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__ActualApproverName__c</formula>
+        <label>AR - Actual Approver Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Actual_Approver__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__Actual_Approver__r.Id, Approval_Request__r.Apttus_Approval__ActualApproverName__c, &quot;_top&quot;)</formula>
+        <label>AR - Actual Approver</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Approval_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Approval Details</label>
+        <length>5000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Approval_Process_Instance__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__ProcessInstanceId__r.Id, Approval_Request__r.Apttus_Approval__ProcessInstanceId__r.Name, &quot;_top&quot;)</formula>
+        <label>AR - Approval Process Instance</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Approval_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Approval_Request__r.Apttus_Approval__Approval_Status__c )</formula>
+        <label>AR - Approval Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Approver_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Approver Comments</label>
+        <length>32000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Assigned_To_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Approval_Request__r.Apttus_Approval__Assigned_To_Type__c )</formula>
+        <label>AR - Assigned To Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Assigned_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__Assigned_To_Link__c</formula>
+        <label>AR - Assigned To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Backup_From_User__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__Backup_From_User__r.Id, Approval_Request__r.Apttus_Approval__Backup_From_User__r.FirstName + &apos; &apos; + Approval_Request__r.Apttus_Approval__Backup_From_User__r.LastName, &quot;_top&quot;)</formula>
+        <label>AR - Backup From User</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Date_Approved__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__DateApproved__c</formula>
+        <label>AR - Date Approved</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Date_Assigned__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__DateAssigned__c</formula>
+        <label>AR - Date Assigned</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Date_Cancelled__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__DateCancelled__c</formula>
+        <label>AR - Date Cancelled</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Date_Reassigned__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__DateReassigned__c</formula>
+        <label>AR - Date Reassigned</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Date_Rejected__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__DateRejected__c</formula>
+        <label>AR - Date Rejected</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Delegate_Approver__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__DelegateApprover__r.Id, Approval_Request__r.Apttus_Approval__DelegateApprover__r.FirstName + &apos; &apos; + Approval_Request__r.Apttus_Approval__DelegateApprover__r.LastName, &quot;_top&quot;)</formula>
+        <label>AR - Delegate Approver</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Depends_On__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Depends On</label>
+        <length>2048</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Email_Sent_On__c</fullName>
+        <externalId>false</externalId>
+        <label>AR – Email Sent On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>AR_Email_Sent_to_Queue__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>AR – Email Sent to Queue</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AR_Has_Delegate_Approver__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__HasDelegateApprover__c</formula>
+        <label>AR - Has Delegate Approver</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>AR_Initial_Submitter__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__Initial_Submitter__r.Id, Approval_Request__r.Apttus_Approval__Initial_Submitter__r.FirstName + &apos; &apos; + Approval_Request__r.Apttus_Approval__Initial_Submitter__r.LastName, &quot;_top&quot;)</formula>
+        <label>AR - Initial Submitter</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+ 
+IF(ISBLANK(Approval_Request__r.Owner:Queue.QueueName), Approval_Request__r.Owner:User.Id, &apos;p/own/Queue/d?id=&apos; + Approval_Request__r.Owner:Queue.Id ), 
+IF(ISBLANK(Approval_Request__r.Owner:Queue.QueueName), Approval_Request__r.Owner:User.FirstName +&apos; &apos;+Approval_Request__r.Owner:User.LastName, Approval_Request__r.Owner:Queue.QueueName),
+&apos;_top&apos;)</formula>
+        <label>AR - Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Prev_Assigned_To_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Approval_Request__r.Apttus_Approval__PrevAssignedToType__c )</formula>
+        <label>AR - Prev Assigned To Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Prev_Assigned_To__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__PrevAssignedToName__c</formula>
+        <label>AR - Prev Assigned To</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Queue_Members__c</fullName>
+        <externalId>false</externalId>
+        <label>AR – Queue Members</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Related_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_Approval__Related_Agreement__r.Id, Approval_Request__r.Apttus_Approval__Related_Agreement__r.Name, &quot;_top&quot;)</formula>
+        <label>AR - Related Agreement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Related_Quote_Proposal__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Approval_Request__r.Apttus_QPApprov__ProposalId__r.Id, Approval_Request__r.Apttus_QPApprov__ProposalId__r.Apttus_Proposal__Proposal_Name__c , &quot;_top&quot;)</formula>
+        <label>AR - Related Quote/Proposal</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Request_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Name</formula>
+        <label>AR - Request Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Sequence__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__StepSequenceString__c</formula>
+        <label>AR - Sequence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Step_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__Step_Name__c</formula>
+        <label>AR - Step Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Step__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__StepNameLink__c</formula>
+        <label>AR - Step</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Sub_Sequence__c</fullName>
+        <externalId>false</externalId>
+        <formula>Approval_Request__r.Apttus_Approval__Sequence__c</formula>
+        <label>AR - Sub-Sequence</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AR_Submission_Comment_1__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Submission Comment 1</label>
+        <length>4096</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Submission_Comment_2__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Submission Comment 2</label>
+        <length>4096</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>AR_Submission_Comment_3__c</fullName>
+        <externalId>false</externalId>
+        <label>AR - Submission Comment 3</label>
+        <length>4096</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Approval_Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Approval Request</label>
+        <referenceTo>Apttus_Approval__Approval_Request__c</referenceTo>
+        <relationshipLabel>Opportunity Screening Logs</relationshipLabel>
+        <relationshipName>Opportunity_Screening_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OPP_ABB_Location_LBU__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.LBU_Technical__c</formula>
+        <label>OPP - ABB Location LBU</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_ABB_Location_LPG__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.LPG_Technical__c</formula>
+        <label>OPP - ABB Location LPG</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_ABB_Sales_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.StageName )</formula>
+        <label>OPP - ABB Sales Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Actual_Bid_Submission_Date_Comm__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Actual_Bid_Submission_Date_Comm__c</formula>
+        <label>OPP - Actual Bid Submission Date (Comm.)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OPP_Actual_Bid_Submission_Date_Tech__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Actual_Bid_Submission_Date_Tech__c</formula>
+        <label>OPP - Actual Bid Submission Date (Tech.)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OPP_Opp_Qualification_Gate1_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.Opportunity_Qualification_Status__c )</formula>
+        <label>OPP - Opp. Qualification (Gate1) Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Opportunity_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Name</formula>
+        <label>OPP - Opportunity Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Opportunity_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Number__c</formula>
+        <label>OPP - Opportunity Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Opportunity_Owner__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Opportunity__r.OwnerId, Opportunity__r.Opportunity_Owner__c, &quot;_top&quot;)</formula>
+        <label>OPP - Opportunity Owner</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Opportunity_Value__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Opportunity_Value__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OPP - Opportunity Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>16</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>OPP_Req_Bid_Submission_Date_Comm__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Requested_Bid_Submission_Date_Comm__c</formula>
+        <label>OPP - Req. Bid Submission Date (Comm.)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OPP_Req_Bid_Submission_Date_Tech__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity__r.Requested_Bid_Submission_Date_Tech__c</formula>
+        <label>OPP - Req. Bid Submission Date (Tech.)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>OPP_Sales_Pursuit_Progress__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.Sales_Pursuit_Progress__c )</formula>
+        <label>OPP - Sales Pursuit Progress</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OPP_Tender_Screening_Gate2_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity__r.Opportunity_Screening_Gate_2_Status__c )</formula>
+        <label>OPP - Tender Screening (Gate2) Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Approval_status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity_Screening__r.Approval_Status__c )</formula>
+        <label>OS - Approval status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_Completeness__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_Completeness__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_Completeness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_FIT_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_FIT_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_FIT_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_FIT_ResourcesGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_FIT_SafeIslandGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_FIT_ResourcesGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_FIT_SafeIslandGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_FIT_SafeIslandGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_FIT_SafeIslandGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_FIT_StrategyGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_FIT_StrategyGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_FIT_StrategyGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_GET_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_GET_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_GET_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_GET_CompetitionGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_GET_CompetitionGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_GET_CompetitionGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_GET_CustomerRelationGroupScor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_GET_CustomerRelationGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_GET_CustomerRelationGroupScor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_WILL_BusinessGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_WILL_BusinessGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_WILL_BusinessGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_WILL_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_WILL_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_WILL_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_WILL_EndUserGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_WILL_EndUserGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_WILL_EndUserGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE1_WILL_ProjectDevelopGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE1_WILL_ProjectDevelopGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE1_WILL_ProjectDevelopGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_Completeness__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_Completeness__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_Completeness</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_CommercialGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_CommercialGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_CommercialGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_ResourcesGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_SafeIslandGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_ResourcesGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_RiskGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_RiskGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_RiskGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_SafeIslandGS__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_SafeIslandGS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_SafeIslandGS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_SafeIslandGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_SafeIslandGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_SafeIslandGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_StrategyGS__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_StrategyGS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_StrategyGS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_FIT_StrategyGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_FIT_StrategyGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_FIT_StrategyGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CompetitionGS__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CompetitionGS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CompetitionGS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CompetitionGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CompetitionGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CompetitionGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CompetitiveEdgeGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CompetitiveEdgeGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CompetitiveEdgeGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CustomerRelationGS__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CustomerRelationGS__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CustomerRelationGS</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_GET_CustomerRelationGroupScor__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_GET_CustomerRelationGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_GET_CustomerRelationGroupScor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_WILL_BusinessValueGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_WILL_BusinessValueGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_WILL_BusinessValueGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_WILL_CategoryScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_WILL_CategoryScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_WILL_CategoryScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_WILL_EndUserGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_WILL_EndUserGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_WILL_EndUserGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_GATE2_WILL_ProjDevelopGroupScore__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.GATE2_WILL_ProjDevelopGroupScore__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>OS - GATE2_WILL_ProjDevelopGroupScore</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Gate_Status__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT( Opportunity_Screening__r.Gate_Status__c )</formula>
+        <label>OS - Gate Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Opportunity_Screening_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.Name</formula>
+        <label>OS - Opportunity Screening Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Record_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.RecordType.Name</formula>
+        <label>OS - Record Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Submitted_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(Opportunity_Screening__r.Submitted_By__r.Id, Opportunity_Screening__r.Submitted_By_Name__c, &quot;_top&quot;)</formula>
+        <label>OS - Submitted By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OS_Submitted_On__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity_Screening__r.Submitted_On__c</formula>
+        <label>OS - Submitted On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Screening__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity Screening</label>
+        <referenceTo>Opportunity_Screening__c</referenceTo>
+        <relationshipLabel>Opportunity Screening Logs</relationshipLabel>
+        <relationshipName>Opportunity_Screening_Logs</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunity Screening Logs</relationshipLabel>
+        <relationshipName>Opportunity_Screening_Logs</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>of_Opportunity_Screening_Logs__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Opportunity Screening Logs</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Opportunity Screening Log</label>
+    <nameField>
+        <displayFormat>OSL-{0000000}</displayFormat>
+        <label>Opportunity Screening Log Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Opportunity Screening Logs</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>

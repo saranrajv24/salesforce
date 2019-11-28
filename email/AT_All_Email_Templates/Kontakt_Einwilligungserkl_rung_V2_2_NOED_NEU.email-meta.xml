@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email-Template für die Einholung der Einwilligungserklärung gemäß DSG 2000 (neue Fassung; nicht editierbar; Freigabe: extern)</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Kontakt - Einwilligungserklärung V2.2 NOED</name>
+    <style>none</style>
+    <subject>Bitte um Einwilligung zur Datennutzung in neuer ABB Kundendatenbank nach dem Datenschutzgesetz 2000</subject>
+    <textOnly>{!Contact.Salutation} {!Contact.LastName},
+
+ABB hat sich zum Ziel gesetzt, den Service und das Informationsangebot für unsere Kunden stetig zu verbessern, um dadurch zum Unternehmenserfolg auf beiden Seiten beizutragen.
+
+In Zeiten der zunehmenden Globalisierung hat sich der ABB-Konzern deshalb dafür entschieden, die Kontaktdaten unserer Kunden und Partner in eine globale ABB-Kundendatenbank zu übernehmen. Damit wird es den Mitarbeitern von ABB ermöglicht, mit unseren Kunden effizienter zu kommunizieren und dadurch optimierte Serviceleistungen zur Verfügung zu stellen.
+
+Die ABB-Gesellschaften mit Zugang zu dieser Kundendatenbank befinden sich unter anderem auch in Ländern, in denen allenfalls ein anderes Datenschutzniveau als in der Europäischen Union gilt. Nach den geltenden Datenschutzbestimmungen, sind wir daher verpflichtet, zur weltweiten Verwendung Ihrer Daten, selbst wenn diese nur konzernintern erfolgt, Ihre Zustimmung einzuholen. Eine Auflistung aller ABB-Gesellschaften finden Sie unter folgender Internetadresse:  Where to find us .
+
+Wir bitten um Ihre Zustimmung, dass wir die von Ihnen bereits erhaltenen, nachfolgend beschriebenen Daten in der o.a. Kundendatenbank speichern und verwenden dürfen und versichern Ihnen, dass wir diese Daten stets im Einklang mit den strikten Datenschutzbestimmungen von ABB und in Übereinstimmung mit den einschlägiggen nationalen und internationalen Gesetzen und Verordnungen verwenden.
+
+Ansprache:   {!Contact.Salutation}
+Name:   {!Contact.FirstName} {!Contact.LastName}
+Telefon:   {!Contact.Phone}
+Mobil:   {!Contact.MobilePhone}
+Fax:   {!Contact.Fax}
+Email:   {!Contact.Email}
+Firma:   {!Contact.AccountName__c}
+Adresse:    {!Contact.MailingStreet}
+{!Contact.MailingPostalCode} {!Contact.MailingCity}
+
+
+Bitte teilen Sie uns Ihre Entscheidung nach Möglichkeit innerhalb der nächsten zwei Kalenderwochen mit, indem Sie  auf diese Mail direkt (mit &quot;Historie&quot;) antworten. Je nach Wahl kopieren Sie dazu bitte folgende Zeilen in Ihre Antwort:
+
+Ich habe die untenstehende (Originalmail) Zustimmungserklärung gemäß dem Datenschutzgesetz zur Kenntnis genommen und bin mit der Verwendung der darin genannten Kontaktdaten in der globalen Kundendatenbank von ABB einverstanden.
+oder
+Ich lehne die Verwendung meiner Kontaktdaten in der globalen Kundendatenbank von ABB ab.
+
+Bitte informieren Sie uns darüberhinaus über möglicherweise notwendige  Korrekturen der o.a. Daten.
+
+Sie können Ihre Zustimmung jederzeit mit Wirkung für die Zukunft durch eine schriftliche Erklärung an ABB AG,  z.Hd. {!User.FirstName} {!User.LastName}, {!User.Street},  {!User.PostalCode} {!User.City}  oder per Email an {!User.Email}  widerrufen. Nach einem Widerruf werden die Daten zu Ihrer Person aus der globalen ABB-Kundendatenbank gelöscht.
+
+Wir bedanken uns schon im Voraus für Ihre Unterstützung.
+
+Mit freundlichen Grüßen,
+
+
+
+
+_
+{!User.FirstName} {!User.LastName}
+{!User.Title}
+
+ABB AG
+{!User.Street}
+{!User.PostalCode} {!User.City}, Österreich
+Telefon: {!User.Phone}
+Mobil: {!User.MobilePhone}
+abb.com
+
+Firma/Company: ABB AG
+Rechtsform/Legal Form: Aktiengesellschaft / Corporation
+Firmenbuchnummer/Commercial Register: FN 57678x
+Firmenbuchgericht/Legal Venue: Handelsgericht Wien
+Firmensitz/Principal Office: Wien/Vienna
+Vorstandsvorsitzender/Chairman of Board: Ing. Franz Chalupecky
+Aufsichtsratsvorsitzender/Chairman of Supervisory Board: Dipl.-Vw. Hans-Georg Krabbe</textOnly>
+    <type>custom</type>
+</EmailTemplate>

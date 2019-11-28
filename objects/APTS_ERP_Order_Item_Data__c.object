@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object to hold item data provided by ERP systems</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>APTS_ARKTX__c</fullName>
+        <description>Short text for sales order item</description>
+        <externalId>false</externalId>
+        <label>Short text for item</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_CLOSE_DATE__c</fullName>
+        <description>Closing Date</description>
+        <externalId>false</externalId>
+        <label>Closing Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>APTS_DELETE__c</fullName>
+        <description>Deletion Flag, delete whole item from Apttus</description>
+        <externalId>false</externalId>
+        <label>Deletion Flag</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_DOCNUM__c</fullName>
+        <description>IDoc Number</description>
+        <externalId>false</externalId>
+        <label>IDoc Number</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ERDAT__c</fullName>
+        <description>Date on which record was created</description>
+        <externalId>false</externalId>
+        <label>Date on which record was created</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>APTS_ERPID__c</fullName>
+        <externalId>false</externalId>
+        <label>ERPID</label>
+        <length>20</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ERZET__c</fullName>
+        <description>Entry Time</description>
+        <externalId>false</externalId>
+        <label>Entry Time</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_FACE_REF_ID__c</fullName>
+        <description>Face Reference Object ID</description>
+        <externalId>false</externalId>
+        <label>Face Reference Object ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_FACE_REF_LINEID__c</fullName>
+        <description>FACE Reference Item Object ID</description>
+        <externalId>false</externalId>
+        <label>FACE Reference Item Object ID</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_FACE_REF_TYP__c</fullName>
+        <description>FACE Reference Object Type</description>
+        <externalId>false</externalId>
+        <label>FACE Reference Object Type</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Has_Error__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created for Req.#6486, used to identify whether Error occured while processing Order information to create MSPA Sales order</description>
+        <externalId>false</externalId>
+        <label>Has Error</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_ITEM_HEADER_KEY_New__c</fullName>
+        <description>This new field will replace the APTS_ITEM_HEADER_KEY__c formula field. This will be updated via Trigger.</description>
+        <externalId>false</externalId>
+        <label>Item Header Key</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_ITEM_HEADER_KEY__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_ERPID__c + APTS_VBELN__c + APTS_DOCNUM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Item Header Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_Processed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Processed?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Is_SalesOrder_Data__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is created for Req.#6486, used to identify whether ERP Order Item is created for MSPA Sales Order Creation.</description>
+        <externalId>false</externalId>
+        <label>Is SalesOrder Data</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Item_Key__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_ERPID__c + APTS_VBELN__c + APTS_POSNN__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Item Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_KURSK_ASSOLD__c</fullName>
+        <description>Exchange Rate for Price Determination - as sold</description>
+        <externalId>false</externalId>
+        <label>Ex. Rate for Price Determination-As Sold</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_KURSK__c</fullName>
+        <description>Current Exchange Rate for Price Determination</description>
+        <externalId>false</externalId>
+        <label>Current Ex. Rate for Price Determination</label>
+        <precision>14</precision>
+        <required>false</required>
+        <scale>5</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MATNR__c</fullName>
+        <description>Material Number</description>
+        <externalId>false</externalId>
+        <label>Material Number</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MENGE_ASSOLD__c</fullName>
+        <description>Order Quantity in Sales Units - As Sold</description>
+        <externalId>false</externalId>
+        <label>Order Quantity in Sales Units - As Sold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_MENGE__c</fullName>
+        <description>Current Order Quantity in Sales Units</description>
+        <externalId>false</externalId>
+        <label>Current Order Quantity in Sales Units</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_NETWR_ASSOLD__c</fullName>
+        <description>Net value of the order item in document currency - First fill</description>
+        <externalId>false</externalId>
+        <label>Net val of order item document currency</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_NETWR__c</fullName>
+        <description>Current Net value of the order item in document currency</description>
+        <externalId>false</externalId>
+        <label>Cur. Net val of order item- doc currency</label>
+        <precision>17</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Order_Information_Error__c</fullName>
+        <description>This field is created for Req.#6486, used to Populate error while processing Order Information</description>
+        <externalId>false</externalId>
+        <label>Order Information Error</label>
+        <length>100000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>APTS_POSNN__c</fullName>
+        <description>Subsequent item of an SD document</description>
+        <externalId>false</externalId>
+        <label>SAP item</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_POSNV__c</fullName>
+        <description>Preceding SAP document Item</description>
+        <externalId>false</externalId>
+        <label>Preceding SAP document Item</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_PSTYV__c</fullName>
+        <description>Sales Document Item Category</description>
+        <externalId>false</externalId>
+        <label>Sales Document Item Category</label>
+        <length>4</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_UEPOS__c</fullName>
+        <description>Higher level item in bill of material structures</description>
+        <externalId>false</externalId>
+        <label>Higher item - bill of material structure</label>
+        <length>6</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_VBELN__c</fullName>
+        <description>Subsequent Sales and distribution document</description>
+        <externalId>false</externalId>
+        <label>SAP document</label>
+        <length>20</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_VBELV__c</fullName>
+        <description>Preceding SAP document</description>
+        <externalId>false</externalId>
+        <label>Preceding SAP document</label>
+        <length>10</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_VBTYV__c</fullName>
+        <description>Preceding SD document category</description>
+        <externalId>false</externalId>
+        <label>Preceding SD document category</label>
+        <length>1</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_VRKME__c</fullName>
+        <description>Sales Unit</description>
+        <externalId>false</externalId>
+        <label>Sales Unit</label>
+        <length>3</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_WAERK__c</fullName>
+        <description>SAP Document Currency</description>
+        <externalId>false</externalId>
+        <label>SAP Document Currency</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_WAVWR_ASSOLD__c</fullName>
+        <description>Cost in document currency - as sold</description>
+        <externalId>false</externalId>
+        <label>Cost in document currency - as sold</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>APTS_WAVWR__c</fullName>
+        <description>Current Cost in document currency</description>
+        <externalId>false</externalId>
+        <label>Current Cost in document currency</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>ERP Order Item Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_CLOSE_DATE__c</columns>
+        <columns>APTS_VBELN__c</columns>
+        <columns>APTS_POSNN__c</columns>
+        <columns>APTS_ERPID__c</columns>
+        <columns>APTS_FACE_REF_ID__c</columns>
+        <columns>APTS_FACE_REF_LINEID__c</columns>
+        <columns>APTS_Is_Processed__c</columns>
+        <columns>APTS_WAVWR__c</columns>
+        <columns>APTS_NETWR__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>CREATED_DATE</columns>
+        <columns>NAME</columns>
+        <columns>APTS_VBELN__c</columns>
+        <columns>APTS_ERPID__c</columns>
+        <columns>APTS_POSNN__c</columns>
+        <columns>APTS_DOCNUM__c</columns>
+        <columns>APTS_FACE_REF_ID__c</columns>
+        <columns>APTS_FACE_REF_LINEID__c</columns>
+        <columns>APTS_FACE_REF_TYP__c</columns>
+        <columns>APTS_CLOSE_DATE__c</columns>
+        <columns>APTS_Is_Processed__c</columns>
+        <columns>APTS_WAVWR__c</columns>
+        <columns>APTS_KURSK__c</columns>
+        <columns>APTS_NETWR__c</columns>
+        <columns>APTS_WAVWR_ASSOLD__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>ERP-ORDER-ITEM-{000000}</displayFormat>
+        <label>ERP Item Data Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>ERP Order Item Data</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

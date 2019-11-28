@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>R4 Poc Copy MSPA Team Member functionality.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Access_Level__c</fullName>
+        <description>R4 Poc - MSPA team member access level</description>
+        <externalId>false</externalId>
+        <label>Access Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Read Only</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Read/Write</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Account_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(APTS_Agreement__r.Apttus__Account__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Agreement_RecordType_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(APTS_Agreement__r.RecordTypeId)</formula>
+        <label>Agreement RecordType Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <referenceTo>Apttus__APTS_Agreement__c</referenceTo>
+        <relationshipName>MSPA_Team_Members</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_Record_Type_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>APTS_Agreement__r.APTS_Division__c</formula>
+        <label>Record Type Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Team_Role__c</fullName>
+        <externalId>false</externalId>
+        <label>Team Role</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Engineer</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Channel Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Customer Service Responsible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Executive Sponsor</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Qualifier</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Pre-Sales Consultant</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>GAM/SAM Account Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quote Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Quote Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contract Delivery Manager</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Service Coordinator</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Responsible</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>User</label>
+        <lookupFilter>
+            <active>true</active>
+            <filterItems>
+                <field>$Source.Country__c</field>
+                <operation>equals</operation>
+                <valueField>User.Country</valueField>
+            </filterItems>
+            <filterItems>
+                <field>User.Profile.Name</field>
+                <operation>notEqual</operation>
+                <value>ABB External Competitive Sales Agent Profile</value>
+            </filterItems>
+            <isOptional>true</isOptional>
+        </lookupFilter>
+        <referenceTo>User</referenceTo>
+        <relationshipName>MSPA_Team_Members</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>Used for the lookup filter of the user.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field is pre-populated from the Agreement. Please do not change this.</inlineHelpText>
+        <label>Country</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Italy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>China</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>France</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Last_Activity_Text__c</fullName>
+        <description>CLM - Backend field created to achieve the &apos;Send Email to Agreement Team Member&apos; functionality.</description>
+        <externalId>false</externalId>
+        <label>Last Activity Text</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Send_Email__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>If value is Manual then send the email notification to the user.</description>
+        <externalId>false</externalId>
+        <label>Send Email</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Agreement Team Member</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>ATM-{000000}</displayFormat>
+        <label>Agreement Team Member Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Agreement Team Members</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>User_Filter_should_be_mandatory_for_MSPA</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(APTS_Agreement__r.RecordType.Name == &apos;MSPA&apos;,
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c),
+NOT($Setup.ObjectsSaveMode__c.Safe__c),
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+OR(TEXT(APTS_Agreement__r.APTS_Country__c) &lt;&gt; APTS_User__r.Country,
+APTS_User__r.Profile.Name = &apos;ABB External Competitive Sales Agent Profile&apos;))</errorConditionFormula>
+        <errorMessage>This user should be of same country as agreement and should not have profile as &quot;ABB External Competitive Sales Agent Profile&quot;.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Account_Team</fullName>
+        <availability>online</availability>
+        <description>Copy all Account Team Members to the MSPA Team Member</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Account Team</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var loggedInUserID = &apos;{!$User.Id}&apos;;
+var agreeID = &apos;{!Apttus__APTS_Agreement__c.Id}&apos;;
+
+var query2 = &quot;SELECT Id, APTS_Access_Level__c FROM APTS_MSPA_Team_Member__c WHERE APTS_Agreement__c =&apos;&quot;+agreeID+&quot;&apos; and APTS_User__c = &apos;&quot;+loggedInUserID+&quot;&apos;&quot;;
+var teamMem = sforce.connection.query(query2);
+var recs2 = teamMem.getArray(&quot;records&quot;);
+
+if(recs2 &amp;&amp; recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read Only&apos;){
+// array defined AND array has at least 1 item AND access level =read only
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;);
+}
+else if(!recs2){
+// array has no items 
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;);
+}
+else{
+var agreeAccCustID = &apos;{!Apttus__APTS_Agreement__c.APTS_LP_AccountCustomerId__c}&apos;;
+var query1 = &quot;SELECT Id,AccountId FROM AccountTeamMember WHERE AccountId=&apos;&quot;+agreeAccCustID+&quot;&apos;&quot;;
+var accountTeam = sforce.connection.query(query1);
+var recs1 = accountTeam.getArray(&quot;records&quot;);
+
+if(!recs1 || !recs1.length){
+// array was not defined OR array was defined but is empty
+alert(&apos;Related account does not have any Account Team Member.&apos;);
+}
+
+else {
+// no error
+var URL = &apos;/apex/AddAccOppDefaultTeamtoMSPATeamPage?id={!Apttus__APTS_Agreement__c.Id}&amp;agreeAccCustomer={!Apttus__APTS_Agreement__c.APTS_LP_AccountCustomerId__c}&amp;buttonName=Add_Account_Team&apos;;
+window.open(URL, &apos;_top&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Default_Team</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Default Team</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)}
+
+var loggedInUserID = &apos;{!$User.Id}&apos;; 
+var agreeID = &apos;{!Apttus__APTS_Agreement__c.Id}&apos;; 
+var agreementCountry = &apos;{!Apttus__APTS_Agreement__c.APTS_Country__c}&apos;;
+
+var query2 = &quot;SELECT Id, APTS_Access_Level__c FROM APTS_MSPA_Team_Member__c WHERE APTS_Agreement__c =&apos;&quot;+agreeID+&quot;&apos; and APTS_User__c = &apos;&quot;+loggedInUserID+&quot;&apos;&quot;; 
+var teamMem = sforce.connection.query(query2); 
+var recs2 = teamMem.getArray(&quot;records&quot;); 
+
+if(recs2 &amp;&amp; recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read Only&apos;){ 
+// array defined AND array has at least 1 item AND access level = read only. 
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;); 
+}
+else if(!recs2){
+// array has no items.
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;); 
+}
+else{ 
+// no error
+if(agreementCountry == &apos;Italy&apos;){
+var salesDistrict = &apos;{!Apttus__APTS_Agreement__c.APTS_Sales_District__c}&apos;; 
+
+if(salesDistrict === null || salesDistrict === &apos;&apos;){
+alert(&apos;There is no sales district for this agreement.&apos;);
+} else{
+var URL = &apos;/apex/AddAccOppDefaultTeamtoMSPATeamPage?id={!Apttus__APTS_Agreement__c.Id}&amp;buttonName=Add_Team&apos;;
+window.open(URL, &apos;_top&apos;);
+}
+}
+
+else if(agreementCountry == &apos;France&apos;){ 
+var salesOffice = &apos;{!Apttus__APTS_Agreement__c.APTS_Sales_Office_LP__c}&apos;; 
+
+if(salesOffice === null || salesOffice === &apos;&apos;){ 
+alert(&apos;There is no sales office for this quotation.&apos;); 
+} else{ 
+var URL = &apos;/apex/AddAccOppDefaultTeamtoMSPATeamPage?id={!Apttus__APTS_Agreement__c.Id}&amp;buttonName=Add_Team&apos;;
+window.open(URL, &apos;_top&apos;);
+} 
+} 
+else if(agreementCountry == &apos;Spain&apos;){
+var salesTerritory = &apos;{!$User.Sales_Territory_Name__c}&apos;;
+
+if(salesTerritory === null || salesTerritory === &apos;&apos;){
+alert(&apos;There is no sales Territory for the logged in user.&apos;);
+}else{
+var URL = &apos;/apex/AddAccOppDefaultTeamtoMSPATeamPage?id={!Apttus__APTS_Agreement__c.Id}&amp;buttonName=Add_Team&apos;;
+window.open(URL, &apos;_top&apos;);
+}
+}
+else{
+alert(&apos;The Default Team is currently available for Italy, France &amp; Spain.&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Opportunity_Team</fullName>
+        <availability>online</availability>
+        <description>Copy all Opportunity Team Members to the MSPA Team Member</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Opportunity Team</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/31.0/apex.js&quot;)} 
+var loggedInUserID = &apos;{!$User.Id}&apos;; 
+var agreeID = &apos;{!Apttus__APTS_Agreement__c.Id}&apos;;
+var query2 = &quot;SELECT Id, APTS_Access_Level__c FROM APTS_MSPA_Team_Member__c WHERE APTS_Agreement__c =&apos;&quot;+agreeID+&quot;&apos; and APTS_User__c = &apos;&quot;+loggedInUserID+&quot;&apos;&quot;; 
+var teamMem = sforce.connection.query(query2); 
+var recs2 = teamMem.getArray(&quot;records&quot;); 
+
+if(recs2 &amp;&amp; recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read Only&apos;){ 
+// array defined AND array has at least 1 item AND access level = read only. 
+alert(&apos;You do not have the required permissions to add Opportunity Team members.&apos;); 
+} 
+else if(!recs2){ 
+// array has no items. 
+alert(&apos;You do not have the required permissions to add Opportunity Team members.&apos;); 
+} 
+else { 
+var mspaOpptyID =&apos;{!Apttus__APTS_Agreement__c.Apttus__Related_OpportunityId__c}&apos;; 
+
+var recs1 = &apos;&apos;; 
+var query1 = &quot;SELECT Id,OpportunityId FROM OpportunityTeamMember WHERE OpportunityId=&apos;&quot;+mspaOpptyID+&quot;&apos;&quot;; 
+var opptyTeam = sforce.connection.query(query1); 
+recs1 = opptyTeam.getArray(&quot;records&quot;); 
+if(mspaOpptyID == &quot;&quot;){ 
+// array has no items 
+alert(&apos;Team members could not be added. MSPA is not associated with Opportunity.&apos;); 
+} else if((!recs1 || !recs1.length)){ 
+alert(&apos;Related Opportunity has no members to add.&apos;); 
+}  
+else {
+var URL = &apos;/apex/AddAccOppDefaultTeamtoMSPATeamPage?id={!Apttus__APTS_Agreement__c.Id}&amp;mspaOppty={!Apttus__APTS_Agreement__c.Apttus__Related_OpportunityId__c}&amp;buttonName=Add_Opportunity_Team&apos;; 
+window.open(URL, &apos;_top&apos;); } 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Delete_All</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete All</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)} 
+
+var loggedInUserID = &apos;{!$User.Id}&apos;; 
+var agreeID = &apos;{!Apttus__APTS_Agreement__c.Id}&apos;;
+var mspaOwnerID = &apos;{!Apttus__APTS_Agreement__c.OwnerId}&apos;;
+ 
+
+var query2 = &quot;SELECT Id, APTS_Access_Level__c FROM APTS_MSPA_Team_Member__c WHERE APTS_Agreement__c =&apos;&quot;+agreeID+&quot;&apos; and APTS_User__c = &apos;&quot;+loggedInUserID+&quot;&apos;&quot;; 
+var teamMem = sforce.connection.query(query2); 
+var recs2 = teamMem.getArray(&quot;records&quot;); 
+
+if(recs2 &amp;&amp; (recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read Only&apos; || recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read/Write&apos;)&amp;&amp;(loggedInUserID != mspaOwnerID)){ 
+// array defined AND array has at least 1 item AND access level = read only. 
+alert(&apos;You do not have the required permissions to delete Team members.&apos;); 
+} 
+else if(!recs2){ 
+// array has no items. 
+alert(&apos;You do not have the required permissions to delete Team members.&apos;); 
+} 
+else{ 
+var result = sforce.apex.execute(&quot;Delete_Team_CPQ&quot;,&quot;deleteMSPATeam&quot;, {agreementId:agreeID}); 
+if(result == &apos;Data&apos;){
+var URL = &apos;/&apos; + agreeID; 
+window.open(URL, &apos;_top&apos;);
+} 
+else if(result == &apos;Empty&apos;){ 
+alert(&apos;MSPA Team Member is empty.&apos;); 
+} 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_MSPA_Team_Member</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New MSPA Team Member</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/25.0/apex.js&quot;)}
+
+var loggedInUserID = &apos;{!$User.Id}&apos;; 
+var agreeID = &apos;{!Apttus__APTS_Agreement__c.Id}&apos;; 
+
+var query2 = &quot;SELECT Id, APTS_Access_Level__c FROM APTS_MSPA_Team_Member__c WHERE APTS_Agreement__c =&apos;&quot;+agreeID+&quot;&apos; and APTS_User__c = &apos;&quot;+loggedInUserID+&quot;&apos;&quot;; 
+var teamMem = sforce.connection.query(query2); 
+var recs2 = teamMem.getArray(&quot;records&quot;);
+
+if(recs2 &amp;&amp; recs2.length &amp;&amp; recs2[0].APTS_Access_Level__c == &apos;Read Only&apos;){ 
+// array defined AND array has at least 1 item AND access level =read only 
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;); 
+}
+else if(!recs2){ 
+// array has no items 
+alert(&apos;You do not have the required permissions to add Account Team members.&apos;); 
+}
+else{
+var URL = &apos;/{!$Label.ATM_Agreement_object_ID}/e?{!$Label.ATM_Agreement_Field_ID}={!Apttus__APTS_Agreement__c.Id}&amp;{!$Label.ATM_Agreement_Field_Value}={!Apttus__APTS_Agreement__c.Name}&amp;{!$Label.ATM_County_Field_ID}={!Apttus__APTS_Agreement__c.APTS_Country__c}&amp;saveURL=/{!Apttus__APTS_Agreement__c.Id}&amp;retURL=/{!Apttus__APTS_Agreement__c.Id}&apos;;
+window.open(URL, &apos;_top&apos;);
+}</url>
+    </webLinks>
+</CustomObject>

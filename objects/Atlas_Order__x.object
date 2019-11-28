@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Atlas Orders for account</description>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <externalDataSource>OData_Source</externalDataSource>
+    <externalName>VCAGLOM_13_Q001Results</externalName>
+    <fields>
+        <fullName>Account_Customer__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MMIDFGUID_T</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Account Name</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account Customer</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type_Name__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MMICACTYP_T</description>
+        <externalDeveloperName>MMIGUID__MMICACTYP_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB account type name</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account Type Name</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Type__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MMICACTYP</description>
+        <externalDeveloperName>MMIGUID__MMICACTYP</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB account type</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account Type</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Sts R8 field from Atlas: MCAMGMT__MABBUSUNT</description>
+        <externalDeveloperName>MCAMGMT__MABBUSUNT</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Business Unit</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Business Unit</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_Code__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MCACNTRY</description>
+        <externalDeveloperName>MMIGUID__MCACNTRY</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Reporting country code</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Country Code</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <description>StS R8 field from Atlas: MMIGUID__MCACNTRY_T</description>
+        <externalDeveloperName>MMIGUID__MCACNTRY_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Reporting country name</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Country</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>StS R8 field from Atlas: MCAMGMT__MABDIVIS</description>
+        <externalDeveloperName>MCAMGMT__MABDIVIS</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Division</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Division</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GUID__c</fullName>
+        <description>MMIGUID__MMIDFGUID</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account</label>
+        <length>10</length>
+        <referenceTargetField>Account.GUID__c</referenceTargetField>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>VCAGLOM_1_Q032Results</relationshipLabel>
+        <relationshipName>VCAGLOM_1_Q032Results</relationshipName>
+        <type>IndirectLookup</type>
+    </fields>
+    <fields>
+        <fullName>ID__c</fullName>
+        <description>ID</description>
+        <externalDeveloperName>ID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>ID</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPLPRD008_MPLPRD001_T_G__c</fullName>
+        <description>MPLPRD008__MPLPRD001_T_G</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_G</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>MPLPRD008__MPLPRD001_T_G</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPLPRD008_MPLPRD001_T_N__c</fullName>
+        <description>MPLPRD008__MPLPRD001_T_N</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_N</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>MPLPRD008__MPLPRD001_T_N</label>
+        <length>65</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPLPRD008_MPLPRD001_T_O__c</fullName>
+        <description>MPLPRD008__MPLPRD001_T_O</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_O</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>MPLPRD008__MPLPRD001_T_O</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>MPLPRD008_MPLPRD001_T_P__c</fullName>
+        <description>MPLPRD008__MPLPRD001_T_P</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_P</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>MPLPRD008__MPLPRD001_T_P</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Loca_Currency__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_LOCAL_E</description>
+        <externalDeveloperName>ORDERS_LOCAL_E</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Order currency</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Local Currency</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Local_Formatted__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_LOCAL_F</description>
+        <externalDeveloperName>ORDERS_LOCAL_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Formatted local orders of the account</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Local Formatted</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Local__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_LOCAL</description>
+        <externalDeveloperName>ORDERS_LOCAL</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Local orders of the account</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Local</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Total_Currency__c</fullName>
+        <description>Sts R8 fiield from Atlas: ORDERS_TOTAL_E</description>
+        <externalDeveloperName>ORDERS_E</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total orders currency of the account</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Total Currency</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Total_Formatted__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_TOTAL_F</description>
+        <externalDeveloperName>ORDERS_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Formatted total orders of the account</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Total Formatted</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Orders_Total__c</fullName>
+        <description>StS R8 field from Atlas: ORDERS_TOTAL</description>
+        <externalDeveloperName>ORDERS</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Total orders ot the accounts</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Orders Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Name__c</fullName>
+        <description>StS R8 Field from Atlas: MCAMGMT__MABDFPRDG_T</description>
+        <externalDeveloperName>MCAMGMT__MABDFPRDG_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Product Group Name</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Group Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>StS R8 field from Atlas: MCAMGMT__MABDFPRDG</description>
+        <externalDeveloperName>MCAMGMT__MABDFPRDG</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Product Group</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Group</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Line_Code__c</fullName>
+        <description>StS R8 field from Atlas: MPLPRD008__MPLPRD001_T_M</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_M</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>PL Code</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Line Code</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Line_Level__c</fullName>
+        <description>StS R8 field form Atlas: MPLPRD008__MPLPRD001_T_L</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_L</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>PL Level</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Line Level</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Line_Node__c</fullName>
+        <description>StS R8 field from Atlas: MPLPRD008__MPLPRD001_T_D</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T_D</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Product line node</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Line Node</label>
+        <length>9</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Line__c</fullName>
+        <description>StS R8 field from Atlas: MPLPRD008__MPLPRD001_T</description>
+        <externalDeveloperName>MPLPRD008__MPLPRD001_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>ABB Product Line</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Line</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotaledProperties__c</fullName>
+        <description>TotaledProperties</description>
+        <externalDeveloperName>TotaledProperties</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>TotaledProperties</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Year__c</fullName>
+        <description>StS R8 field from Atlas: A0CALYEAR</description>
+        <externalDeveloperName>A0CALYEAR</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Accounting year</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Year</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Atlas Order</label>
+    <pluralLabel>Atlas Orders</pluralLabel>
+    <searchLayouts/>
+</CustomObject>

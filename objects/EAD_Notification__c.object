@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Here it can specified period of time after which system will generate notification to the opportunity owner. Values may vary for different stages. If no value is specified notification won’t be generated</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Bidding_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Bidding Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bidding__c</fullName>
+        <externalId>false</externalId>
+        <label>Bidding</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No notifications</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Negotiation_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Negotiation Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Negotiation__c</fullName>
+        <externalId>false</externalId>
+        <label>Negotiation</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No notifications</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>PG__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Group</label>
+        <referenceTo>Product_Group__c</referenceTo>
+        <relationshipLabel>EAD Notifications</relationshipLabel>
+        <relationshipName>EAD_Notifications</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>true</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Id__c</fullName>
+        <caseSensitive>true</caseSensitive>
+        <externalId>false</externalId>
+        <label>Product Group Id</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prospect__c</fullName>
+        <externalId>false</externalId>
+        <label>Prospect</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No notifications</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Pursuit_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Pursuit Value</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pursuit__c</fullName>
+        <externalId>false</externalId>
+        <label>Pursuit</label>
+        <picklist>
+            <picklistValues>
+                <fullName>No notifications</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Days</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Weeks</fullName>
+                <default>false</default>
+            </picklistValues>
+            <restrictedPicklist>true</restrictedPicklist>
+            <sorted>false</sorted>
+        </picklist>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <label>EAD Notification</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>EAD Notification Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>EAD Notifications</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Bidding_Value_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT( ISPICKVAL(Bidding__c, &apos;No notifications&apos;) ), ISBLANK( Bidding_Value__c ) )</errorConditionFormula>
+        <errorDisplayField>Bidding_Value__c</errorDisplayField>
+        <errorMessage>Please specify the Bidding Value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Negotiation_Value_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT( ISPICKVAL(Negotiation__c, &apos;No notifications&apos;) ), ISBLANK( Negotiation_Value__c ) )</errorConditionFormula>
+        <errorDisplayField>Negotiation_Value__c</errorDisplayField>
+        <errorMessage>Please specify the Negotiation Value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prospect_Value_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT( ISPICKVAL(Prospect__c, &apos;No notifications&apos;) ), ISBLANK( Prospect_Value__c ) )</errorConditionFormula>
+        <errorDisplayField>Prospect_Value__c</errorDisplayField>
+        <errorMessage>Please specify the Prospect Value</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Pursuit_Value_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+NOT($Setup.ObjectsSaveMode__c.DisabledValidation__c), 
+NOT($Setup.ObjectsSaveMode__c.FullLogicDisabled__c),
+NOT( ISPICKVAL(Pursuit__c, &apos;No notifications&apos;) ), ISBLANK( Pursuit_Value__c ) )</errorConditionFormula>
+        <errorDisplayField>Pursuit_Value__c</errorDisplayField>
+        <errorMessage>Please specify the Pursuit Value.</errorMessage>
+    </validationRules>
+</CustomObject>

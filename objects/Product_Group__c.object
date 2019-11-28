@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object contains all product groups and the relation to BU / Div, which is used (mainly) in opportunities</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Business_Unit_Name__c</fullName>
+        <description>Contains the BU Name</description>
+        <externalId>false</externalId>
+        <label>Business Unit Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>Contains the BU code</description>
+        <externalId>false</externalId>
+        <label>Business Unit</label>
+        <length>5</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division_Name__c</fullName>
+        <description>Contains the name of the Division</description>
+        <externalId>false</externalId>
+        <label>Division Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>Contains the Division Code</description>
+        <externalId>false</externalId>
+        <label>Division</label>
+        <length>3</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsActive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsLastSuccessorActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsLastSuccessorActive</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsModifiedByIntegration__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Modified By Integration</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>IsService__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>IsService</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LastSuccessor__c</fullName>
+        <externalId>false</externalId>
+        <label>LastSuccessor</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Neglected_ActivityFutureDays__c</fullName>
+        <description>BR 4703</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Threshold used by Neglected Opportunities formula to calculate for many days in the future the latest Due Date of all open or closed Tasks related to Opportunity OR the latest Date of all Events related to Opportunity is set.</inlineHelpText>
+        <label>Neglected Opps - Activity Future Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Neglected_ActivityPastDays__c</fullName>
+        <description>BR 4703</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Threshold used by Neglected Opportunities formula to calculate for many days in the past the latest Due Date of all open or closed Tasks related to Opportunity OR the latest Date of all Events related to Opportunity is set.</inlineHelpText>
+        <label>Neglected Opps - Activity Past Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Neglected_LastModifiedDays__c</fullName>
+        <description>BR 4703</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Threshold used by Neglected Opportunities formula to calculate for how many days an Opportunity (or its related records) was not updated by a Non-Technical User.</inlineHelpText>
+        <label>Neglected Opps - Last Modified Days</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Non_Searchable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Only product related PG’s can be used as Offering – Primary Product Group for opportunity. To improve reporting and data quality non-product PG’s can’t be selectable.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This field specifies if product group can be selected as Offering – Primary Product Group on the opportunity</inlineHelpText>
+        <label>Non-Searchable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Default_Type__c</fullName>
+        <description>This setting defines the default opportunity type by PG</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This setting defines the default opportunity type by PG</inlineHelpText>
+        <label>Opportunity Default Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Fast Track</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Regular</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Qualification_Threshold_USD__c</fullName>
+        <description>R4 - Opportunity qualification threshold measurement</description>
+        <externalId>false</externalId>
+        <label>Opportunity Qualification Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Threshold__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>This value will be used to determine the opportunity type, Fast Track or Regular. Exceeding this value switches the opportunity to Regular</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Threshold for switching an opportunity to Regular type, a value of &quot;USD 0&quot; ignores any threshold for this PG.</inlineHelpText>
+        <label>Opportunity Threshold</label>
+        <precision>8</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Code__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Numeric PG code to user as external ID</description>
+        <externalId>true</externalId>
+        <label>Product Group Code</label>
+        <length>4</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Full__c</fullName>
+        <externalId>false</externalId>
+        <formula>Product_Group_Code__c &amp; &apos; - &apos; &amp; Product_Group_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product Group Full</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Name__c</fullName>
+        <description>Contains the Product Group Name</description>
+        <externalId>false</externalId>
+        <label>Product Group Name</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ReportingPeriod__c</fullName>
+        <externalId>false</externalId>
+        <label>ReportingPeriodName</label>
+        <length>10</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Successor__c</fullName>
+        <externalId>false</externalId>
+        <label>Successor</label>
+        <length>6</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technical_BU__c</fullName>
+        <description>Combination of BU / BU Name</description>
+        <externalId>false</externalId>
+        <formula>Business_Unit__c &amp;&quot; - &quot;&amp; Business_Unit_Name__c</formula>
+        <label>Technical BU</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Technical_Opportunity_Threshold__c</fullName>
+        <description>This technical field shows the Opportunity Threshold Currency value as number value.</description>
+        <externalId>false</externalId>
+        <formula>Opportunity_Threshold__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Technical Opportunity Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tender_Screening_Threshold_USD__c</fullName>
+        <description>R4 - Tender Screening Threshold in USD</description>
+        <externalId>false</externalId>
+        <label>Tender Screening Threshold</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>of_Product_Groups__c</fullName>
+        <description>SFDC - 4167 - Field type ‘Power of One’ for reporting purpose only</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>It shows if at least 1 record on this object was created or not (1 means that it was)</inlineHelpText>
+        <label># of Product Groups</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Product Group</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Product_Group_Name__c</columns>
+        <columns>Business_Unit__c</columns>
+        <columns>Business_Unit_Name__c</columns>
+        <columns>Division__c</columns>
+        <columns>Division_Name__c</columns>
+        <columns>Opportunity_Default_Type__c</columns>
+        <columns>Opportunity_Threshold__c</columns>
+        <columns>Tender_Screening_Threshold_USD__c</columns>
+        <columns>OBJECT_ID</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <label>Product Group</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Product Groups</pluralLabel>
+    <recordTypes>
+        <fullName>Product_Group</fullName>
+        <active>true</active>
+        <description>All PG records</description>
+        <label>Product Group</label>
+        <picklistValues>
+            <picklist>Opportunity_Default_Type__c</picklist>
+            <values>
+                <fullName>Fast Track</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Regular</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Product_Group_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Business_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Business_Unit_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Division__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Division_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity_Default_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity_Threshold__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LAST_UPDATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OBJECT_ID</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Product_Group_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Business_Unit_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Division__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Division_Name__c</lookupDialogsAdditionalFields>
+        <lookupFilterFields>NAME</lookupFilterFields>
+        <lookupFilterFields>Product_Group_Name__c</lookupFilterFields>
+        <lookupFilterFields>Business_Unit__c</lookupFilterFields>
+        <lookupFilterFields>Business_Unit_Name__c</lookupFilterFields>
+        <lookupFilterFields>Division__c</lookupFilterFields>
+        <lookupFilterFields>Division_Name__c</lookupFilterFields>
+        <lookupPhoneDialogsAdditionalFields>Product_Group_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Business_Unit_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Division__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Division_Name__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Product_Group_Name__c</searchFilterFields>
+        <searchFilterFields>Business_Unit__c</searchFilterFields>
+        <searchFilterFields>Business_Unit_Name__c</searchFilterFields>
+        <searchFilterFields>Division__c</searchFilterFields>
+        <searchFilterFields>Division_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Product_Group_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Business_Unit_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Division__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Division_Name__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+</CustomObject>

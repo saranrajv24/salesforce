@@ -1,0 +1,2062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>APTS_LP_Agreements_Share_with_China_country_admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>APTS LP Agreements Share with China country admin</label>
+        <sharedTo>
+            <group>CN_EP_EPMS_LCA_Share_Write</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>China</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>APTS_LP_Agreements_Share_with_France_country_admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>APTS LP Agreements Share with France country admin</label>
+        <sharedTo>
+            <group>France_Country_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>APTS_LP_Agreements_Share_with_Italy_country_admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>APTS LP Agreements Share with Italy country admin</label>
+        <sharedTo>
+            <group>Italy_Country_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>Italy</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>APTS_LP_Agreements_Share_with_spain_country_admin</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>APTS LP Agreements Share with spain country admin</label>
+        <sharedTo>
+            <group>Spain_Country_Admin</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Country__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Approvers</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM, for Country: Germany and not for Global Frame Agreements</description>
+        <label>CLM DE Country View</label>
+        <sharedTo>
+            <group>CLM_DE_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Approvers_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>It is created to provide access to Service group of CLM, for Country: Germany and not for Global Frame Agreements</description>
+        <label>CLM DE Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_BNL_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM, for Country: Belgium, Netherlands, Luxembourg 
+and not for Global Frame Agreements</description>
+        <label>CLM BNL Country View</label>
+        <sharedTo>
+            <group>CLM_BNL_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Belgium,Luxembourg,Netherlands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_BNL_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>It is created to provide access to Service group of CLM, for Country: Germany and not for Global Frame Agreements</description>
+        <label>CLM BNL Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_BNL_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Belgium,Luxembourg,Netherlands</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_BR_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Brazil</description>
+        <label>CLM BR View</label>
+        <sharedTo>
+            <group>CLM_BR_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_BR_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM BR View/Edit</label>
+        <sharedTo>
+            <group>CLM_BR_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Brazil</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_CZ_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM CZ  View</label>
+        <sharedTo>
+            <group>CLM_CZ_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Czech Republic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_CZ_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM CZ View/Edit</label>
+        <sharedTo>
+            <group>CLM_CZ_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Czech Republic</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_EP_EPDS_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM DE EP EPDS View</label>
+        <sharedTo>
+            <group>CLM_DE_EP_EPDS_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>EPDS - Distribution Solutions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_EP_EPDS_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DE EP EPDS View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_EP_EPDS_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>EPDS - Distribution Solutions</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_IACT_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM DE IA IAEN View</label>
+        <sharedTo>
+            <group>CLM_DE_IA_IACT_View</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAEN - Energy Industries</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_IACT_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DE IA IAEN View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_IA_IACT_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAEN - Energy Industries</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_IAPI_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM DE IA IAPI View</label>
+        <sharedTo>
+            <group>CLM_DE_IA_IAPI_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAPI - Process Industries</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_IAPI_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DE IA IAPI View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_IA_IAPI_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAPI - Process Industries</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Every DE user in this group has  access to Salesforce and to CLM and can see ,access and open attachements and documents of all DE agreements  in read modus accross BU IA</description>
+        <label>CLM_DE_IA_View</label>
+        <sharedTo>
+            <group>CLM_DE_IA_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>IA - Industrial Automation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_IA_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>&quot;Every  DE user in this Group has R/W access 
+to all  agreements accross BU IA&quot;</description>
+        <label>CLM_DE_IA_View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_IA_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>IA - Industrial Automation</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_RM_RMDR_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM DE RM RMDR View</label>
+        <sharedTo>
+            <group>CLM_DE_RM_RMDR_View</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MODR - Drives</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DE_RM_RMDR_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DE RM RMDR View/Edit</label>
+        <sharedTo>
+            <group>CLM_DE_RM_RMDR_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MODR - Drives</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Germany</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DK_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Denmark</description>
+        <label>CLM DK Country View</label>
+        <sharedTo>
+            <group>CLM_DK_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Denmark</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DK_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DK Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_DK_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Denmark</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DZ_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM DZ View</label>
+        <sharedTo>
+            <group>CLM_DZ_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Algeria</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_DZ_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM DZ View/Edit</label>
+        <sharedTo>
+            <group>CLM_DZ_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Algeria</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_EE_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Estonia</description>
+        <label>CLM EE Country View</label>
+        <sharedTo>
+            <group>CLM_EE_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Estonia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_EE_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM EE Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_EE_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Estonia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_EG_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Egypt</description>
+        <label>CLM EG Country View</label>
+        <sharedTo>
+            <group>CLM_EG_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Egypt</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_EG_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM EG Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_EG_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Egypt</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_ES_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Spain</description>
+        <label>CLM ES Country View</label>
+        <sharedTo>
+            <group>CLM_ES_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_ES_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM ES Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_ES_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Spain</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FI_Country_Read_Write</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing read/write access with all finland Users with agreement category not global</description>
+        <label>CLM FI View/Edit</label>
+        <sharedTo>
+            <group>CLM_FI_Country_RW</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Finland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FI_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing read access with all finland Users with agreement category not global</description>
+        <label>CLM FI View</label>
+        <sharedTo>
+            <group>CLM_FI_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Finland</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_EP_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM FR EP View/Edit</label>
+        <sharedTo>
+            <group>CLM_FR_EP_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>EP - Electrification</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_IA_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM FR IA View/Edit</label>
+        <sharedTo>
+            <group>CLM_FR_IA_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>IA - Industrial Automation</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_PG_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM FR PG View/Edit</label>
+        <sharedTo>
+            <group>CLM_FR_PG_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>PG - Power Grids</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_RM_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM FR RM View/Edit</label>
+        <sharedTo>
+            <group>CLM_FR_RM_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Division__c</field>
+            <operation>equals</operation>
+            <value>MO - Motion</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing read access with all France Users with agreement category not global</description>
+        <label>CLM FR View</label>
+        <sharedTo>
+            <group>CLM_FR_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_FR_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing read/write access with all France Users with agreement category not global</description>
+        <label>CLM FR View/Edit</label>
+        <sharedTo>
+            <group>CLM_FR_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>France</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Global_Frame_Agreement_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>This provides Read/Write Access to members in CLM Global Frame Agreement View/Edit Group</description>
+        <label>CLM Global Frame Agreement View/Edit</label>
+        <sharedTo>
+            <group>CLM_Global_Frame_Agreement_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Global_Frame_Agreement_Viewers</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This provides Read/Write Access to members in CLM Global Frame Agreement ViewersGroup</description>
+        <label>CLM Global Frame Agreement Viewers</label>
+        <sharedTo>
+            <group>CLM_Global_Frame_Agreement_Viewers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_KR_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM KR View</label>
+        <sharedTo>
+            <group>CLM_KR_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>&quot;Korea, Republic of&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_KR_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM KR View/Edit</label>
+        <sharedTo>
+            <group>CLM_KR_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>&quot;Korea, Republic of&quot;</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_LT_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Lithuania</description>
+        <label>CLM LT Country View</label>
+        <sharedTo>
+            <group>CLM_LT_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Lithuania</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_LT_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM LT Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_LT_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Lithuania</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_LV_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Latvia</description>
+        <label>CLM LV Country View</label>
+        <sharedTo>
+            <group>CLM_LV_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Latvia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_LV_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM LV Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_LV_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Latvia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_EPBP_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All EPPB Agreements</description>
+        <label>CLM NO EPBP View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_EPBP_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>EPSB - Smart Buildings</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_EPDS_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All EPDS Agreements</description>
+        <label>CLM NO EPDS View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_EPDS_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>EPDS - Distribution Solutions</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_EPPC_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM NO EPPC View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_EPPC_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>EPSP - Smart Power</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_IACT_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM NO IAEN View</label>
+        <sharedTo>
+            <group>CLM_NO_IACT_View</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAEN - Energy Industries</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_IACT_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All  IACT agreements</description>
+        <label>CLM NO IAEN View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_IACT_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND 4</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>IAEN - Energy Industries</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGGA_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All PGGA agreements</description>
+        <label>CLM NO PGGA View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_PGGA_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGGA - Grid Automation</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGGI_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All PGGI agreements</description>
+        <label>CLM NO PGGI View</label>
+        <sharedTo>
+            <group>CLM_NO_PGGI_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGGI - Grid Integration</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGGI_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All PGGI agreements</description>
+        <label>CLM NO PGGI View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_PGGI_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGGI - Grid Integration</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGHV_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All PGHV agreements</description>
+        <label>CLM NO PGHV View</label>
+        <sharedTo>
+            <group>CLM_NO_PGHV_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGHV - High Voltage Products</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGHV_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All PGHV agreements</description>
+        <label>CLM NO PGHV View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_PGHV_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGHV - High Voltage Products</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_PGTR_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All PGTR agreements</description>
+        <label>CLM NO PGTR View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_PGTR_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>PGTR - Transformers</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_RM_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All RMDR and RMMG agreements</description>
+        <label>CLM NO RM View</label>
+        <sharedTo>
+            <group>CLM_NO_RM_View</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MOMG - Motors &amp; Generators</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MODR - Drives</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_RM_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>All RMDR and RMMG agreements</description>
+        <label>CLM NO RM View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_RM_View_Edit</group>
+        </sharedTo>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MOMG - Motors &amp; Generators</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Business_Unit__c</field>
+            <operation>equals</operation>
+            <value>MODR - Drives</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Sharing read access with all Norway Users with agreement category not global</description>
+        <label>CLM NO View</label>
+        <sharedTo>
+            <group>CLM_NO_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_NO_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM NO View/Edit</label>
+        <sharedTo>
+            <group>CLM_NO_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Norway</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_PG4449_Approvers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>It is created to provide read only access to all the CLM approvers of PG 4449</description>
+        <label>CLM UK PG4449 Approvers</label>
+        <sharedTo>
+            <group>CLM_PG4449_Approvers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Product_Group__c</field>
+            <operation>equals</operation>
+            <value>&quot;4449 - Oil, Gas &amp; Chemicals Service&quot;</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_PG4449_Legal_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is used to provide read access to entire legal team of PG4449</description>
+        <label>CLM UK PG4449 Legal Team</label>
+        <sharedTo>
+            <group>CLM_PG4449_Legal_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Product_Group__c</field>
+            <operation>equals</operation>
+            <value>&quot;4449 - Oil, Gas &amp; Chemicals Service&quot;</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_PGES_Legal_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>PGES legal team needs to have access to FACE Agreements</description>
+        <label>CLM PGES Legal Team</label>
+        <sharedTo>
+            <group>CLM_PGES_Legal_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,CCP Frame Agreement Superseded,CCP Frame Agreement Open</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_PL_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Poland</description>
+        <label>CLM PL Country View</label>
+        <sharedTo>
+            <group>CLM_PL_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_PL_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM PL Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_PL_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Poland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_SE_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It is created to provide access to Service group of CLM for Sweden</description>
+        <label>CLM SE View</label>
+        <sharedTo>
+            <group>CLM_SE_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Sweden</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_SE_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM SE View/Edit</label>
+        <sharedTo>
+            <group>CLM_SE_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Sweden</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_SK_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM SK  View</label>
+        <sharedTo>
+            <group>CLM_SK_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Slovakia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_SK_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM SK View/Edit</label>
+        <sharedTo>
+            <group>CLM_SK_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Slovakia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Service_Approvers</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>It is created to provide access to Service group of CLM, not part of PG4449</description>
+        <label>CLM CH View/Edit</label>
+        <sharedTo>
+            <group>CLM_Service_Approvers</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Service_Legal_Team</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>It provides read access to entire legal team of Services (not PG4449)</description>
+        <label>CLM CH Viewers</label>
+        <sharedTo>
+            <group>CLM_Service_Legal_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_Switzerland_Contact_Center</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM Switzerland/Contact Center</label>
+        <sharedTo>
+            <group>CH_Contact_center_Queue</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>Switzerland</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_UK_Country_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM UK Country View</label>
+        <sharedTo>
+            <group>CLM_UK_Country_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Product_Group__c</field>
+            <operation>notEqual</operation>
+            <value>&quot;4449 - Oil, Gas &amp; Chemicals Service&quot;</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_UK_Country_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM UK Country View/Edit</label>
+        <sharedTo>
+            <group>CLM_UK_Country_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>notEqual</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Leading_Product_Group__c</field>
+            <operation>notEqual</operation>
+            <value>&quot;4449 - Oil, Gas &amp; Chemicals Service&quot;</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_US_View</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CLM US  View</label>
+        <sharedTo>
+            <group>CLM_US_View</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United States</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>CLM_US_View_Edit</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>CLM US View/Edit</label>
+        <sharedTo>
+            <group>CLM_US_View_Edit</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>Frame Agreement,NDA,Deal Agreement (Products and/or Services)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Country_Global__c</field>
+            <operation>equals</operation>
+            <value>United States</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__Agreement_Category__c</field>
+            <operation>equals</operation>
+            <value>Global</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>APTS_MSPA_with_owner_belonging_to_EP_EUC_IT</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>MSPA with owner belonging to EP:EUC/IT</label>
+        <sharedTo>
+            <group>APTS_EP_EUC_IT_APTS_MSPA_AllShare</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EP_EUC_IT</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>CN_Agreement_Read_Share</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>CN_Agreement_Read_Share</label>
+        <sharedTo>
+            <group>CN_EP_EPMS_Agreements_Share</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>CN_EP_EPMS_Share_Read</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>EP_EUC_FR_Read_Write</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>MSPA are shared with read and write rights with all Users which belongs to EP:EUC/FR (and groups lower in this hierarchy)</description>
+        <label>EP:EUC/FR.Read.Write</label>
+        <sharedTo>
+            <roleAndSubordinates>EP_EUC_FR</roleAndSubordinates>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EP_EUC_FR</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ext_Agency</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This sharing rule allows the sharing of any MSPA created by the role of External Agent (EXT:EP:EUC/IT) to be shared with a specific group</description>
+        <label>Ext Agent MSPA</label>
+        <sharedTo>
+            <group>ABB_Project_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <role>EXT_EP_EUC_IT</role>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ext_Agent_FR_Agreement</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This rule allows the sharing of an MSPA Agreement created by an External Agent with the public group named FR Quotation Share</description>
+        <label>Ext Agent FR Agreement</label>
+        <sharedTo>
+            <group>FR_Quotation_Share</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXT_EP_EUC_IT</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Ext_Agent_IT_Agreement</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>This rule allows the sharing of an MSPA Agreement created by an external agent to be shared with the group IT Quotation share</description>
+        <label>Ext Agent IT Agreement</label>
+        <sharedTo>
+            <group>IT_Quotation_Share</group>
+        </sharedTo>
+        <sharedFrom>
+            <roleAndSubordinates>EXT_EP_EUC_IT</roleAndSubordinates>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>IT_EXT_Agreement_Share</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>IT/EXT.Agreement.Share</label>
+        <sharedTo>
+            <group>IT_EXT_Agreement_ShareTo</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>IT_EXT_Agreement_Share</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

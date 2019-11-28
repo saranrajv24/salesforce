@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Using to assign the GDPR user as owner  for objectchangelog reocrd.</description>
+    <fields>
+        <fullName>Type_user__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Pardot_Global or Pardot_GDPR</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type user</label>
+        <length>250</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>User_Name__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>Please Add username Like  GDPR Global</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>User Id</label>
+        <length>250</length>
+        <required>true</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <label>Global GDPR User</label>
+    <pluralLabel>Global GDPR Users</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

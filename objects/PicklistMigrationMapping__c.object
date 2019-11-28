@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>PicklistMigrationMapping Local to Global - Holds Existing New Value and old Values used in Batch class for one time migration</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>FieldAPI__c</fullName>
+        <description>Hold the field API whose New and Old values are present</description>
+        <externalId>false</externalId>
+        <label>FieldAPI</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>NewValue__c</fullName>
+        <description>Hold the existing new value</description>
+        <externalId>false</externalId>
+        <label>NewValue</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectAPI__c</fullName>
+        <description>Hold the object API name</description>
+        <externalId>false</externalId>
+        <label>ObjectAPI</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OldValue__c</fullName>
+        <description>Holds the old values</description>
+        <externalId>false</externalId>
+        <label>OldValue</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>PicklistMigrationMappings</label>
+    <visibility>Public</visibility>
+</CustomObject>

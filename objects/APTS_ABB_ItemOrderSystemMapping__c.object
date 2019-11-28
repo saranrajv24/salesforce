@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>This object is used to find out Order Management System (OMS/BOL/SPINE/ERP LN) based on BAL ID.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>APTS_BAL_ID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <description>This field is unique identified for a product and its related factory where this product can be configure or relate to</description>
+        <externalId>true</externalId>
+        <inlineHelpText>This field is unique identified for a product and its related factory where this product can be configure or relate to</inlineHelpText>
+        <label>BAL ID</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Manual_Configuration_Send__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>To indicate whether Manual Configured Product should be send to Ordering System</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To indicate whether Manual Configured Product should be send to Ordering System</inlineHelpText>
+        <label>Manual Configuration Send</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Ordering_System__c</fullName>
+        <description>Order System related to BAL ID</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Order System related to BAL ID</inlineHelpText>
+        <label>Ordering System</label>
+        <picklist>
+            <picklistValues>
+                <fullName>OMS</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>BOL</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Spine</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>ERP_LN</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Production_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Production Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sales_Factory_Unit__c</fullName>
+        <description>Constant value that will be included in the eBookOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Constant value that will be included in the eBookOrder</inlineHelpText>
+        <label>Sales Unit</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Technical_Data__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To indicate whether to request technical data from CCI for eBookOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To indicate whether to request technical data from CCI for eBookOrder</inlineHelpText>
+        <label>Technical Data</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>APTS_Terms_And_Conditions__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To indicate whether to send T&amp;C in the request of eBookOrder</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To indicate whether to send T&amp;C in the request of eBookOrder</inlineHelpText>
+        <label>Terms &amp; Conditions</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Custom_Product_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Product Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Free text</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Free text</inlineHelpText>
+        <label>Description</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>internal_order_enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Field to enable the internal order</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Field to enable the internal order</inlineHelpText>
+        <label>internal order enabled</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Item Order System Mapping</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>APTS_BAL_ID__c</columns>
+        <columns>APTS_Ordering_System__c</columns>
+        <columns>APTS_Sales_Factory_Unit__c</columns>
+        <columns>APTS_Technical_Data__c</columns>
+        <columns>APTS_Terms_And_Conditions__c</columns>
+        <columns>Description__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>APTS_BAL_ID__c</columns>
+        <columns>APTS_Ordering_System__c</columns>
+        <columns>APTS_Sales_Factory_Unit__c</columns>
+        <columns>Description__c</columns>
+        <columns>APTS_Terms_And_Conditions__c</columns>
+        <columns>APTS_Technical_Data__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <nameField>
+        <displayFormat>OSM-{0000000000}</displayFormat>
+        <label>Order System Mapping Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Item Order System Mappings</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>APTS_Ordering_System__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_BAL_ID__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Sales_Factory_Unit__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Technical_Data__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>APTS_Terms_And_Conditions__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Ordering_System__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_BAL_ID__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Sales_Factory_Unit__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Technical_Data__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>APTS_Terms_And_Conditions__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.ALIAS</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>UPDATEDBY_USER</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Ordering_System__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_BAL_ID__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Sales_Factory_Unit__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Technical_Data__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>APTS_Terms_And_Conditions__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.ALIAS</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>UPDATEDBY_USER</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>APTS_Ordering_System__c</searchFilterFields>
+        <searchFilterFields>APTS_BAL_ID__c</searchFilterFields>
+        <searchFilterFields>APTS_Sales_Factory_Unit__c</searchFilterFields>
+        <searchFilterFields>APTS_Technical_Data__c</searchFilterFields>
+        <searchFilterFields>APTS_Terms_And_Conditions__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>UPDATEDBY_USER</searchFilterFields>
+        <searchResultsAdditionalFields>APTS_Ordering_System__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_BAL_ID__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Sales_Factory_Unit__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Technical_Data__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>APTS_Terms_And_Conditions__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.ALIAS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <startsWith>Vowel</startsWith>
+</CustomObject>

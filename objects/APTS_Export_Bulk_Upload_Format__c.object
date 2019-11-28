@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <description>R3-MR1-Req.6140-This field is used for export workspace content to bulk upload format.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>APTS_Column_Width__c</fullName>
+        <description>As part of QFA-R3-MR1 Req. 6140, Export Bulk Upload Format in .xls file</description>
+        <externalId>false</externalId>
+        <label>APTS Column Width</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Sequence__c</fullName>
+        <description>R3-MR1-Req.6140-This field is created for exporting bulk upload format functionality and sequence the header in bulk upload file.</description>
+        <externalId>false</externalId>
+        <label>Sequence</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CSV_Header__c</fullName>
+        <description>R3-MR1-Req.6140-This field is created for exporting bulk upload format functionality</description>
+        <externalId>false</externalId>
+        <label>CSV Header</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Export Bulk Upload Format</label>
+    <visibility>Public</visibility>
+</CustomObject>

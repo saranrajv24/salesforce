@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<font face="Verdana"><font size="2">
+
+{!Contact.Salutation} {!Contact.LastName},
+<br><br>
+ABB hat sich zum Ziel gesetzt, den Service und das Informationsangebot für unsere Kunden stetig zu verbessern, um dadurch zum Unternehmenserfolg auf beiden Seiten beizutragen. 
+<br><br>
+In Zeiten der zunehmenden Globalisierung hat sich der ABB-Konzern deshalb dafür entschieden, die Kontaktdaten unserer Kunden und Partner in eine globale ABB-Kundendatenbank zu übernehmen. Damit wird es den Mitarbeitern von ABB ermöglicht, mit unseren Kunden effizienter zu kommunizieren und dadurch optimierte Serviceleistungen zur Verfügung zu stellen. 
+<br><br>
+Die ABB-Gesellschaften mit Zugang zu dieser Kundendatenbank befinden sich unter anderem auch in Ländern, in denen allenfalls ein anderes Datenschutzniveau als in der Europäischen Union gilt. Nach den geltenden Datenschutzbestimmungen, sind wir daher verpflichtet, zur weltweiten Verwendung Ihrer Daten, selbst wenn diese nur konzernintern erfolgt, Ihre Zustimmung einzuholen. Eine Auflistung aller ABB-Gesellschaften finden Sie unter folgender Internetadresse: 
+<a shape="rect" href="http://www.abb.com/cawp/abbzh252/8efc27160cf68e81c1256723005af741.aspx" target="_BLANK"> Where to find us </a>.
+<br><br>
+Wir bitten um Ihre Zustimmung, dass wir die von Ihnen bereits erhaltenen, nachfolgend beschriebenen Daten in der o.a. Kundendatenbank speichern und verwenden dürfen und versichern Ihnen, dass wir diese Daten stets im Einklang mit den strikten Datenschutzbestimmungen von ABB und in Übereinstimmung mit den einschlägiggen nationalen und internationalen Gesetzen und Verordnungen verwenden.
+
+<br><br>
+<table width="700" border="0">
+     <tr valign="top">
+          <td width="100"><font face="Verdana"><font size="2">Ansprache: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.Salutation}</td>
+     <tr valign="top">
+          <td width="100" align="top"><font face="Verdana"><font size="2">
+               Name: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.FirstName} {!Contact.LastName}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Telefon: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.Phone}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Mobil: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.MobilePhone}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Fax: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.Fax}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Email: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.Email}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Firma: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">{!Contact.AccountName__c}</td>
+     <tr valign="top">
+          <td width="100" align="left"><font face="Verdana"><font size="2">
+               Adresse: </td>
+          <td width="600" align="left"><font face="Verdana"><font size="2"
+               color="blue">
+               {!Contact.MailingStreet}<br>{!Contact.MailingPostalCode} 
+               {!Contact.MailingCity}</td>
+</table>
+
+<br>
+Bitte teilen Sie uns Ihre Entscheidung <u>nach Möglichkeit innerhalb der nächsten zwei Kalenderwochen</u> mit, indem Sie  auf diese Mail direkt (mit &quot;Historie&quot;) antworten. Je nach Wahl kopieren Sie dazu bitte folgende Zeilen in Ihre Antwort:
+
+<br><br><font color="blue">
+Ich habe die untenstehende (Originalmail) Zustimmungserklärung gemäß dem Datenschutzgesetz zur Kenntnis genommen und bin mit der Verwendung der darin genannten Kontaktdaten in der globalen Kundendatenbank von ABB einverstanden.
+
+<br></font><u>oder</u>
+
+<br><font color="blue"> Ich lehne die Verwendung meiner Kontaktdaten in der globalen Kundendatenbank von ABB ab. </font></blockquote>
+
+<br><br>
+Bitte informieren Sie uns darüberhinaus über möglicherweise notwendige  Korrekturen der o.a. Daten.
+
+<br><br>
+Sie können Ihre Zustimmung jederzeit mit Wirkung für die Zukunft durch eine schriftliche Erklärung an ABB AG, 
+<span><font color="blue"> z.Hd. {!User.FirstName} {!User.LastName}, {!User.Street},  {!User.PostalCode} {!User.City} </font> oder per Email an <font color="blue" href="mailto:{!User.Email}">{!User.Email} </font></span> widerrufen. Nach einem Widerruf werden die Daten zu Ihrer Person aus der globalen ABB-Kundendatenbank gelöscht.
+
+<br><br>
+Wir bedanken uns schon im Voraus für Ihre Unterstützung. 
+
+<br><br>
+Mit freundlichen Grüßen,<br><br><br>
+<img src="https://abb.my.salesforce.com/servlet/servlet.ImageServer?id=01520000002reV9&oid=00D20000000oFs1" height="50"><br><br>
+<font face="Verdana"><font size="-1" color="red">
+_
+<br><font color="black">
+<b>{!User.FirstName} {!User.LastName}</b><br>
+{!User.Title}<br><br>
+<font face="Verdana"><font size="-1">
+<b>ABB AG</b><br>
+{!User.Street}<br>
+{!User.PostalCode} {!User.City}, Österreich<br>
+Telefon: {!User.Phone}<br>
+Mobil: {!User.MobilePhone}<br>
+abb.com<br><br>
+</font><font face="Verdana"><font size="-2">
+Firma/Company: <b>ABB AG</b><br>
+Rechtsform/Legal Form: <b>Aktiengesellschaft / Corporation</b><br>
+Firmenbuchnummer/Commercial Register: <b>FN 57678x</b><br>
+Firmenbuchgericht/Legal Venue: <b>Handelsgericht Wien</b><br>
+Firmensitz/Principal Office: <b>Wien/Vienna</b><br>
+Vorstandsvorsitzender/Chairman of Board: <b>Ing. Franz Chalupecky</b><br>
+Aufsichtsratsvorsitzender/Chairman of Supervisory Board: <b>Dipl.-Vw. Hans-Georg Krabbe</b><br>
+</font>
+</html>

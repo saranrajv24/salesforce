@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Atlas data containing basic account&apos;s KPIs (External Object)</description>
+    <enableFeeds>false</enableFeeds>
+    <enableReports>false</enableReports>
+    <enableSearch>false</enableSearch>
+    <externalDataSource>OData_Source</externalDataSource>
+    <externalName>VOCGLOM_2_Q010Results</externalName>
+    <fields>
+        <fullName>Account_Customer__c</fullName>
+        <description>ABB Account Customer</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account Customer</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Unit__c</fullName>
+        <description>ABB Business Unit</description>
+        <externalDeveloperName>MABBUSUNT</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Business Unit</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalDeveloperName>MABCTYCIR_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Country</label>
+        <length>160</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Limit_Formatted__c</fullName>
+        <description>Credit Limit (Formatted)</description>
+        <externalDeveloperName>CREDIT_LIMIT_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Credit Limit (Formatted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit_Limit__c</fullName>
+        <externalDeveloperName>CREDIT_LIMIT</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Credit Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Division__c</fullName>
+        <description>ABB Division</description>
+        <externalDeveloperName>MABDIVIS</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Division</label>
+        <length>12</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GUID__c</fullName>
+        <description>MMIGUID__MMIDFGUID</description>
+        <externalDeveloperName>MMIGUID__MMIDFGUID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Account</label>
+        <length>10</length>
+        <referenceTargetField>Account.GUID__c</referenceTargetField>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Atlas KPIs</relationshipLabel>
+        <relationshipName>VOCGLOM_2_Q010Results</relationshipName>
+        <type>IndirectLookup</type>
+    </fields>
+    <fields>
+        <fullName>ID__c</fullName>
+        <description>ID</description>
+        <externalDeveloperName>ID</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>ID</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Backlog_Formatted__c</fullName>
+        <description>Order Backlog (Formatted)</description>
+        <externalDeveloperName>BACKLOG_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Order Backlog (Formatted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Order_Backlog__c</fullName>
+        <description>SFDC R8 requirement 4339</description>
+        <externalDeveloperName>BACKLOG</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The orders from the customer that have not yet been shipped or invoiced.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Order Backlog</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overdue_Formatted__c</fullName>
+        <description>Overdue (Formatted)</description>
+        <externalDeveloperName>OVERDUE_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Overdue (Formatted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Overdue_receivables__c</fullName>
+        <description>SFDC R8 requirement 4339</description>
+        <externalDeveloperName>OVERDUE</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Trade receivables that are overdue.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Overdue receivables</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group_Name__c</fullName>
+        <description>ABB Product Group Name</description>
+        <externalDeveloperName>MABPRDGRP_T</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Group Name</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Group__c</fullName>
+        <description>ABB Product Group</description>
+        <externalDeveloperName>MABPRDGRP</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Product Group</label>
+        <length>20</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Receivables_Formatted__c</fullName>
+        <description>Receivables (Formatted)</description>
+        <externalDeveloperName>RECEIVABLES_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Receivables (Formatted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remaining_credit_available_Formatted__c</fullName>
+        <description>Remaining credit available (Formatted)</description>
+        <externalDeveloperName>CREDIT_AVAIL_F</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Remaining credit available (Formatted)</label>
+        <length>60</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Remaining_credit_available__c</fullName>
+        <description>SFDC R8 requirement 4339</description>
+        <externalDeveloperName>CREDIT_AVAIL</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>Remaining amount of the total credit limit. This is the total credit limit reduced by the exposure (outstanding receivables, sales in excess of billing, order backlog reduced by advances and billing in excess of sales).</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Remaining credit available</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Reporting_Unit__c</fullName>
+        <description>ABB Reporting Unit</description>
+        <externalDeveloperName>MABREPUNT</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Reporting Unit</label>
+        <length>32</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_credit_limit__c</fullName>
+        <description>SFDC R8 requirement 4339</description>
+        <externalDeveloperName>CREDIT_LIMIT</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum amount of credit that ABB has approved for this customer.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Total credit limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_receivables__c</fullName>
+        <description>SFDC R8 requirement 4339</description>
+        <externalDeveloperName>RECEIVABLES</externalDeveloperName>
+        <externalId>false</externalId>
+        <inlineHelpText>The total amount invoiced by ABB.</inlineHelpText>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>Total receivables</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotaledProperties__c</fullName>
+        <description>TotaledProperties</description>
+        <externalDeveloperName>TotaledProperties</externalDeveloperName>
+        <externalId>false</externalId>
+        <isFilteringDisabled>false</isFilteringDisabled>
+        <isNameField>false</isNameField>
+        <isSortingDisabled>false</isSortingDisabled>
+        <label>TotaledProperties</label>
+        <length>128</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Atlas KPIs</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Order_Backlog__c</columns>
+        <columns>Overdue_receivables__c</columns>
+        <columns>Total_credit_limit__c</columns>
+        <columns>Remaining_credit_available__c</columns>
+        <columns>Total_receivables__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>GUID__c</field>
+            <operation>equals</operation>
+            <value>G08123221</value>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <pluralLabel>Atlas KPIs</pluralLabel>
+    <searchLayouts/>
+</CustomObject>

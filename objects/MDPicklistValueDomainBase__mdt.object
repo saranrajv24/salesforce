@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The reason of introduction the second Masterdata object is saving a space in custom metadata namespace. One object that is only 90 bites bigger may be used to save information about entire code domain</description>
+    <fields>
+        <fullName>Code__c</fullName>
+        <description>The original code from master data</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Code</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>IsActive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To indicate if the last successor is active it will be used in datafix </description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>IsLastSuccessorActive</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LastSuccessorDomain__c</fullName>
+        <description>Semicolon separated values of domains </description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>LastSuccessorDomain</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LastSuccessor__c</fullName>
+        <description>The code of last successor that it is related to the original code.  </description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>LastSuccessor</label>
+        <length>10</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>MDPicklistValueDomainBase</label>
+    <pluralLabel>MDPicklistValueDomainBases</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

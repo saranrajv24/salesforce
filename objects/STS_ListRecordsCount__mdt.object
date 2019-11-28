@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>STS PR 2.0: Metadata used for storing numbers of records to be displayed</description>
+    <fields>
+        <fullName>STS_RecCount__c</fullName>
+        <defaultValue>10</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>STS_RecCount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>STS_ListRecordsCount</label>
+    <pluralLabel>STS_ListRecordsCounts</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

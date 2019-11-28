@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Settings related to the CQP system</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>CQP_APP_URL__c</fullName>
+        <defaultValue>&quot;/CQP/en-US/ExternalServices/ImportOpportunity&quot;</defaultValue>
+        <description>The URL of the CQP Application, relative to CQP_Server__c</description>
+        <externalId>false</externalId>
+        <label>CQP APP URL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CQP_Check_URL__c</fullName>
+        <defaultValue>&quot;/CQP/Images/info.png&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>CQP Check URL</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CQP_Server__c</fullName>
+        <defaultValue>&quot;http://quotations.abb.com&quot;</defaultValue>
+        <description>Holds URL to CQP server</description>
+        <externalId>false</externalId>
+        <label>CQP Server</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>CQP</label>
+    <visibility>Protected</visibility>
+</CustomObject>

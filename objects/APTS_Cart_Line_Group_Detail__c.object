@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>APTS_Cart_Line_Group_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Cart Line Group Id</label>
+        <referenceTo>APTS_Cart_Line_Group__c</referenceTo>
+        <relationshipLabel>Cart Line Group Details</relationshipLabel>
+        <relationshipName>Cart_Line_Group_Details</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(APTS_Discount__c&lt; 10, 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 4), 
+IF(APTS_Discount__c&gt; 100, 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 6), 
+LEFT(SUBSTITUTE(TEXT(APTS_Discount__c), &quot;.&quot;, &quot;,&quot;), 5) 
+) 
+) &amp; 
+IF( 
+(APTS_Discount__c - FLOOR(APTS_Discount__c)) &lt;&gt; 0, 
+&quot;&quot; ,&quot;,00&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Discount % EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Group_Hierarchy_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Group Hierarchy Code</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Group_Hierarchy_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Group Hierarchy Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Amount_EUR__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( 
+APTS_Net_Amount__c&gt;= 1000000, 
+TEXT(FLOOR(APTS_Net_Amount__c/ 1000000)) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+IF( 
+APTS_Net_Amount__c &gt;= 1000, 
+RIGHT(TEXT(FLOOR(APTS_Net_Amount__c / 1000)), 3) &amp; &quot;.&quot;, 
+&quot;&quot;) &amp; 
+RIGHT(TEXT(FLOOR(APTS_Net_Amount__c)), 3) &amp; &quot;,&quot; &amp; 
+IF( 
+MOD(APTS_Net_Amount__c, 1) * 100 &lt; 10, 
+&quot;0&quot; &amp; TEXT(ROUND(MOD(APTS_Net_Amount__c, 1), 2) * 100), 
+TEXT(MIN(ROUND(MOD(APTS_Net_Amount__c, 1), 2) * 100, 99)) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Amount EUR</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>APTS_Net_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Net Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Cart Line Group Detail</label>
+    <nameField>
+        <displayFormat>CLGD-{0000000000}</displayFormat>
+        <label>Cart Line Group Details Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Cart Line Group Details</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+</CustomObject>
